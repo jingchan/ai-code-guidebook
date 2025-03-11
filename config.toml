@@ -1,7 +1,7 @@
 title = "AI Code Guidebook"
 description = "A comprehensive guide to AI-powered code development"
 base_url = "https://jingchan.github.io/ai-code-guidebook"
-theme = "after-dark"
+# theme = "after-dark"
 compile_sass = true
 build_search_index = true
 taxonomies = [
@@ -19,10 +19,10 @@ external_links_no_follow = true
 smart_punctuation = true
 
 [extra]
-after_dark_menu = [
-  { url = "$BASE_URL", name = "Home" },
-  { url = "$BASE_URL/about", name = "About" },
-]
+# after_dark_menu = [
+#   { url = "$BASE_URL", name = "Home" },
+#   { url = "$BASE_URL/about", name = "About" },
+# ]
 after_dark_css = "dark"
 
 accent_color = "cyan"
