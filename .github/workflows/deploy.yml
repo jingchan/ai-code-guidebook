@@ -1,10 +1,6 @@
 name: Build and deploy GH Pages
 
-on:
-  push:
-    branches:
-      - main
-
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,4 +12,4 @@ jobs:
         uses: shalzz/zola-deploy-action@master
         env:
           PAGES_BRANCH: gh-pages
-          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.DEPLOY_TOKEN }}
