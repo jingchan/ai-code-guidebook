@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+
+{% block title %}Blog - {{ config.title }}{% endblock title %}
+{% block description %}Latest blog posts and articles{% endblock description %}
+
+{% block content %}
+  <div class="blog-index">
+    <header class="page-header">
+      <h1 class="page-title">Blog</h1>
+      {% if config.description %}
+        <div class="page-description">{{ config.description }}</div>
+      {% endif %}
+    </header>
+
+    <div class="post-list">
+      {% for page in section.pages %}
+        <article class="post-list-item">
+          <header class="post-header">
+            <h2 class="post-title">
+              <a href="{{ page.permalink }}" class="post-link"
+                >{{ page.title }}</a
+              >
+            </h2>
+            <div class="post-meta">
+              <div class="post-meta-item">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+                <time datetime="{{ page.date }}"
+                  >{{ page.date | date(format="%B %d, %Y") }}</time
+                >
+              </div>
+              {% if page.taxonomies.tags %}
+                <div class="post-meta-item">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                    ></path>
+                    <line x1="7" y1="7" x2="7.01" y2="7"></line>
+                  </svg>
+                  <div class="post-tags">
+                    {% for tag in page.taxonomies.tags %}
+                      <a
+                        href="{{ get_taxonomy_url(kind="tags", name=tag) }}"
+                        class="post-tag"
+                        >#{{ tag }}</a
+                      >
+                    {% endfor %}
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </header>
+          {% if page.description %}
+            <div class="post-excerpt">{{ page.description }}</div>
+          {% endif %}
+        </article>
+      {% endfor %}
+    </div>
+
+    {% if paginator %}
+      <nav class="pagination">
+        {% if paginator.previous %}
+          <a class="prev" href="{{ paginator.previous }}">← Previous</a>
+        {% endif %}
+        <span class="page-number"
+          >Page {{ paginator.current_index }} of
+          {{ paginator.number_pagers }}</span
+        >
+        {% if paginator.next %}
+          <a class="next" href="{{ paginator.next }}">Next →</a>
+        {% endif %}
+      </nav>
+    {% endif %}
+  </div>
+{% endblock content %}

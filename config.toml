@@ -1,0 +1,32 @@
+title = "AI Code Guidebook"
+description = "A comprehensive guide to AI-powered code development"
+base_url = "https://jingchan.github.io/ai-code-guidebook"
+compile_sass = true
+build_search_index = true
+taxonomies = [
+  { name = "tags", feed = true },
+  { name = "categories", feed = true },
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "nord"
+# highlight_theme = "base16-ocean-dark"
+render_emoji = true
+external_links_target_blank = true
+external_links_no_follow = true
+smart_punctuation = true
+
+[extra]
+accent_color = "cyan"
+background_color = "dark"
+logo_home_link = "/"
+show_reading_time = true
+use_full_hack_font = true
+use_code_label = true
+center_content = true
+enable_post_view_navigation = true
+enable_post_meta = true
+enable_social_icons = true
+enable_theme_toggle = false
+enable_categories = true

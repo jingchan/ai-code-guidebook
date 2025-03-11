@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}{{ taxonomy.name | title }} - {{ config.title }}{% endblock title %}
+{% block description %}Browse all {{ taxonomy.name }} on {{ config.title }}{% endblock description %}
+
+{% block content %}
+  <div class="taxonomy-list">
+    <header class="page-header">
+      <h1 class="page-title">{{ taxonomy.name | title }}</h1>
+      <div class="page-description">Browse posts by {{ taxonomy.name }}</div>
+    </header>
+
+    <div class="taxonomy-items">
+      {% for term in terms %}
+        <div class="taxonomy-term">
+          <h2 class="term-title">
+            <a href="{{ term.permalink }}" class="term-link"
+              >#{{ term.name }}</a
+            >
+            <span class="term-count">({{ term.pages | length }})</span>
+          </h2>
+          <div class="term-pages">
+            {% for page in term.pages %}
+              <div class="term-page">
+                <a href="{{ page.permalink }}" class="page-link"
+                  >{{ page.title }}</a
+                >
+                <time datetime="{{ page.date }}" class="page-date"
+                  >{{ page.date | date(format="%B %d, %Y") }}</time
+                >
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}

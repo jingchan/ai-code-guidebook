@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+    <meta
+      name="description"
+      content="{% block description %}{{ config.description }}{% endblock description %}"
+    />
+    <link rel="stylesheet" href="{{ get_url(path='css/main.css') | safe }}" />
+    {% block head %}{% endblock head %}
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="{{ config.base_url }}" class="site-title"
+          >{{ config.title }}</a
+        >
+        <div class="nav-links">
+          <a href="{{ get_url(path='blog') }}">Blog</a>
+          <a href="https://github.com/jinghcan/ai-code-guidebook">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">{% block content %}{% endblock content %}</main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; {{ now() | date(format="%Y") }} {{ config.title }}</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="content">
+    <!-- Main Content -->
+    <section class="welcome">{{ section.content | safe }}</section>
+
+    <!-- Recent Posts -->
+    <section class="recent-posts">
+      <h2>Recent Posts</h2>
+      {% set posts = get_section(path="blog/_index.md") %}
+      <div class="post-grid">
+        {% for page in posts.pages | slice(end=6) %}
+          <article class="post-card">
+            <h3><a href="{{ page.permalink }}">{{ page.title }}</a></h3>
+            {% if page.description %}
+              <p>{{ page.description }}</p>
+            {% endif %}
+            <div class="post-meta">
+              <time datetime="{{ page.date }}"
+                >{{ page.date | date(format="%B %d, %Y") }}</time
+              >
+              {% if page.taxonomies.tags %}
+                <div class="tags">
+                  {% for tag in page.taxonomies.tags %}
+                    <a href="{{ get_taxonomy_url(kind='tags', name=tag) }}"
+                      >#{{ tag }}</a
+                    >
+                  {% endfor %}
+                </div>
+              {% endif %}
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories">
+      <h2>Categories</h2>
+      <div class="category-list">
+        {% set categories = get_taxonomy(kind="categories") %}
+        {% for term in categories.items %}
+          <a href="{{ term.permalink }}" class="category-item">
+            {{ term.name | title }}
+            <span>({{ term.pages | length }})</span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+{% endblock content %}
