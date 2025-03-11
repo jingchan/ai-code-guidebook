@@ -1,0 +1,234 @@
+/* Custom styles for enhanced index page */
+
+:root {
+  --dark-bg: #1a1b26;
+  --darker-bg: #16161e;
+  --accent: #7dcfff;
+  --text: #a9b1d6;
+  --text-bright: #c0caf5;
+  --border: #292e42;
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --hover-shadow: 0 6px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Global overrides */
+body {
+  background-color: var(--dark-bg);
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--text-bright);
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1.8rem;
+  margin: 3rem 0 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+  color: var(--text-bright);
+  letter-spacing: 0.5px;
+}
+
+/* Featured posts */
+.featured-posts {
+  margin: 2rem 0;
+}
+
+.featured-posts .post-list-item {
+  background: var(--darker-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.8rem;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.featured-posts .post-list-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+  border-color: var(--accent);
+}
+
+.featured-posts .post-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.featured-posts .post-title a {
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+.featured-posts .post-title a:hover {
+  color: var(--accent);
+}
+
+.post-excerpt {
+  color: var(--text);
+  line-height: 1.6;
+  margin: 1rem 0;
+}
+
+/* Categories grid */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.category-card {
+  background: var(--darker-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.category-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--hover-shadow);
+  border-color: var(--accent);
+}
+
+.category-title {
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.category-title a {
+  color: var(--text-bright);
+  text-decoration: none;
+}
+
+.category-count {
+  font-size: 0.9rem;
+  color: var(--text);
+  opacity: 0.8;
+}
+
+/* Tags cloud */
+.tags-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.tag-item {
+  background: var(--darker-bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 0.5rem 1.2rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: var(--card-shadow);
+}
+
+.tag-item:hover {
+  background: var(--accent);
+  color: var(--darker-bg);
+  border-color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: var(--hover-shadow);
+}
+
+.tag-count {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  margin-left: 0.3rem;
+}
+
+/* Post meta styling */
+.post-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  color: var(--text);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.post-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post-meta-item svg {
+  color: var(--accent);
+}
+
+/* Code blocks */
+pre {
+  background: var(--darker-bg) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 8px !important;
+  padding: 1.2rem !important;
+  margin: 1.5rem 0 !important;
+  box-shadow: var(--card-shadow);
+}
+
+code {
+  font-family: "Hack", monospace !important;
+  font-size: 0.9rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .featured-posts .post-title {
+    font-size: 1.3rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .post-meta {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+/* Header and navigation enhancements */
+.site-header {
+  background: var(--darker-bg);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.site-title {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Footer enhancements */
+.site-footer {
+  background: var(--darker-bg);
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+/* Content width and spacing */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
