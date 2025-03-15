@@ -1,0 +1,1573 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Terminology - AI Code Guidebook</title>
+    <meta
+      name="description"
+      content="A comprehensive guide to game terms"
+    />
+    <link rel="stylesheet" href="https://jingchan.github.io/ai-code-guidebook/css/main.css" />
+    
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="https:&#x2F;&#x2F;jingchan.github.io&#x2F;ai-code-guidebook" class="site-title"
+          >AI Code Guidebook</a
+        >
+        <div class="nav-links">
+          <a href="https://jingchan.github.io/ai-code-guidebook/blog">Blog</a>
+          <a href="https://github.com/jinghcan/ai-code-guidebook">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Game Terminology</h1>
+      <div class="post-meta">
+        <div class="post-meta-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <time datetime="2025-03-14"
+            >March 14, 2025</time
+          >
+        </div>
+        
+          <div class="post-meta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+              ></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+
+            <div class="post-tags">
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/game/"
+                  class="post-tag"
+                  >#game</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/terms/"
+                  class="post-tag"
+                  >#terms</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/terminology/"
+                  class="post-tag"
+                  >#terminology</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/gamedev/"
+                  class="post-tag"
+                  >#gamedev</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/llm/"
+                  class="post-tag"
+                  >#llm</a
+                >
+              
+            </div>
+          </div>
+        
+      </div>
+    </header>
+
+    <div class="post-content"><p><strong>Core Game Concepts:</strong></p>
+<ol>
+<li><strong>Entity:</strong> A fundamental game object.</li>
+<li><strong>Component:</strong> A data structure that defines an entity’s attributes.</li>
+<li><strong>System:</strong> A process that operates on entities and components.</li>
+<li><strong>World:</strong> The overall game environment.</li>
+<li><strong>Scene:</strong> A specific area or level within the world.</li>
+<li><strong>GameState:</strong> The overall state of the game.</li>
+<li><strong>Player:</strong> The controlled character.</li>
+<li><strong>Actor:</strong> A general term for any entity that can act.</li>
+<li><strong>Object:</strong> A general game element.</li>
+<li><strong>Item:</strong> A collectible or usable object.</li>
+<li><strong>Inventory:</strong> A collection of items.</li>
+<li><strong>Equipment:</strong> Items worn or used by an actor.</li>
+<li><strong>Skill:</strong> A learned ability.</li>
+<li><strong>Spell:</strong> A magical ability.</li>
+<li><strong>Effect:</strong> A temporary change to an entity’s state.</li>
+<li><strong>Status:</strong> A persistent change to an entity’s state.</li>
+<li><strong>Buff:</strong> A positive status effect.</li>
+<li><strong>Debuff:</strong> A negative status effect.</li>
+<li><strong>Projectile:</strong> A launched object.</li>
+<li><strong>Trigger:</strong> An event that initiates an action.</li>
+<li><strong>Interaction:</strong> An action between entities.</li>
+<li><strong>Dialogue:</strong> A conversation between characters.</li>
+<li><strong>Quest:</strong> A task given to the player.</li>
+<li><strong>Objective:</strong> A specific goal within a quest.</li>
+<li><strong>Loot:</strong> Items dropped by defeated enemies.</li>
+<li><strong>Reward:</strong> Items or experience gained from completing quests.</li>
+<li><strong>Experience:</strong> Points gained from completing tasks.</li>
+<li><strong>Level:</strong> A measure of character progression.</li>
+<li><strong>Stats:</strong> Core character attributes (strength, dexterity, etc.).</li>
+<li><strong>Attributes:</strong> Properties of an entity.</li>
+<li><strong>Modifiers:</strong> Changes to attributes or stats.</li>
+<li><strong>Damage:</strong> A reduction in health.</li>
+<li><strong>Healing:</strong> A restoration of health.</li>
+<li><strong>Resistance:</strong> A reduction in damage taken.</li>
+<li><strong>Vulnerability:</strong> An increase in damage taken.</li>
+<li><strong>Collision:</strong> An event when two entities overlap.</li>
+<li><strong>Hitbox:</strong> A region used for collision detection.</li>
+<li><strong>Hurtbox:</strong> A region that can receive damage.</li>
+<li><strong>Pathfinding:</strong> An algorithm for navigating through the world.</li>
+<li><strong>AI (Artificial Intelligence):</strong> Systems that control non-player characters.</li>
+<li><strong>Behavior:</strong> An AI’s actions and responses.</li>
+<li><strong>Pattern:</strong> A predictable sequence of actions.</li>
+<li><strong>Animation:</strong> A sequence of images or frames.</li>
+<li><strong>State Machine:</strong> A system for managing animation and behavior states.</li>
+<li><strong>Input:</strong> Player actions.</li>
+<li><strong>Control:</strong> Player or AI control of an entity.</li>
+<li><strong>Movement:</strong> Changes in an entity’s position.</li>
+<li><strong>Navigation:</strong> The process of moving through the world.</li>
+<li><strong>Tile:</strong> A unit of space in a grid-based world.</li>
+<li><strong>Grid:</strong> A structured layout of tiles.</li>
+<li><strong>Region:</strong> A large area within the world.</li>
+<li><strong>Zone:</strong> A distinct area within a region.</li>
+<li><strong>Room:</strong> A smaller enclosed area within a zone.</li>
+<li><strong>Dungeon:</strong> A procedurally generated or hand-crafted area.</li>
+<li><strong>Biome:</strong> A distinct ecological region.</li>
+<li><strong>Terrain:</strong> The ground and environment.</li>
+<li><strong>Weather:</strong> Environmental conditions.</li>
+<li><strong>Lighting:</strong> The illumination of the scene.</li>
+<li><strong>Shadow:</strong> An area of darkness.</li>
+<li><strong>Camera:</strong> The viewpoint of the player.</li>
+<li><strong>Viewport:</strong> The visible area of the screen.</li>
+<li><strong>UI (User Interface):</strong> Elements for player interaction.</li>
+<li><strong>HUD (Heads-Up Display):</strong> UI elements that overlay the game world.</li>
+<li><strong>Menu:</strong> A UI element for navigating game options.</li>
+<li><strong>Popup:</strong> A UI element that appears temporarily.</li>
+<li><strong>Save:</strong> Storing game progress.</li>
+<li><strong>Load:</strong> Restoring game progress.</li>
+<li><strong>Resource:</strong> A global data structure.</li>
+<li><strong>Asset:</strong> A game file (texture, model, sound, etc.).</li>
+<li><strong>Pool:</strong> A collection of reusable objects.</li>
+<li><strong>Factory:</strong> A system for creating objects.</li>
+<li><strong>Manager:</strong> A system for managing game data.</li>
+<li><strong>Event:</strong> A signal that something has happened.</li>
+<li><strong>Message:</strong> A data structure used for communication.</li>
+<li><strong>Packet:</strong> A data structure for network communication.</li>
+<li><strong>Serialization:</strong> Converting data to a format for storage or transmission.</li>
+<li><strong>Deserialization:</strong> Converting serialized data back to its original format.</li>
+<li><strong>Randomizer:</strong> A system for generating random numbers.</li>
+<li><strong>Seed:</strong> A value used to initialize a random number generator.</li>
+<li><strong>Noise:</strong> A pattern of random values.</li>
+<li><strong>Procedural Generation:</strong> Creating content algorithmically.</li>
+<li><strong>Map:</strong> A representation of the world or a level.</li>
+<li><strong>Graph:</strong> A data structure representing connections.</li>
+<li><strong>Node:</strong> A point in a graph.</li>
+<li><strong>Edge:</strong> A connection between nodes.</li>
+<li><strong>State:</strong> A specific condition of an entity or system.</li>
+<li><strong>Transition:</strong> A change from one state to another.</li>
+<li><strong>Timer:</strong> A system for tracking time.</li>
+<li><strong>Cooldown:</strong> A period of time before an action can be repeated.</li>
+<li><strong>Waypoint:</strong> A point used for navigation.</li>
+<li><strong>Checkpoint:</strong> A point where the player can save or respawn.</li>
+<li><strong>Unlock:</strong> A progression mechanic.</li>
+<li><strong>Upgrade:</strong> An improvement to an entity or item.</li>
+<li><strong>Crafting:</strong> Combining items to create new items.</li>
+<li><strong>Recipe:</strong> A formula for crafting.</li>
+<li><strong>Faction:</strong> A group of entities with shared goals.</li>
+<li><strong>Reputation:</strong> A measure of standing with a faction.</li>
+<li><strong>Lore:</strong> The background story and history of the game world.</li>
+<li><strong>Cutscene:</strong> A pre-rendered or scripted sequence.</li>
+<li><strong>Particle System:</strong> A system for creating visual effects.</li>
+<li><strong>Shader:</strong> A program that runs on the GPU.</li>
+<li><strong>Render Target:</strong> A buffer that stores rendered images.</li>
+<li><strong>Texture:</strong> An image used for rendering.</li>
+<li><strong>Mesh:</strong> A 3D model.</li>
+<li><strong>Skeleton:</strong> A structure used for animating 3D models.</li>
+<li><strong>Physics Material:</strong> properties used for physics simulations.</li>
+<li><strong>Sound Effect:</strong> a playable audio file.</li>
+<li><strong>Music Track:</strong> a longer playable audio file.</li>
+<li><strong>Localization:</strong> the process of adapting a game for different languages.</li>
+<li><strong>Profile:</strong> a collection of user settings.</li>
+</ol>
+<h1 id="game-development-terminology-for-data-structures">Game Development Terminology for Data Structures</h1>
+<h2 id="core-entity-components">Core Entity Components</h2>
+<ol>
+<li><strong>Entity</strong> - Base class/struct for any object in the game world</li>
+<li><strong>Transform</strong> - Position, rotation, and scale data</li>
+<li><strong>Sprite</strong> - Visual representation of an entity</li>
+<li><strong>Collider</strong> - Hitbox for collision detection</li>
+<li><strong>RigidBody</strong> - Physics properties for an entity</li>
+<li><strong>Controller</strong> - Input handling component</li>
+<li><strong>Stats</strong> - Character attributes like health, strength, etc.</li>
+<li><strong>Inventory</strong> - Container for items</li>
+<li><strong>WorldObject</strong> - Static element in the game world</li>
+<li><strong>Actor</strong> - Any entity that can perform actions</li>
+</ol>
+<h2 id="character-systems">Character Systems</h2>
+<ol start="11">
+<li><strong>Character</strong> - Player or NPC with attributes</li>
+<li><strong>PlayerCharacter</strong> - User-controlled entity</li>
+<li><strong>NonPlayerCharacter</strong> - AI-controlled entity</li>
+<li><strong>Mob</strong> - Mobile enemy entity</li>
+<li><strong>Boss</strong> - Special powerful enemy</li>
+<li><strong>Companion</strong> - Ally that follows the player</li>
+<li><strong>Faction</strong> - Grouping for allegiance systems</li>
+<li><strong>Class</strong> - Character archetype (Warrior, Mage, etc.)</li>
+<li><strong>Race</strong> - Character species or type</li>
+<li><strong>Profession</strong> - Character’s role or occupation</li>
+</ol>
+<h2 id="combat-systems">Combat Systems</h2>
+<ol start="21">
+<li><strong>Weapon</strong> - Item used to deal damage</li>
+<li><strong>Armor</strong> - Item used for defense</li>
+<li><strong>Projectile</strong> - Moving object (arrows, bullets, etc.)</li>
+<li><strong>Damage</strong> - Harm dealt to entities</li>
+<li><strong>DamageType</strong> - Category of damage (Fire, Physical, etc.)</li>
+<li><strong>StatusEffect</strong> - Temporary modification to an entity</li>
+<li><strong>CombatManager</strong> - System controlling combat interactions</li>
+<li><strong>Hitbox</strong> - Area that can receive damage</li>
+<li><strong>Hurtbox</strong> - Area that can deal damage</li>
+<li><strong>AttackPattern</strong> - Sequence of attack moves</li>
+</ol>
+<h2 id="movement-physics">Movement &amp; Physics</h2>
+<ol start="31">
+<li><strong>Velocity</strong> - Speed and direction</li>
+<li><strong>Acceleration</strong> - Change in velocity</li>
+<li><strong>Gravity</strong> - Downward force</li>
+<li><strong>Jump</strong> - Upward movement mechanic</li>
+<li><strong>Dash</strong> - Quick movement ability</li>
+<li><strong>Teleport</strong> - Instantaneous movement</li>
+<li><strong>PathNode</strong> - Point in a navigation path</li>
+<li><strong>NavMesh</strong> - Navigation mesh for AI movement</li>
+<li><strong>CollisionLayer</strong> - Group for collision filtering</li>
+<li><strong>PhysicsMaterial</strong> - Properties affecting physics behavior</li>
+</ol>
+<h2 id="progression-systems">Progression Systems</h2>
+<ol start="41">
+<li><strong>Level</strong> - Character progression stage</li>
+<li><strong>Experience</strong> - Points toward level advancement</li>
+<li><strong>Skill</strong> - Special ability or action</li>
+<li><strong>SkillTree</strong> - Hierarchical skill organization</li>
+<li><strong>Perk</strong> - Passive bonus</li>
+<li><strong>Talent</strong> - Specialization option</li>
+<li><strong>Attribute</strong> - Base character statistic</li>
+<li><strong>ProgressionManager</strong> - System tracking advancement</li>
+<li><strong>Milestone</strong> - Significant achievement point</li>
+<li><strong>Quest</strong> - Objective-based mission</li>
+</ol>
+<h2 id="items-equipment">Items &amp; Equipment</h2>
+<ol start="51">
+<li><strong>Item</strong> - Collectible object</li>
+<li><strong>Equipment</strong> - Wearable item</li>
+<li><strong>Consumable</strong> - One-use item</li>
+<li><strong>Rarity</strong> - Item quality level</li>
+<li><strong>CraftingMaterial</strong> - Resource for item creation</li>
+<li><strong>Recipe</strong> - Formula for crafting</li>
+<li><strong>Modifier</strong> - Statistical change applied to items</li>
+<li><strong>Enchantment</strong> - Magical property on equipment</li>
+<li><strong>Currency</strong> - Medium of exchange</li>
+<li><strong>Loot</strong> - Items dropped by enemies</li>
+</ol>
+<h2 id="world-environment">World &amp; Environment</h2>
+<ol start="61">
+<li><strong>Room</strong> - Discrete area in the game</li>
+<li><strong>Zone</strong> - Larger region containing rooms</li>
+<li><strong>Biome</strong> - Environmental type with specific properties</li>
+<li><strong>Portal</strong> - Connection between areas</li>
+<li><strong>Hazard</strong> - Environmental danger</li>
+<li><strong>Checkpoint</strong> - Save or respawn point</li>
+<li><strong>Spawner</strong> - Entity generation point</li>
+<li><strong>Trigger</strong> - Area causing an event when entered</li>
+<li><strong>Destructible</strong> - Object that can be broken</li>
+<li><strong>Weather</strong> - Environmental condition</li>
+</ol>
+<h2 id="procedural-generation">Procedural Generation</h2>
+<ol start="71">
+<li><strong>Generator</strong> - System creating content</li>
+<li><strong>Seed</strong> - Value initializing random generation</li>
+<li><strong>DungeonLayout</strong> - Structure of game level</li>
+<li><strong>ProceduralRule</strong> - Constraint for generation</li>
+<li><strong>TileSet</strong> - Collection of map pieces</li>
+<li><strong>TerrainType</strong> - Category of landscape</li>
+<li><strong>MapChunk</strong> - Section of a larger map</li>
+<li><strong>NodeGraph</strong> - Connection structure for rooms</li>
+<li><strong>GenerationParameter</strong> - Setting for procedural systems</li>
+<li><strong>RoomTemplate</strong> - Pattern for room creation</li>
+</ol>
+<h2 id="game-state-management">Game State Management</h2>
+<ol start="81">
+<li><strong>GameState</strong> - Current mode of play</li>
+<li><strong>SaveData</strong> - Persistent game information</li>
+<li><strong>Objective</strong> - Current goal</li>
+<li><strong>SceneManager</strong> - System handling different game areas</li>
+<li><strong>EventSystem</strong> - Manager for game events</li>
+<li><strong>Flag</strong> - Boolean game state marker</li>
+<li><strong>Condition</strong> - Requirement for an event</li>
+<li><strong>Timeline</strong> - Sequence of game events</li>
+<li><strong>DialogueTree</strong> - Conversation structure</li>
+<li><strong>Cutscene</strong> - Non-interactive sequence</li>
+</ol>
+<h2 id="abilities-magic">Abilities &amp; Magic</h2>
+<ol start="91">
+<li><strong>Ability</strong> - Special action with cooldown</li>
+<li><strong>Spell</strong> - Magical effect</li>
+<li><strong>Cooldown</strong> - Time until reuse</li>
+<li><strong>Mana</strong> - Magic resource</li>
+<li><strong>Aura</strong> - Area-based persistent effect</li>
+<li><strong>ElementType</strong> - Magical affinity</li>
+<li><strong>CastingTime</strong> - Duration to use ability</li>
+<li><strong>AbilitySlot</strong> - Container for equipped ability</li>
+<li><strong>Combo</strong> - Sequence of actions for special effect</li>
+<li><strong>ResourcePool</strong> - Energy for using abilities</li>
+</ol>
+<h2 id="ui-feedback">UI &amp; Feedback</h2>
+<ol start="101">
+<li><strong>HealthBar</strong> - Visual representation of health</li>
+<li><strong>Minimap</strong> - Condensed map view</li>
+<li><strong>Notification</strong> - Message to player</li>
+<li><strong>HUD</strong> - Heads-up display elements</li>
+<li><strong>MenuState</strong> - Current menu configuration</li>
+<li><strong>Tooltip</strong> - Information popup</li>
+<li><strong>InventorySlot</strong> - Position in inventory grid</li>
+<li><strong>QuestMarker</strong> - Visual indicator for objectives</li>
+<li><strong>DamageNumber</strong> - Floating combat text</li>
+<li><strong>InteractionPrompt</strong> - UI for possible actions</li>
+</ol>
+<h2 id="metroidvania-specifics">Metroidvania Specifics</h2>
+<ol start="111">
+<li><strong>Ability_Unlock</strong> - New player capability that enables progression</li>
+<li><strong>MapCell</strong> - Individual section of the overall map</li>
+<li><strong>SecretArea</strong> - Hidden location with rewards</li>
+<li><strong>BacktrackTrigger</strong> - Event causing return to previous areas</li>
+<li><strong>ProgressionBarrier</strong> - Obstacle requiring specific ability</li>
+<li><strong>MapRevealComponent</strong> - System for uncovering the map</li>
+<li><strong>AbilityGate</strong> - Obstacle requiring specific ability</li>
+<li><strong>WorldConnectionNode</strong> - Link between map areas</li>
+<li><strong>Shortcut</strong> - Unlockable path between areas</li>
+<li><strong>DiscoveryTracker</strong> - Record of found secrets/areas</li>
+</ol>
+<h2 id="roguelike-specifics">Roguelike Specifics</h2>
+<ol start="121">
+<li><strong>Run</strong> - Single playthrough attempt</li>
+<li><strong>MetaProgression</strong> - Advancement between runs</li>
+<li><strong>Permadeath</strong> - Final character death mechanic</li>
+<li><strong>FloorLevel</strong> - Depth in dungeon</li>
+<li><strong>ItemPool</strong> - Collection of possible items</li>
+<li><strong>RogueRandom</strong> - Random number generator</li>
+<li><strong>Curse</strong> - Negative effect on character</li>
+<li><strong>Blessing</strong> - Positive effect on character</li>
+<li><strong>AscensionLevel</strong> - Difficulty tier</li>
+<li><strong>RelicEffect</strong> - Permanent run modifier</li>
+</ol>
+<h2 id="arpg-specifics">ARPG Specifics</h2>
+<ol start="131">
+<li><strong>StatScaling</strong> - Growth of attributes with level</li>
+<li><strong>DamageFormula</strong> - Calculation for attack power</li>
+<li><strong>LootTable</strong> - Probability distribution for drops</li>
+<li><strong>AttributeRequirement</strong> - Stat needed to use item</li>
+<li><strong>AreaOfEffect</strong> - Range of ability impact</li>
+<li><strong>CriticalHit</strong> - Enhanced damage chance</li>
+<li><strong>BuildData</strong> - Character specialization info</li>
+<li><strong>GearSet</strong> - Related equipment pieces</li>
+<li><strong>SocketSystem</strong> - Modification slots in equipment</li>
+<li><strong>DifficultyTier</strong> - Challenge level setting</li>
+</ol>
+<p>Below is a comprehensive list of <strong>500 names</strong> that you might encounter as classes, structs, traits, or similar constructs in a typical game engine or game source code. This list is designed to support a versatile game engine capable of creating games across multiple genres, such as Action RPGs (ARPGs), Roguelikes, and Metroidvanias. The names cover core engine components, game-specific features, and utilities, providing you with a broad and recognizable vocabulary for developing new features.</p>
+<p>The list is organized into categories for clarity, ensuring coverage of rendering, physics, audio, input, scripting, UI, networking, AI, and genre-specific functionalities, among others. Each name is unique and could plausibly appear in a game engine’s architecture.</p>
+<hr />
+<h3 id="core-engine-components">Core Engine Components</h3>
+<ol>
+<li><strong>Engine</strong> - The main game engine class.</li>
+<li><strong>Game</strong> - Represents the game instance.</li>
+<li><strong>Application</strong> - Handles application lifecycle.</li>
+<li><strong>MainLoop</strong> - Manages the game’s main loop.</li>
+<li><strong>UpdateLoop</strong> - Controls game logic updates.</li>
+<li><strong>RenderLoop</strong> - Manages rendering cycles.</li>
+</ol>
+<hr />
+<h3 id="rendering">Rendering</h3>
+<ol start="7">
+<li><strong>Renderer</strong> - Base rendering system.</li>
+<li><strong>Graphics</strong> - Graphics context manager.</li>
+<li><strong>Window</strong> - Display window handler.</li>
+<li><strong>Viewport</strong> - Defines the rendering area.</li>
+<li><strong>FrameBuffer</strong> - Off-screen rendering target.</li>
+<li><strong>RenderTarget</strong> - Destination for rendering output.</li>
+<li><strong>Shader</strong> - Programmable graphics shader.</li>
+<li><strong>VertexShader</strong> - Shader for vertex processing.</li>
+<li><strong>FragmentShader</strong> - Shader for pixel processing.</li>
+<li><strong>GeometryShader</strong> - Shader for geometry manipulation.</li>
+<li><strong>ComputeShader</strong> - General-purpose compute shader.</li>
+<li><strong>Material</strong> - Defines surface properties.</li>
+<li><strong>Texture</strong> - Base texture class.</li>
+<li><strong>Texture2D</strong> - 2D texture representation.</li>
+<li><strong>Texture3D</strong> - 3D volumetric texture.</li>
+<li><strong>CubeMap</strong> - Environment mapping texture.</li>
+<li><strong>RenderTexture</strong> - Texture for render-to-texture.</li>
+<li><strong>Mesh</strong> - 3D geometry data.</li>
+<li><strong>Model</strong> - Complete 3D object with mesh and material.</li>
+<li><strong>Vertex</strong> - Single point in a mesh.</li>
+<li><strong>IndexBuffer</strong> - Indices for mesh rendering.</li>
+<li><strong>VertexBuffer</strong> - Vertex data storage.</li>
+<li><strong>Geometry</strong> - Abstract geometry representation.</li>
+<li><strong>Primitive</strong> - Basic renderable shape.</li>
+<li><strong>Line</strong> - Line geometry.</li>
+<li><strong>Triangle</strong> - Triangle geometry.</li>
+<li><strong>Quad</strong> - Quadrilateral geometry.</li>
+<li><strong>Polygon</strong> - General polygon geometry.</li>
+<li><strong>Camera</strong> - Base camera class.</li>
+<li><strong>PerspectiveCamera</strong> - Camera with perspective projection.</li>
+<li><strong>OrthographicCamera</strong> - Camera with orthographic projection.</li>
+<li><strong>Light</strong> - Base lighting class.</li>
+<li><strong>PointLight</strong> - Omnidirectional light source.</li>
+<li><strong>DirectionalLight</strong> - Sun-like light source.</li>
+<li><strong>SpotLight</strong> - Focused light source.</li>
+<li><strong>AmbientLight</strong> - Uniform background lighting.</li>
+<li><strong>Skybox</strong> - Background environment renderable.</li>
+<li><strong>PostProcessing</strong> - Post-render effects manager.</li>
+<li><strong>Bloom</strong> - Glow effect for bright areas.</li>
+<li><strong>DepthOfField</strong> - Focus blur effect.</li>
+<li><strong>MotionBlur</strong> - Blur for fast-moving objects.</li>
+<li><strong>ScreenSpaceReflection</strong> - Real-time reflections.</li>
+<li><strong>VolumetricLight</strong> - Light scattering effect.</li>
+<li><strong>ParticleSystem</strong> - Manages particle effects.</li>
+<li><strong>ParticleEmitter</strong> - Spawns particles.</li>
+<li><strong>Particle</strong> - Individual particle instance.</li>
+<li><strong>Sprite</strong> - 2D renderable image.</li>
+<li><strong>SpriteSheet</strong> - Collection of sprites.</li>
+<li><strong>Animation</strong> - Base animation class.</li>
+<li><strong>Animator</strong> - Controls animation playback.</li>
+<li><strong>Skeleton</strong> - Bone structure for animation.</li>
+<li><strong>Bone</strong> - Single bone in a skeleton.</li>
+<li><strong>Skin</strong> - Mesh deformation data.</li>
+<li><strong>MorphTarget</strong> - Shape key for morph animations.</li>
+</ol>
+<hr />
+<h3 id="physics">Physics</h3>
+<ol start="61">
+<li><strong>PhysicsEngine</strong> - Core physics simulation.</li>
+<li><strong>PhysicsWorld</strong> - Physics simulation environment.</li>
+<li><strong>RigidBody</strong> - Physics object with mass.</li>
+<li><strong>Collider</strong> - Base collision shape.</li>
+<li><strong>BoxCollider</strong> - Rectangular collision volume.</li>
+<li><strong>SphereCollider</strong> - Spherical collision volume.</li>
+<li><strong>CapsuleCollider</strong> - Capsule-shaped collision volume.</li>
+<li><strong>MeshCollider</strong> - Mesh-based collision shape.</li>
+<li><strong>Trigger</strong> - Non-physical collision detector.</li>
+<li><strong>Constraint</strong> - Limits object movement.</li>
+<li><strong>Joint</strong> - Base joint for constraints.</li>
+<li><strong>HingeJoint</strong> - Rotational joint.</li>
+<li><strong>BallSocketJoint</strong> - Spherical joint.</li>
+<li><strong>FixedJoint</strong> - Rigid connection.</li>
+<li><strong>Spring</strong> - Elastic constraint.</li>
+<li><strong>Force</strong> - Applied physics force.</li>
+<li><strong>Gravity</strong> - Gravitational force simulator.</li>
+<li><strong>Friction</strong> - Surface friction handler.</li>
+<li><strong>Restitution</strong> - Bounce coefficient manager.</li>
+<li><strong>CollisionDetection</strong> - Detects object intersections.</li>
+<li><strong>BroadPhase</strong> - Initial collision filtering.</li>
+<li><strong>NarrowPhase</strong> - Precise collision detection.</li>
+<li><strong>Contact</strong> - Collision contact point.</li>
+<li><strong>Manifold</strong> - Collision contact details.</li>
+<li><strong>Raycast</strong> - Ray intersection test.</li>
+<li><strong>SweepTest</strong> - Continuous collision test.</li>
+<li><strong>FluidSimulation</strong> - Liquid physics system.</li>
+<li><strong>ClothSimulation</strong> - Fabric physics system.</li>
+<li><strong>DestructionSystem</strong> - Breakable object manager.</li>
+</ol>
+<hr />
+<h3 id="audio">Audio</h3>
+<ol start="90">
+<li><strong>AudioManager</strong> - Manages audio playback.</li>
+<li><strong>Sound</strong> - Base audio class.</li>
+<li><strong>Music</strong> - Background music handler.</li>
+<li><strong>AudioSource</strong> - Audio emission point.</li>
+<li><strong>AudioListener</strong> - Audio reception point.</li>
+<li><strong>AudioClip</strong> - Audio data container.</li>
+<li><strong>SoundEffect</strong> - Short audio effect.</li>
+<li><strong>AmbientSound</strong> - Background environmental sound.</li>
+<li><strong>PositionalSound</strong> - 3D-positioned sound.</li>
+<li><strong>GlobalSound</strong> - Non-spatial sound.</li>
+<li><strong>LoopingSound</strong> - Continuously repeating sound.</li>
+<li><strong>Reverb</strong> - Echo effect.</li>
+<li><strong>Echo</strong> - Delayed sound repetition.</li>
+<li><strong>Distortion</strong> - Audio distortion effect.</li>
+<li><strong>SpatialAudio</strong> - 3D audio system.</li>
+<li><strong>HRTF</strong> - Head-related transfer function for 3D audio.</li>
+<li><strong>BinauralAudio</strong> - Stereo 3D audio simulation.</li>
+</ol>
+<hr />
+<h3 id="input">Input</h3>
+<ol start="107">
+<li><strong>InputManager</strong> - Handles all input devices.</li>
+<li><strong>Keyboard</strong> - Keyboard input handler.</li>
+<li><strong>Mouse</strong> - Mouse input handler.</li>
+<li><strong>Controller</strong> - Gamepad input handler.</li>
+<li><strong>Joystick</strong> - Analog stick input.</li>
+<li><strong>TouchInput</strong> - Touchscreen input.</li>
+<li><strong>GestureRecognizer</strong> - Detects touch gestures.</li>
+<li><strong>VRController</strong> - Virtual reality controller input.</li>
+<li><strong>Key</strong> - Single key input.</li>
+<li><strong>Button</strong> - Generic button input.</li>
+<li><strong>Axis</strong> - Analog input axis.</li>
+<li><strong>InputAction</strong> - Mapped input event.</li>
+<li><strong>InputBinding</strong> - Custom input mapping.</li>
+</ol>
+<hr />
+<h3 id="scripting">Scripting</h3>
+<ol start="120">
+<li><strong>Script</strong> - Base script class.</li>
+<li><strong>Behavior</strong> - Scripted entity behavior.</li>
+<li><strong>Component</strong> - Modular script component.</li>
+<li><strong>ScriptEngine</strong> - Executes scripts.</li>
+<li><strong>LuaScript</strong> - Lua-based script.</li>
+<li><strong>PythonScript</strong> - Python-based script.</li>
+<li><strong>Function</strong> - Scripted function.</li>
+<li><strong>Variable</strong> - Script variable.</li>
+<li><strong>Event</strong> - Script-triggered event.</li>
+<li><strong>Delegate</strong> - Function pointer for scripting.</li>
+</ol>
+<hr />
+<h3 id="entity-component-system-ecs">Entity-Component-System (ECS)</h3>
+<ol start="130">
+<li><strong>Entity</strong> - Basic game object.</li>
+<li><strong>GameObject</strong> - Entity with components.</li>
+<li><strong>Transform</strong> - Position, rotation, scale data.</li>
+<li><strong>Component</strong> - Modular entity feature.</li>
+<li><strong>System</strong> - Processes components.</li>
+<li><strong>EntityManager</strong> - Manages entities.</li>
+<li><strong>ComponentManager</strong> - Manages component types.</li>
+<li><strong>SystemManager</strong> - Coordinates systems.</li>
+</ol>
+<hr />
+<h3 id="scene-management">Scene Management</h3>
+<ol start="138">
+<li><strong>Scene</strong> - Game level or state.</li>
+<li><strong>SceneGraph</strong> - Hierarchical scene structure.</li>
+<li><strong>SceneNode</strong> - Node in the scene graph.</li>
+<li><strong>Layer</strong> - Rendering or logic layer.</li>
+<li><strong>Tag</strong> - Entity identifier.</li>
+<li><strong>Hierarchy</strong> - Parent-child relationships.</li>
+</ol>
+<hr />
+<h3 id="resource-management">Resource Management</h3>
+<ol start="144">
+<li><strong>ResourceManager</strong> - Loads and manages assets.</li>
+<li><strong>AssetLoader</strong> - Loads specific asset types.</li>
+<li><strong>Cache</strong> - Stores loaded resources.</li>
+<li><strong>Resource</strong> - Base resource class.</li>
+<li><strong>Asset</strong> - Game asset (e.g., texture, model).</li>
+<li><strong>Bundle</strong> - Grouped assets.</li>
+<li><strong>Prefab</strong> - Preconfigured entity template.</li>
+<li><strong>Template</strong> - Reusable object blueprint.</li>
+</ol>
+<hr />
+<h3 id="event-system">Event System</h3>
+<ol start="152">
+<li><strong>EventManager</strong> - Manages event dispatching.</li>
+<li><strong>Event</strong> - Base event class.</li>
+<li><strong>Listener</strong> - Event receiver.</li>
+<li><strong>Subscriber</strong> - Event subscription handler.</li>
+<li><strong>EventQueue</strong> - Queues events for processing.</li>
+<li><strong>EventDispatcher</strong> - Sends events to listeners.</li>
+<li><strong>CollisionEvent</strong> - Collision occurrence event.</li>
+<li><strong>InputEvent</strong> - User input event.</li>
+<li><strong>NetworkEvent</strong> - Multiplayer-related event.</li>
+</ol>
+<hr />
+<h3 id="user-interface">User Interface</h3>
+<ol start="161">
+<li><strong>UIManager</strong> - Manages UI elements.</li>
+<li><strong>HUD</strong> - Heads-up display.</li>
+<li><strong>Menu</strong> - Menu screen.</li>
+<li><strong>Button</strong> - Clickable UI element.</li>
+<li><strong>Text</strong> - Text display element.</li>
+<li><strong>Image</strong> - UI image element.</li>
+<li><strong>Slider</strong> - Adjustable value control.</li>
+<li><strong>Checkbox</strong> - Toggleable option.</li>
+<li><strong>Dropdown</strong> - Selection menu.</li>
+<li><strong>ScrollView</strong> - Scrollable content area.</li>
+<li><strong>Panel</strong> - UI container.</li>
+<li><strong>Layout</strong> - UI element arrangement.</li>
+<li><strong>Widget</strong> - Generic UI component.</li>
+<li><strong>Canvas</strong> - UI rendering surface.</li>
+</ol>
+<hr />
+<h3 id="networking">Networking</h3>
+<ol start="175">
+<li><strong>NetworkManager</strong> - Manages network connections.</li>
+<li><strong>Server</strong> - Hosts multiplayer sessions.</li>
+<li><strong>Client</strong> - Connects to servers.</li>
+<li><strong>Packet</strong> - Network data unit.</li>
+<li><strong>Protocol</strong> - Communication rules.</li>
+<li><strong>Connection</strong> - Network link.</li>
+<li><strong>Socket</strong> - Network endpoint.</li>
+<li><strong>TCPConnection</strong> - Reliable network connection.</li>
+<li><strong>UDPConnection</strong> - Fast, unreliable connection.</li>
+<li><strong>WebSocketConnection</strong> - Web-based connection.</li>
+<li><strong>Matchmaking</strong> - Player pairing system.</li>
+<li><strong>Lobby</strong> - Pre-game gathering area.</li>
+<li><strong>VoiceChat</strong> - Real-time voice communication.</li>
+</ol>
+<hr />
+<h3 id="artificial-intelligence">Artificial Intelligence</h3>
+<ol start="188">
+<li><strong>AIController</strong> - Manages AI behavior.</li>
+<li><strong>Pathfinding</strong> - Navigation system.</li>
+<li><strong>StateMachine</strong> - Finite state machine for AI.</li>
+<li><strong>BehaviorTree</strong> - Hierarchical AI behavior.</li>
+<li><strong>Agent</strong> - AI-controlled entity.</li>
+<li><strong>Brain</strong> - AI decision-making core.</li>
+<li><strong>Decision</strong> - AI choice logic.</li>
+<li><strong>PatrolState</strong> - AI patrol behavior.</li>
+<li><strong>ChaseState</strong> - AI pursuit behavior.</li>
+<li><strong>FleeState</strong> - AI escape behavior.</li>
+<li><strong>NavigationMesh</strong> - Pathfinding grid.</li>
+<li><strong>Waypoint</strong> - Navigation marker.</li>
+</ol>
+<hr />
+<h3 id="animation">Animation</h3>
+<ol start="200">
+<li><strong>Animation</strong> - Base animation class.</li>
+<li><strong>Animator</strong> - Controls animation playback.</li>
+<li><strong>AnimationClip</strong> - Single animation sequence.</li>
+<li><strong>AnimationState</strong> - Current animation status.</li>
+<li><strong>AnimationCurve</strong> - Animation timing curve.</li>
+<li><strong>Skeleton</strong> - Bone structure.</li>
+<li><strong>Bone</strong> - Single skeletal element.</li>
+<li><strong>Skin</strong> - Mesh deformation data.</li>
+<li><strong>MorphTarget</strong> - Shape key animation.</li>
+<li><strong>Keyframe</strong> - Animation frame marker.</li>
+<li><strong>BlendTree</strong> - Animation blending system.</li>
+<li><strong>InverseKinematics</strong> - Realistic limb positioning.</li>
+</ol>
+<hr />
+<h3 id="particle-systems">Particle Systems</h3>
+<ol start="212">
+<li><strong>ParticleSystem</strong> - Manages particle effects.</li>
+<li><strong>ParticleEmitter</strong> - Spawns particles.</li>
+<li><strong>Particle</strong> - Single particle instance.</li>
+<li><strong>Affector</strong> - Modifies particle behavior.</li>
+<li><strong>PointEmitter</strong> - Single-point particle source.</li>
+<li><strong>LineEmitter</strong> - Linear particle source.</li>
+<li><strong>VolumeEmitter</strong> - 3D volume particle source.</li>
+<li><strong>GPUParticle</strong> - GPU-accelerated particle.</li>
+</ol>
+<hr />
+<h3 id="save-and-load">Save and Load</h3>
+<ol start="220">
+<li><strong>SaveManager</strong> - Handles game saving.</li>
+<li><strong>LoadManager</strong> - Handles game loading.</li>
+<li><strong>Serializer</strong> - Converts data to storage format.</li>
+<li><strong>Deserializer</strong> - Restores data from storage.</li>
+<li><strong>JSONSerializer</strong> - JSON-based serialization.</li>
+<li><strong>XMLSerializer</strong> - XML-based serialization.</li>
+<li><strong>BinarySerializer</strong> - Binary data serialization.</li>
+<li><strong>CloudSave</strong> - Online save storage.</li>
+<li><strong>Encryption</strong> - Data security for saves.</li>
+</ol>
+<hr />
+<h3 id="utility-classes">Utility Classes</h3>
+<ol start="229">
+<li><strong>Vector</strong> - Base vector class.</li>
+<li><strong>Vector2</strong> - 2D vector.</li>
+<li><strong>Vector3</strong> - 3D vector.</li>
+<li><strong>Vector4</strong> - 4D vector.</li>
+<li><strong>Matrix</strong> - Base matrix class.</li>
+<li><strong>Matrix3x3</strong> - 3x3 matrix.</li>
+<li><strong>Matrix4x4</strong> - 4x4 matrix.</li>
+<li><strong>Quaternion</strong> - Rotation representation.</li>
+<li><strong>Color</strong> - Color data.</li>
+<li><strong>Rect</strong> - Rectangle structure.</li>
+<li><strong>AABB</strong> - Axis-aligned bounding box.</li>
+<li><strong>Sphere</strong> - Spherical bounds.</li>
+<li><strong>Plane</strong> - Flat surface.</li>
+<li><strong>Line</strong> - Straight line.</li>
+<li><strong>Ray</strong> - Directed line segment.</li>
+<li><strong>Math</strong> - Mathematical utilities.</li>
+<li><strong>Random</strong> - Random number generator.</li>
+<li><strong>Noise</strong> - Noise generation base.</li>
+<li><strong>PerlinNoise</strong> - Smooth noise function.</li>
+<li><strong>SimplexNoise</strong> - Optimized noise function.</li>
+<li><strong>Time</strong> - Time management.</li>
+<li><strong>Timer</strong> - Countdown or interval timer.</li>
+<li><strong>Clock</strong> - Real-time clock.</li>
+<li><strong>Stopwatch</strong> - Performance timing.</li>
+</ol>
+<hr />
+<h3 id="game-specific-features">Game-Specific Features</h3>
+<ol start="253">
+<li><strong>Character</strong> - Base character class.</li>
+<li><strong>Player</strong> - Player-controlled character.</li>
+<li><strong>NPC</strong> - Non-player character.</li>
+<li><strong>Enemy</strong> - Hostile character.</li>
+<li><strong>Stats</strong> - Character attributes.</li>
+<li><strong>Health</strong> - Hit points tracker.</li>
+<li><strong>Mana</strong> - Magic resource tracker.</li>
+<li><strong>Experience</strong> - Progression points.</li>
+<li><strong>Level</strong> - Character or game progression stage.</li>
+<li><strong>Skill</strong> - Character ability.</li>
+<li><strong>Ability</strong> - Special power or move.</li>
+<li><strong>Talent</strong> - Passive character trait.</li>
+<li><strong>Inventory</strong> - Item storage.</li>
+<li><strong>Item</strong> - Base item class.</li>
+<li><strong>Weapon</strong> - Combat item.</li>
+<li><strong>Armor</strong> - Protective item.</li>
+<li><strong>Consumable</strong> - Usable item.</li>
+<li><strong>Potion</strong> - Healing consumable.</li>
+<li><strong>Scroll</strong> - Magic consumable.</li>
+<li><strong>Amulet</strong> - Equippable accessory.</li>
+<li><strong>Quest</strong> - Story or task objective.</li>
+<li><strong>Dialogue</strong> - Conversation system.</li>
+<li><strong>Choice</strong> - Dialogue option.</li>
+<li><strong>CraftingRecipe</strong> - Item creation formula.</li>
+<li><strong>Ingredient</strong> - Crafting component.</li>
+<li><strong>CraftingStation</strong> - Crafting location.</li>
+<li><strong>ProceduralGenerator</strong> - Dynamic content creator.</li>
+<li><strong>DungeonGenerator</strong> - Dungeon layout creator.</li>
+<li><strong>TerrainGenerator</strong> - Landscape creator.</li>
+<li><strong>RoomGenerator</strong> - Room layout creator.</li>
+<li><strong>CorridorGenerator</strong> - Passage creator.</li>
+<li><strong>LootGenerator</strong> - Item drop creator.</li>
+<li><strong>Map</strong> - Game world overview.</li>
+<li><strong>Tile</strong> - Map grid unit.</li>
+<li><strong>TileMap</strong> - Grid-based map.</li>
+<li><strong>Room</strong> - Enclosed map area.</li>
+<li><strong>Door</strong> - Map transition point.</li>
+<li><strong>Checkpoint</strong> - Save or respawn point.</li>
+<li><strong>Gate</strong> - Progression barrier.</li>
+<li><strong>TurnManager</strong> - Turn-based system.</li>
+<li><strong>Action</strong> - Turn-based move.</li>
+<li><strong>Command</strong> - Player or AI instruction.</li>
+<li><strong>Permadeath</strong> - Permanent death system.</li>
+<li><strong>TurnBasedCombat</strong> - Combat turn manager.</li>
+<li><strong>Backtracking</strong> - Exploration mechanic.</li>
+<li><strong>AbilityGating</strong> - Progression lock system.</li>
+</ol>
+<hr />
+<h3 id="debugging-and-profiling">Debugging and Profiling</h3>
+<ol start="299">
+<li><strong>Debug</strong> - Debugging utilities.</li>
+<li><strong>Profiler</strong> - Performance monitor.</li>
+<li><strong>Logger</strong> - Event logger.</li>
+<li><strong>Console</strong> - In-game command console.</li>
+<li><strong>DebugDraw</strong> - Visual debugging tool.</li>
+<li><strong>Log</strong> - Single log entry.</li>
+<li><strong>Assertion</strong> - Runtime check.</li>
+</ol>
+<hr />
+<h3 id="platform-specific">Platform-Specific</h3>
+<ol start="306">
+<li><strong>Platform</strong> - Base platform class.</li>
+<li><strong>Device</strong> - Hardware abstraction.</li>
+<li><strong>WindowsPlatform</strong> - Windows-specific code.</li>
+<li><strong>MacPlatform</strong> - macOS-specific code.</li>
+<li><strong>LinuxPlatform</strong> - Linux-specific code.</li>
+<li><strong>AndroidPlatform</strong> - Android-specific code.</li>
+<li><strong>iOSPlatform</strong> - iOS-specific code.</li>
+<li><strong>ConsolePlatform</strong> - Console-specific code.</li>
+<li><strong>WebPlatform</strong> - Web-based platform code.</li>
+</ol>
+<hr />
+<h3 id="editor-tools">Editor Tools</h3>
+<ol start="315">
+<li><strong>Editor</strong> - Game editor interface.</li>
+<li><strong>SceneEditor</strong> - Scene design tool.</li>
+<li><strong>AssetBrowser</strong> - Asset management tool.</li>
+<li><strong>Inspector</strong> - Property viewer/editor.</li>
+<li><strong>PropertyEditor</strong> - Specific property editor.</li>
+<li><strong>Tool</strong> - Generic editor tool.</li>
+<li><strong>Brush</strong> - Terrain or object placement tool.</li>
+<li><strong>Gizmo</strong> - Transform manipulation tool.</li>
+</ol>
+<hr />
+<h3 id="version-control">Version Control</h3>
+<ol start="323">
+<li><strong>VersionControl</strong> - Versioning system.</li>
+<li><strong>GitIntegration</strong> - Git support.</li>
+<li><strong>SVNIntegration</strong> - SVN support.</li>
+<li><strong>PerforceIntegration</strong> - Perforce support.</li>
+</ol>
+<hr />
+<h3 id="licensing-and-attribution">Licensing and Attribution</h3>
+<ol start="327">
+<li><strong>LicenseManager</strong> - License validation.</li>
+<li><strong>CreditsScreen</strong> - Attribution display.</li>
+<li><strong>Attribution</strong> - Credit entry.</li>
+</ol>
+<hr />
+<h3 id="analytics-and-telemetry">Analytics and Telemetry</h3>
+<ol start="330">
+<li><strong>AnalyticsManager</strong> - Tracks game data.</li>
+<li><strong>EventTracker</strong> - Logs specific events.</li>
+<li><strong>MetricsCollector</strong> - Gathers performance metrics.</li>
+<li><strong>Telemetry</strong> - Remote data reporting.</li>
+</ol>
+<hr />
+<h3 id="monetization">Monetization</h3>
+<ol start="334">
+<li><strong>InAppPurchase</strong> - In-game purchases.</li>
+<li><strong>AdManager</strong> - Advertisement system.</li>
+<li><strong>SubscriptionService</strong> - Recurring payment system.</li>
+<li><strong>Microtransaction</strong> - Small purchase handler.</li>
+</ol>
+<hr />
+<h3 id="social-features">Social Features</h3>
+<ol start="338">
+<li><strong>SocialManager</strong> - Social integration.</li>
+<li><strong>Leaderboard</strong> - Player rankings.</li>
+<li><strong>AchievementSystem</strong> - Achievement tracker.</li>
+<li><strong>Friend</strong> - Social connection.</li>
+<li><strong>Message</strong> - Player communication.</li>
+<li><strong>Notification</strong> - In-game alert.</li>
+</ol>
+<hr />
+<h3 id="security">Security</h3>
+<ol start="344">
+<li><strong>AntiCheat</strong> - Cheat prevention system.</li>
+<li><strong>Encryption</strong> - Data security.</li>
+<li><strong>Decryption</strong> - Data recovery.</li>
+<li><strong>Hash</strong> - Data integrity check.</li>
+<li><strong>Authentication</strong> - User verification.</li>
+</ol>
+<hr />
+<h3 id="cloud-services">Cloud Services</h3>
+<ol start="349">
+<li><strong>CloudSave</strong> - Online save storage.</li>
+<li><strong>CloudStorage</strong> - General cloud storage.</li>
+<li><strong>RemoteConfig</strong> - Dynamic configuration.</li>
+<li><strong>API</strong> - Cloud service interface.</li>
+<li><strong>Endpoint</strong> - API connection point.</li>
+</ol>
+<hr />
+<h3 id="virtual-reality-augmented-reality">Virtual Reality / Augmented Reality</h3>
+<ol start="354">
+<li><strong>VRManager</strong> - VR system manager.</li>
+<li><strong>ARSession</strong> - AR session handler.</li>
+<li><strong>TrackingSystem</strong> - Position tracking.</li>
+<li><strong>Headset</strong> - VR/AR device.</li>
+<li><strong>Controller</strong> - VR/AR input device.</li>
+<li><strong>Tracker</strong> - Motion tracker.</li>
+</ol>
+<hr />
+<h3 id="haptics">Haptics</h3>
+<ol start="360">
+<li><strong>HapticManager</strong> - Feedback manager.</li>
+<li><strong>VibrationController</strong> - Vibration effects.</li>
+<li><strong>ForceFeedback</strong> - Advanced haptic response.</li>
+<li><strong>Rumble</strong> - Controller rumble effect.</li>
+</ol>
+<hr />
+<h3 id="accessibility">Accessibility</h3>
+<ol start="364">
+<li><strong>AccessibilityOptions</strong> - Accessibility settings.</li>
+<li><strong>ScreenReader</strong> - Text-to-speech system.</li>
+<li><strong>ColorBlindMode</strong> - Color adjustment.</li>
+<li><strong>FontSize</strong> - Text scaling.</li>
+<li><strong>Contrast</strong> - Visual contrast settings.</li>
+<li><strong>AudioDescription</strong> - Narration for visuals.</li>
+<li><strong>RemappableControls</strong> - Custom input mapping.</li>
+<li><strong>Subtitles</strong> - Text for audio.</li>
+</ol>
+<hr />
+<h3 id="internationalization">Internationalization</h3>
+<ol start="372">
+<li><strong>LocalizationManager</strong> - Language manager.</li>
+<li><strong>Language</strong> - Language settings.</li>
+<li><strong>Translation</strong> - Text translation.</li>
+<li><strong>Locale</strong> - Regional settings.</li>
+<li><strong>Format</strong> - Data formatting.</li>
+<li><strong>DateTimeFormat</strong> - Time/date display.</li>
+<li><strong>CurrencyFormat</strong> - Money display.</li>
+</ol>
+<hr />
+<h3 id="design-patterns">Design Patterns</h3>
+<ol start="379">
+<li><strong>Singleton</strong> - Single-instance class.</li>
+<li><strong>Observer</strong> - Event listener pattern.</li>
+<li><strong>Factory</strong> - Object creation pattern.</li>
+<li><strong>Strategy</strong> - Interchangeable behavior.</li>
+<li><strong>Command</strong> - Encapsulated action.</li>
+<li><strong>State</strong> - State management pattern.</li>
+<li><strong>Visitor</strong> - Operation on object structure.</li>
+</ol>
+<hr />
+<h3 id="general-managers-and-systems">General Managers and Systems</h3>
+<ol start="386">
+<li><strong>GameManager</strong> - Oversees game state.</li>
+<li><strong>SceneManager</strong> - Manages scene transitions.</li>
+<li><strong>AudioManager</strong> - Controls audio.</li>
+<li><strong>InputManager</strong> - Handles input.</li>
+<li><strong>NetworkManager</strong> - Manages networking.</li>
+<li><strong>UIManager</strong> - Manages UI.</li>
+<li><strong>PhysicsManager</strong> - Oversees physics.</li>
+<li><strong>AnimationManager</strong> - Controls animations.</li>
+<li><strong>ParticleManager</strong> - Manages particles.</li>
+<li><strong>ResourceManager</strong> - Handles assets.</li>
+<li><strong>EventManager</strong> - Manages events.</li>
+<li><strong>ScriptManager</strong> - Manages scripts.</li>
+<li><strong>AIManager</strong> - Oversees AI.</li>
+<li><strong>SaveManager</strong> - Handles saving.</li>
+<li><strong>LoadManager</strong> - Handles loading.</li>
+<li><strong>DebugManager</strong> - Manages debugging.</li>
+<li><strong>ProfileManager</strong> - Manages profiling.</li>
+<li><strong>SettingsManager</strong> - Manages game settings.</li>
+</ol>
+<hr />
+<h3 id="interfaces-and-abstract-classes">Interfaces and Abstract Classes</h3>
+<ol start="404">
+<li><strong>IRenderable</strong> - Renderable object interface.</li>
+<li><strong>ICollidable</strong> - Collidable object interface.</li>
+<li><strong>IAudible</strong> - Audible object interface.</li>
+<li><strong>IUpdatable</strong> - Updatable object interface.</li>
+<li><strong>IDrawable</strong> - Drawable object interface.</li>
+<li><strong>IClickable</strong> - Clickable object interface.</li>
+<li><strong>IMovable</strong> - Movable object interface.</li>
+<li><strong>IInteractable</strong> - Interactive object interface.</li>
+<li><strong>ISerializable</strong> - Serializable object interface.</li>
+<li><strong>ICloneable</strong> - Cloneable object interface.</li>
+<li><strong>IComparable</strong> - Comparable object interface.</li>
+</ol>
+<hr />
+<h3 id="data-structures">Data Structures</h3>
+<ol start="415">
+<li><strong>Array</strong> - Basic array structure.</li>
+<li><strong>List</strong> - Dynamic list structure.</li>
+<li><strong>Map</strong> - Key-value mapping.</li>
+<li><strong>Set</strong> - Unique element collection.</li>
+<li><strong>Queue</strong> - FIFO structure.</li>
+<li><strong>Stack</strong> - LIFO structure.</li>
+<li><strong>Tree</strong> - Hierarchical structure.</li>
+<li><strong>Graph</strong> - Node-edge structure.</li>
+<li><strong>EntityList</strong> - List of entities.</li>
+<li><strong>ComponentMap</strong> - Component type mapping.</li>
+<li><strong>EventQueue</strong> - Queued events.</li>
+</ol>
+<hr />
+<h3 id="mathematical-concepts">Mathematical Concepts</h3>
+<ol start="426">
+<li><strong>Point</strong> - 2D/3D point.</li>
+<li><strong>Vector2D</strong> - 2D vector.</li>
+<li><strong>Vector3D</strong> - 3D vector.</li>
+<li><strong>Matrix2x2</strong> - 2x2 matrix.</li>
+<li><strong>Matrix3x3</strong> - 3x3 matrix.</li>
+<li><strong>Matrix4x4</strong> - 4x4 matrix.</li>
+<li><strong>Quaternion</strong> - Rotation data.</li>
+<li><strong>EulerAngles</strong> - Angle-based rotation.</li>
+<li><strong>Transform</strong> - Position/rotation/scale.</li>
+<li><strong>Rotation</strong> - Rotation component.</li>
+<li><strong>Scale</strong> - Scaling component.</li>
+<li><strong>Translation</strong> - Position component.</li>
+<li><strong>Projection</strong> - Camera projection.</li>
+<li><strong>Frustum</strong> - Viewable volume.</li>
+<li><strong>ViewVolume</strong> - Visible area.</li>
+</ol>
+<hr />
+<h3 id="time-and-timing">Time and Timing</h3>
+<ol start="441">
+<li><strong>DeltaTime</strong> - Time between frames.</li>
+<li><strong>FrameRate</strong> - Frames per second.</li>
+<li><strong>TimeScale</strong> - Game speed multiplier.</li>
+<li><strong>FixedTimestep</strong> - Fixed update interval.</li>
+<li><strong>VariableTimestep</strong> - Dynamic update interval.</li>
+</ol>
+<hr />
+<h3 id="randomness">Randomness</h3>
+<ol start="446">
+<li><strong>RandomGenerator</strong> - Random number source.</li>
+<li><strong>Seed</strong> - Random seed value.</li>
+<li><strong>Distribution</strong> - Random distribution base.</li>
+<li><strong>UniformDistribution</strong> - Even random spread.</li>
+<li><strong>NormalDistribution</strong> - Bell-curve random spread.</li>
+<li><strong>PoissonDistribution</strong> - Event frequency spread.</li>
+</ol>
+<hr />
+<h3 id="color-and-imaging">Color and Imaging</h3>
+<ol start="452">
+<li><strong>ColorRGB</strong> - RGB color model.</li>
+<li><strong>ColorRGBA</strong> - RGBA color model.</li>
+<li><strong>ColorHSV</strong> - HSV color model.</li>
+<li><strong>ColorHSL</strong> - HSL color model.</li>
+<li><strong>Palette</strong> - Color collection.</li>
+<li><strong>Gradient</strong> - Color transition.</li>
+<li><strong>Image</strong> - Base image class.</li>
+<li><strong>Pixel</strong> - Single image pixel.</li>
+<li><strong>Bitmap</strong> - Raster image.</li>
+<li><strong>VectorImage</strong> - Scalable image.</li>
+</ol>
+<hr />
+<h3 id="text-and-fonts">Text and Fonts</h3>
+<ol start="462">
+<li><strong>Font</strong> - Text typeface.</li>
+<li><strong>Glyph</strong> - Single character shape.</li>
+<li><strong>TextRenderer</strong> - Renders text.</li>
+<li><strong>String</strong> - Text data.</li>
+<li><strong>LocalizationString</strong> - Translated text.</li>
+</ol>
+<hr />
+<h3 id="geometry">Geometry</h3>
+<ol start="467">
+<li><strong>Circle</strong> - Circular shape.</li>
+<li><strong>Ellipse</strong> - Oval shape.</li>
+<li><strong>Rectangle</strong> - Rectangular shape.</li>
+<li><strong>Polygon</strong> - Multi-sided shape.</li>
+<li><strong>Polyline</strong> - Connected line segments.</li>
+<li><strong>BezierCurve</strong> - Smooth curve.</li>
+<li><strong>Spline</strong> - Interpolated curve.</li>
+</ol>
+<hr />
+<h3 id="optimization">Optimization</h3>
+<ol start="474">
+<li><strong>OcclusionCulling</strong> - Hides unseen objects.</li>
+<li><strong>FrustumCulling</strong> - Removes out-of-view objects.</li>
+<li><strong>LevelOfDetail</strong> - Detail level manager.</li>
+<li><strong>BatchRendering</strong> - Groups render calls.</li>
+<li><strong>Instancing</strong> - Efficient object rendering.</li>
+<li><strong>GPUInstancing</strong> - GPU-based instancing.</li>
+<li><strong>CPUInstancing</strong> - CPU-based instancing.</li>
+</ol>
+<hr />
+<h3 id="testing-and-qa">Testing and QA</h3>
+<ol start="481">
+<li><strong>TestFramework</strong> - Testing system.</li>
+<li><strong>MockObject</strong> - Simulated object for tests.</li>
+<li><strong>Stub</strong> - Placeholder functionality.</li>
+<li><strong>Spy</strong> - Monitors interactions.</li>
+<li><strong>TestCase</strong> - Single test scenario.</li>
+<li><strong>TestSuite</strong> - Group of tests.</li>
+</ol>
+<hr />
+<h3 id="versioning">Versioning</h3>
+<ol start="487">
+<li><strong>VersionNumber</strong> - Software version.</li>
+<li><strong>BuildNumber</strong> - Build identifier.</li>
+<li><strong>Revision</strong> - Version revision.</li>
+<li><strong>Branch</strong> - Development branch.</li>
+<li><strong>Tag</strong> - Version marker.</li>
+</ol>
+<hr />
+<h3 id="licensing">Licensing</h3>
+<ol start="492">
+<li><strong>LicenseKey</strong> - Activation key.</li>
+<li><strong>Validation</strong> - License check.</li>
+</ol>
+<hr />
+<h3 id="additional-game-mechanics">Additional Game Mechanics</h3>
+<ol start="494">
+<li><strong>StatusEffect</strong> - Temporary character condition.</li>
+<li><strong>DialogueNode</strong> - Conversation tree node.</li>
+<li><strong>Objective</strong> - Quest goal.</li>
+<li><strong>Reward</strong> - Quest completion prize.</li>
+<li><strong>Equipment</strong> - Equippable item slot.</li>
+<li><strong>Path</strong> - Movement route.</li>
+<li><strong>Navigator</strong> - Pathfinding guide.</li>
+</ol>
+<p>(Due to technical issues, the search service is temporarily unavailable.)</p>
+<p>Here’s a <strong>comprehensive list of over 500 game engine class/struct/trait names</strong>, organized by category for clarity. These cover core systems, rendering, physics, gameplay, and genre-specific features (ARPG, Roguelike, Metroidvania):</p>
+<hr />
+<h3 id="core-engine-systems"><strong>Core Engine Systems</strong></h3>
+<ol>
+<li><code>Application</code></li>
+<li><code>GameInstance</code></li>
+<li><code>EngineConfig</code></li>
+<li><code>Logger</code></li>
+<li><code>Profiler</code></li>
+<li><code>AssetManager</code></li>
+<li><code>ResourceLoader</code></li>
+<li><code>FileSystem</code></li>
+<li><code>Time</code> (handles delta time, scaling)</li>
+<li><code>SceneManager</code></li>
+<li><code>GameState</code></li>
+<li><code>ObjectPool</code></li>
+<li><code>EventSystem</code></li>
+<li><code>Settings</code> (graphics, audio, input)</li>
+<li><code>Platform</code> (abstracts OS interactions)</li>
+<li><code>MemoryManager</code></li>
+<li><code>TaskScheduler</code></li>
+<li><code>ModuleManager</code></li>
+<li><code>PluginSystem</code></li>
+<li><code>DebugDraw</code></li>
+<li><code>Localization</code></li>
+<li><code>BuildSystem</code></li>
+<li><code>PerformanceMonitor</code></li>
+</ol>
+<hr />
+<h3 id="entity-component-system-ecs-1"><strong>Entity Component System (ECS)</strong></h3>
+<ol start="24">
+<li><code>Entity</code></li>
+<li><code>Component</code></li>
+<li><code>System</code></li>
+<li><code>EntityManager</code></li>
+<li><code>ComponentPool</code></li>
+<li><code>TransformComponent</code></li>
+<li><code>SpriteComponent</code></li>
+<li><code>PhysicsComponent</code></li>
+<li><code>ScriptComponent</code></li>
+<li><code>CameraComponent</code></li>
+<li><code>LightComponent</code></li>
+<li><code>AudioComponent</code></li>
+<li><code>UIComponent</code></li>
+<li><code>AnimationComponent</code></li>
+<li><code>ColliderComponent</code></li>
+<li><code>InventoryComponent</code></li>
+<li><code>HealthComponent</code></li>
+<li><code>StatusEffectComponent</code></li>
+<li><code>AIComponent</code></li>
+<li><code>NetworkComponent</code></li>
+</ol>
+<hr />
+<h3 id="rendering-1"><strong>Rendering</strong></h3>
+<ol start="44">
+<li><code>Renderer</code></li>
+<li><code>Camera</code></li>
+<li><code>Shader</code></li>
+<li><code>Texture</code></li>
+<li><code>Material</code></li>
+<li><code>Mesh</code></li>
+<li><code>VertexBuffer</code></li>
+<li><code>IndexBuffer</code></li>
+<li><code>Framebuffer</code></li>
+<li><code>RenderTarget</code></li>
+<li><code>Viewport</code></li>
+<li><code>GraphicsAPI</code> (abstracts DirectX/Vulkan/OpenGL)</li>
+<li><code>BlendMode</code></li>
+<li><code>DepthStencil</code></li>
+<li><code>SpriteBatch</code></li>
+<li><code>DeferredRenderer</code></li>
+<li><code>PostProcess</code> (bloom, AA, etc.)</li>
+<li><code>Skybox</code></li>
+<li><code>ParticleRenderer</code></li>
+<li><code>LineRenderer</code></li>
+<li><code>FontAtlas</code></li>
+<li><code>RenderPipeline</code></li>
+<li><code>Model</code> (3D asset)</li>
+<li><code>SkinnedMesh</code></li>
+<li><code>LODGroup</code> (Level of Detail)</li>
+</ol>
+<hr />
+<h3 id="physics-collision"><strong>Physics &amp; Collision</strong></h3>
+<ol start="69">
+<li><code>PhysicsWorld</code></li>
+<li><code>RigidBody</code></li>
+<li><code>Collider</code></li>
+<li><code>BoxCollider</code></li>
+<li><code>SphereCollider</code></li>
+<li><code>CapsuleCollider</code></li>
+<li><code>RaycastHit</code></li>
+<li><code>PhysicsMaterial</code></li>
+<li><code>Joint</code></li>
+<li><code>CharacterController</code></li>
+<li><code>TriggerVolume</code></li>
+<li><code>PhysicsDebugDraw</code></li>
+<li><code>VehiclePhysics</code></li>
+<li><code>Ragdoll</code></li>
+</ol>
+<hr />
+<h3 id="input-handling"><strong>Input Handling</strong></h3>
+<ol start="83">
+<li><code>InputManager</code></li>
+<li><code>InputAction</code></li>
+<li><code>Keyboard</code></li>
+<li><code>Mouse</code></li>
+<li><code>Gamepad</code></li>
+<li><code>TouchInput</code></li>
+<li><code>InputEvent</code></li>
+<li><code>GestureRecognizer</code></li>
+<li><code>InputRebinding</code></li>
+</ol>
+<hr />
+<h3 id="audio-1"><strong>Audio</strong></h3>
+<ol start="92">
+<li><code>AudioManager</code></li>
+<li><code>Sound</code></li>
+<li><code>Music</code></li>
+<li><code>AudioSource</code></li>
+<li><code>AudioListener</code></li>
+<li><code>AudioMixer</code></li>
+<li><code>SpatialAudio</code></li>
+<li><code>VoiceChat</code></li>
+</ol>
+<hr />
+<h3 id="ui-system"><strong>UI System</strong></h3>
+<ol start="100">
+<li><code>UIManager</code></li>
+<li><code>Widget</code></li>
+<li><code>Button</code></li>
+<li><code>Panel</code></li>
+<li><code>TextLabel</code></li>
+<li><code>Slider</code></li>
+<li><code>Canvas</code></li>
+<li><code>HUD</code></li>
+<li><code>InventoryUI</code></li>
+<li><code>DialogueBox</code></li>
+<li><code>Minimap</code></li>
+<li><code>Tooltip</code></li>
+</ol>
+<hr />
+<h3 id="animation-1"><strong>Animation</strong></h3>
+<ol start="112">
+<li><code>Animation</code></li>
+<li><code>Animator</code></li>
+<li><code>AnimationClip</code></li>
+<li><code>Bone</code></li>
+<li><code>Skeleton</code></li>
+<li><code>BlendTree</code></li>
+<li><code>IKController</code> (Inverse Kinematics)</li>
+<li><code>SpriteAnimation</code></li>
+</ol>
+<hr />
+<h3 id="ai-pathfinding"><strong>AI &amp; Pathfinding</strong></h3>
+<ol start="120">
+<li><code>AIAgent</code></li>
+<li><code>BehaviorTree</code></li>
+<li><code>Blackboard</code></li>
+<li><code>Pathfinding</code></li>
+<li><code>NavMesh</code></li>
+<li><code>SteeringBehavior</code></li>
+<li><code>FSM</code> (Finite State Machine)</li>
+<li><code>UtilityAI</code></li>
+</ol>
+<hr />
+<h3 id="networking-1"><strong>Networking</strong></h3>
+<ol start="128">
+<li><code>NetworkManager</code></li>
+<li><code>Packet</code></li>
+<li><code>Client</code></li>
+<li><code>Server</code></li>
+<li><code>RPC</code> (Remote Procedure Call)</li>
+<li><code>NetworkTransform</code></li>
+<li><code>Replication</code></li>
+<li><code>LagCompensation</code></li>
+</ol>
+<hr />
+<h3 id="scripting-1"><strong>Scripting</strong></h3>
+<ol start="136">
+<li><code>ScriptEngine</code></li>
+<li><code>LuaScript</code></li>
+<li><code>ScriptInstance</code></li>
+<li><code>HotReload</code></li>
+<li><code>ScriptBinding</code></li>
+</ol>
+<hr />
+<h3 id="gameplay-systems"><strong>Gameplay Systems</strong></h3>
+<ol start="141">
+<li><code>GameMode</code></li>
+<li><code>PlayerController</code></li>
+<li><code>Character</code></li>
+<li><code>Inventory</code></li>
+<li><code>Item</code> (weapons, armor, consumables)</li>
+<li><code>Quest</code></li>
+<li><code>DialogueSystem</code></li>
+<li><code>Level</code></li>
+<li><code>SpawnPoint</code></li>
+<li><code>TriggerZone</code></li>
+<li><code>LootTable</code></li>
+<li><code>Crafting</code></li>
+<li><code>SkillTree</code></li>
+<li><code>Attribute</code> (STR, DEX, etc.)</li>
+<li><code>SaveSystem</code></li>
+<li><code>Achievement</code></li>
+<li><code>Cutscene</code></li>
+<li><code>Projectile</code></li>
+<li><code>Ability</code></li>
+<li><code>Cooldown</code></li>
+</ol>
+<hr />
+<h3 id="math-data-structures"><strong>Math &amp; Data Structures</strong></h3>
+<ol start="161">
+<li><code>Vector2</code>/<code>Vector3</code>/<code>Vector4</code></li>
+<li><code>Matrix4</code></li>
+<li><code>Quaternion</code></li>
+<li><code>Transform</code> (position, rotation, scale)</li>
+<li><code>Bounds</code></li>
+<li><code>Ray</code></li>
+<li><code>Color</code></li>
+<li><code>Random</code> (RNG utilities)</li>
+<li><code>Curve</code> (animation/easing)</li>
+<li><code>Grid</code> (tilemaps, pathfinding)</li>
+<li><code>Graph</code> (nodes for AI)</li>
+<li><code>SerializedObject</code> (save/load)</li>
+</ol>
+<hr />
+<h3 id="utilities"><strong>Utilities</strong></h3>
+<ol start="173">
+<li><code>Singleton</code></li>
+<li><code>Factory</code></li>
+<li><code>EventDispatcher</code></li>
+<li><code>StateMachine</code></li>
+<li><code>Timer</code></li>
+<li><code>Coroutine</code></li>
+<li><code>Command</code> (undo/redo)</li>
+<li><code>JSONParser</code></li>
+</ol>
+<hr />
+<h3 id="arpg-specific"><strong>ARPG-Specific</strong></h3>
+<ol start="181">
+<li><code>LootGenerator</code></li>
+<li><code>ItemRarity</code> (common, epic, legendary)</li>
+<li><code>Affix</code> (item modifiers)</li>
+<li><code>SkillTree</code></li>
+<li><code>Talent</code></li>
+<li><code>ClassSystem</code> (warrior, mage)</li>
+<li><code>StatusResistance</code></li>
+<li><code>Relic</code> (equippable power-ups)</li>
+</ol>
+<hr />
+<h3 id="roguelike-specific"><strong>Roguelike-Specific</strong></h3>
+<ol start="189">
+<li><code>ProceduralLevel</code></li>
+<li><code>DungeonGenerator</code></li>
+<li><code>Permadeath</code></li>
+<li><code>RunHistory</code></li>
+<li><code>Seed</code> (procedural generation)</li>
+<li><code>Biome</code> (forest, dungeon)</li>
+<li><code>FogOfWar</code></li>
+<li><code>RiskReward</code> (gameplay choice)</li>
+</ol>
+<hr />
+<h3 id="metroidvania-specific"><strong>Metroidvania-Specific</strong></h3>
+<ol start="197">
+<li><code>MapRevealer</code></li>
+<li><code>AbilityGate</code> (locked by upgrades)</li>
+<li><code>DoubleJump</code></li>
+<li><code>Grapple</code></li>
+<li><code>MorphBall</code></li>
+<li><code>SaveStation</code></li>
+<li><code>Backtracking</code> (revisit areas)</li>
+<li><code>BossDoor</code></li>
+<li><code>ElementalWeakness</code></li>
+</ol>
+<hr />
+<h3 id="advanced-systems"><strong>Advanced Systems</strong></h3>
+<ol start="206">
+<li><code>WeatherSystem</code> (rain, snow)</li>
+<li><code>TimeOfDay</code> (day/night cycle)</li>
+<li><code>Destructible</code> (breakable objects)</li>
+<li><code>StealthVisibility</code></li>
+<li><code>DynamicEvent</code> (random encounters)</li>
+<li><code>ModSupport</code> (user-generated content)</li>
+<li><code>LevelEditor</code></li>
+</ol>
+<hr />
+<h3 id="physics-add-ons"><strong>Physics Add-Ons</strong></h3>
+<ol start="213">
+<li><code>Buoyancy</code></li>
+<li><code>ClothSimulation</code></li>
+<li><code>SoftBody</code></li>
+</ol>
+<hr />
+<h3 id="ui-extensions"><strong>UI Extensions</strong></h3>
+<ol start="216">
+<li><code>DragDrop</code></li>
+<li><code>InventoryTooltip</code></li>
+<li><code>RadialMenu</code></li>
+<li><code>DialogueChoice</code></li>
+</ol>
+<hr />
+<h3 id="ai-extensions"><strong>AI Extensions</strong></h3>
+<ol start="220">
+<li><code>Flocking</code> (group movement)</li>
+<li><code>ThreatAssessment</code></li>
+<li><code>InfluenceMap</code></li>
+</ol>
+<hr />
+<h3 id="networking-extensions"><strong>Networking Extensions</strong></h3>
+<ol start="223">
+<li><code>SnapshotInterpolation</code></li>
+<li><code>CheatDetection</code></li>
+<li><code>VoiceData</code></li>
+</ol>
+<hr />
+<h3 id="scripting-extensions"><strong>Scripting Extensions</strong></h3>
+<ol start="226">
+<li><code>ScriptedEvent</code></li>
+<li><code>ConditionalTrigger</code></li>
+</ol>
+<hr />
+<h3 id="genre-blended-systems"><strong>Genre-Blended Systems</strong></h3>
+<ol start="228">
+<li><code>CraftingMaterial</code></li>
+<li><code>Alchemy</code> (potion brewing)</li>
+<li><code>Shrine</code> (buff/debuff zones)</li>
+<li><code>EnvironmentalHazard</code> (lava, traps)</li>
+<li><code>PuzzleLock</code> (color-coded, sequence-based)</li>
+</ol>
+<hr />
+<h3 id="low-level-optimizations"><strong>Low-Level Optimizations</strong></h3>
+<ol start="233">
+<li><code>SpatialPartition</code> (quadtree, octree)</li>
+<li><code>BatchRenderer</code></li>
+<li><code>MemoryPool</code></li>
+</ol>
+<hr />
+<p>Core: Application, GameInstance, EngineConfig, Logger, AssetManager,
+ResourceLoader, FileSystem, Time, SceneManager, GameState, ObjectPool,
+EventSystem, Settings, Platform, MemoryManager, TaskScheduler, ThreadPool,
+ModuleManager, PluginSystem, VersionControl, DebugDraw, CrashReporter,
+CommandLineParser, Localization, ProjectSettings, BuildSystem, UpdateLoop,
+FrameStats, PerformanceMonitor.</p>
+<p>ECS: Entity, Component, System, EntityManager, ComponentPool,
+TransformComponent, SpriteComponent, PhysicsComponent, ScriptComponent,
+TagComponent, HierarchyComponent, CameraComponent, LightComponent,
+AudioComponent, UIComponent, AnimationComponent, ParticleComponent,
+ColliderComponent, RigidBodyComponent, NavMeshAgentComponent,
+InventoryComponent, HealthComponent, StatusEffectComponent, WeaponComponent,
+AIComponent, NetworkComponent, TerrainComponent, VehicleComponent,
+PathfindingComponent, CharacterControllerComponent.</p>
+<p>Rendering: Renderer, Camera, Shader, Texture, Material, Mesh, VertexBuffer,
+IndexBuffer, RenderPass, Framebuffer, RenderTarget, Viewport, GraphicsAPI,
+RenderState, BlendMode, DepthStencil, Rasterizer, VertexArray, UniformBuffer,
+ComputeShader, SpriteBatch, DeferredRenderer, ForwardRenderer, PostProcess,
+Skybox, Cubemap, Lightmap, ShadowMap, ParticleRenderer, LineRenderer,
+TextRenderer, FontAtlas, GPUTimer, RenderPipeline, ShaderCompiler, TextureAtlas,
+MaterialInstance, SubMesh, Model, SkinnedMesh, LODGroup, OcclusionCuller.</p>
+<p>Physics: PhysicsWorld, RigidBody, Collider, BoxCollider, SphereCollider,
+CapsuleCollider, MeshCollider, CompoundCollider, PhysicsMaterial, RaycastHit,
+SweepResult, OverlapResult, Joint, HingeJoint, SpringJoint, FixedJoint,
+CharacterController, PhysicsSimulation, CollisionLayer, TriggerVolume,
+PhysicsShape, CollisionEvent, PhysicsSolver, ContactPoint, GravityArea,
+ForceField, PhysicsDebugDraw, VehiclePhysics, Ragdoll, Raycaster,
+CollisionGroup.</p>
+<p>Input: InputManager, InputAction, InputMapping, Keyboard, Mouse, Gamepad,
+TouchInput, InputEvent, InputAxis, InputButton, InputState, GestureRecognizer,
+InputHandler, InputContext, ActionMap, Joystick, InputQueue, InputBinding,
+InputDevice, InputSource, InputProcessor, VirtualButton, InputRebinding,
+InputFeedback, MotionSensor, Gyroscope, Accelerometer.</p>
+<p>Audio: AudioManager, Sound, Music, AudioSource, AudioListener, AudioClip,
+AudioBuffer, AudioEffect, ReverbEffect, EchoEffect, AudioMixer, SoundInstance,
+AudioGroup, SpatialAudio, AudioParameter, AudioEvent, AudioLoader, VoiceChat,
+Microphone, AudioStream, Playlist, AudioPriority, AudioFade, AudioEnvelope,
+AudioFilter, AudioAnalyzer, SoundBank, AudioResource, AudioUtils.</p>
+<p>UI: UIManager, Widget, Button, Panel, TextLabel, Slider, Checkbox, RadioButton,
+Dropdown, ScrollView, ProgressBar, Image, Canvas, Layout, GridLayout,
+StackLayout, UIStyle, Font, Cursor, Tooltip, ModalWindow, HUD, InventoryUI,
+DialogueBox, HealthBar, Minimap, Scoreboard, MenuSystem, UIAnimation, UIMask,
+UIInputField, UIEffect, UIDataBinding, UILocalization, UINavigation, UIEvents,
+UIRenderer, UITheme, UIState.</p>
+<p>Animation: Animation, Animator, AnimationClip, AnimationState, AnimationLayer,
+AnimationEvent, Bone, Skeleton, Skinning, Keyframe, Curve, BlendTree,
+StateMachine, Transition, IKController, Rig, Pose, AnimationBlendSpace,
+AnimationController, SpriteAnimation, FrameAnimation, SkeletalMesh, MorphTarget,
+AnimationGraph, AnimationNode, Timeline, AnimationSequence, AnimationBlendMode,
+AnimationExport, Retargeting.</p>
+<p>AI: AIAgent, BehaviorTree, Blackboard, AINode, Selector, Sequence, Decorator,
+ActionNode, ConditionNode, UtilityAI, Goal, Sensor, Memory, Pathfinding,
+NavMesh, NavMeshAgent, Waypoint, PatrolRoute, SteeringBehavior, Seek, Flee,
+Pursue, Evade, Wander, ObstacleAvoidance, Flocking, DecisionMaking, FSM, State,
+Transition, AIUtility, TargetAcquisition, ThreatAssessment, InfluenceMap,
+AIAnimation, AICommunication, AISpawner, AIStats.</p>
+<p>Networking: NetworkManager, Packet, Client, Server, Connection, RPC,
+NetworkTransform, SyncVar, NetworkIdentity, Replication, Session, Lobby,
+Matchmaking, Ping, Latency, Bandwidth, Serialization, Deserialization,
+NetworkEvent, Peer, Host, NATPunchthrough, NetworkDiscovery, Channel,
+ReliablePacket, UnreliablePacket, VoiceData, NetworkAnimator, NetworkObject,
+NetworkScene, Authority, Ownership, Snapshot, Interpolation, Prediction,
+LagCompensation, CheatDetection, NetworkStats, Protocol, Handshake.</p>
+<p>Scripting: ScriptEngine, LuaScript, PythonScript, ScriptComponent,
+ScriptInstance, ScriptClass, ScriptFunction, ScriptBinding, ScriptEvent,
+ScriptVariable, Debugger, HotReload, ScriptAsset, Module, API, ExposeMethod,
+ExposeProperty, Coroutine, ScriptThread, ScriptContext, ScriptResource,
+ScriptLoader, TypeBinding, ScriptError, ScriptProfiler, ScriptConsole,
+ScriptDocumentation, ScriptTemplate, PluginScript, GameScript, EntityScript,
+SystemScript, UIscript.</p>
+<p>Gameplay: GameMode, PlayerController, Character, Pawn, Inventory, Item, Weapon,
+Armor, Consumable, Quest, QuestLog, Objective, Reward, DialogueSystem, NPC,
+Merchant, Faction, Reputation, Level, World, Chunk, SpawnPoint, Checkpoint,
+TriggerZone, Interactable, LootTable, DropRate, Crafting, Recipe, Skill, Talent,
+Perk, Attribute, Stat, Experience, Leveling, Health, Mana, Stamina,
+StatusEffect, Buff, Debuff, Respawn, SaveSystem, LoadSystem, GameRules,
+VictoryCondition, Achievement, Leaderboard, Tutorial, Cutscene,
+CameraController, Projectile, MeleeAttack, Spell, Ability, Cooldown, Charge,
+Combo, Parry, Block, Dodge, Stealth, Detection, Patrol, Aggro, LootSystem,
+Trading, Barter, Economy, Shop, Vendor, AuctionHouse, Guild, Party, Group, Raid,
+PvP, PvE, Difficulty, Scaling, DynamicEvent, Weather, TimeOfDay, Season,
+TerrainModifier, Destructible, PhysicsObject, Vehicle, Mount, Pet, Companion,
+Summon, Trap, Puzzle, Lock, Key, Door, Portal, Teleporter, Elevator, Platform,
+MovingObject, Rotator, TimerSwitch, PressurePlate, LightPuzzle, ColorCode,
+SequenceMatcher, CodeLock, Hacking, RhythmMiniGame, QuickTimeEvent.</p>
+<p>Math &amp; Data: Vector2, Vector3, Vector4, Matrix3, Matrix4, Quaternion, Transform,
+Bounds, Rect, Plane, Ray, Sphere, AABB, OBB, Frustum, Color, Gradient, Curve,
+Noise, Random, Mathf, Geometry, Intersection, Collision, Easing, Interpolation,
+Bezier, Spline, CatmullRom, Hash, Grid, GridCell, Octree, Quadtree, BVH, KDTree,
+SpatialPartition, Graph, Node, Edge, WeightedGraph, PriorityQueue, Heap, Stack,
+Queue, LinkedList, Dictionary, Set, Bitmask, BitField, EnumFlags,
+SerializedObject, JSON, XML, BinaryFormatter, DataBuffer, Compression,
+Encryption, Checksum, GUID, UUID, Variant, AnyType, TypeInfo, RTTI, Reflection,
+MetaData, Field, Property, Method, Attribute.</p>
+<p>Utilities: Singleton, Factory, ObjectPool, EventDispatcher, StateMachine, Timer,
+Coroutine, Observer, Command, UndoRedo, Plugin, Module, ServiceLocator,
+DependencyInjector, Config, Settings, INIReader, CSVReader, XMLParser,
+JSONParser, Logger, Debug, Assert, Profiler, Benchmark, UnitTest, TestCase,
+Mock, Stub, Fixture, Editor, Inspector, Hierarchy, ProjectExplorer, Console,
+Terminal, Clipboard, UndoHistory, RedoHistory, Macro, Shortcut, Toolbar, Menu,
+Dialog, Wizard, Importer, Exporter, Converter, BatchProcessor, Scheduler, Cron,
+Timeout, Interval, Delay, Throttle, Debounce, Cache, LRUCache, FIFOCache,
+PriorityCache, Memoization, Flyweight, Adapter, Decorator, Composite, Visitor,
+Strategy, ChainOfResponsibility, Mediator, Memento, Prototype, Proxy, Bridge,
+Facade, Flyweight, State, TemplateMethod, Iterator, Observer, Command,
+Interpreter.</p>
+<p>Genre-Specific (ARPG/Roguelike/Metroidvania): LootGenerator, ItemRarity, Affix,
+Socket, Gem, Enchantment, Rune, SkillTree, TalentTree, ClassSystem, Progression,
+Permadeath, RunHistory, Seed, ProceduralLevel, RoomTemplate, Corridor,
+DungeonLayout, Biome, TileSet, TileMap, FogOfWar, MapReveal, AbilityGate,
+PowerUp, MetroidAbility, DoubleJump, Dash, Grapple, MorphBall, Bomb, EnergyTank,
+SaveStation, MapStation, TeleporterNode, SequenceBreak, Backtracking,
+EnemyRespawn, RoomLock, BossDoor, SwitchPuzzle, ColorDoor, ElementalWeakness,
+StatusResistance, CraftingMaterial, Alchemy, Potion, Scroll, RuneStone, Relic,
+Artifact, Shrine, Altar, Blessing, Curse, ShopsRandom, MerchantInventory,
+MysteryItem, RiskReward, ScoreMultiplier, ComboMeter, Heat, ThreatLevel,
+StealthVisibility, NoiseLevel, PatrolPath, SecretArea, LoreNote, Codex,
+Bestiary, MapMarker, QuestArrow, HintSystem, EnvironmentalHazard, Trapdoor,
+SpikeTrap, PoisonGas, MovingBlade, FallingRock, Lava, WaterCurrent, WindTunnel,
+IcePhysics, SlipperySurface, ConveyorBelt, MagneticField, LightBeam,
+MirrorPuzzle, WeightedButton, TimedDoor, PressureSensitive, VoiceCommand,
+GestureControl, MotionControl, VRIntegration, ARSupport, CrossPlatformSave,
+CloudSync, ModSupport, WorkshopIntegration, UserGeneratedContent, LevelEditor,
+ScriptingAPI, PluginSDK.</p>
+</div>
+
+    <div class="post-navigation">
+      
+
+      
+    </div>
+  </article>
+</main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 AI Code Guidebook</p>
+      </div>
+    </footer>
+  </body>
+</html>

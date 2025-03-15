@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>AI Code Guidebook - productivity</title>
+    <subtitle>A comprehensive guide to AI-powered code development</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://jingchan.github.io/ai-code-guidebook/tags/productivity/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-03-11T00:00:00+00:00</updated>
+    <id>https://jingchan.github.io/ai-code-guidebook/tags/productivity/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Getting Started with AI-Assisted Coding</title>
+        <published>2024-03-11T00:00:00+00:00</published>
+        <updated>2024-03-11T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook/blog/first-post/"/>
+        <id>https://jingchan.github.io/ai-code-guidebook/blog/first-post/</id>
+        
+        <content type="html" xml:base="https://jingchan.github.io/ai-code-guidebook/blog/first-post/">&lt;h1 id=&quot;getting-started-with-ai-assisted-coding&quot;&gt;Getting Started with AI-Assisted Coding&lt;&#x2F;h1&gt;
+&lt;p&gt;Artificial intelligence is transforming how developers write code. From
+intelligent code completion to automated refactoring, AI tools are becoming an
+essential part of the modern developer’s toolkit.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;benefits-of-ai-assisted-coding&quot;&gt;Benefits of AI-Assisted Coding&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Increased productivity&lt;&#x2F;strong&gt;: AI can help you write code faster by suggesting
+completions and generating boilerplate code.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Reduced errors&lt;&#x2F;strong&gt;: AI can catch potential bugs and suggest fixes before you
+even run your code.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Learning new languages&lt;&#x2F;strong&gt;: AI can help you learn new programming languages by
+providing context-aware suggestions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;popular-ai-coding-tools&quot;&gt;Popular AI Coding Tools&lt;&#x2F;h2&gt;
+&lt;p&gt;Here are some popular AI-assisted coding tools that you might want to try:&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;GitHub Copilot&lt;&#x2F;strong&gt;: An AI pair programmer that suggests code completions
+based on context.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tabnine&lt;&#x2F;strong&gt;: An AI code completion tool that works with multiple languages
+and IDEs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Kite&lt;&#x2F;strong&gt;: An AI coding assistant that provides intelligent code completions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;pre data-lang=&quot;python&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-python &quot;&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;# Example of AI-assisted coding
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;def &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;calculate_fibonacci&lt;&#x2F;span&gt;&lt;span&gt;(n):
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;    Calculate the nth Fibonacci number.
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;    Args:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;        n: The position in the Fibonacci sequence
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;    Returns:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;        The nth Fibonacci number
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;    &amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span&gt;n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;&amp;lt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;0
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;elif &lt;&#x2F;span&gt;&lt;span&gt;n &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;== &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;else&lt;&#x2F;span&gt;&lt;span&gt;:
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;return &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;calculate_fibonacci&lt;&#x2F;span&gt;&lt;span&gt;(n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;calculate_fibonacci&lt;&#x2F;span&gt;&lt;span&gt;(n&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;getting-started&quot;&gt;Getting Started&lt;&#x2F;h2&gt;
+&lt;p&gt;To get started with AI-assisted coding, choose a tool that integrates with your
+preferred IDE and programming languages. Most tools offer free tiers that allow
+you to experience the benefits before committing to a paid plan.&lt;&#x2F;p&gt;
+&lt;p&gt;Remember that AI tools are meant to assist, not replace, human developers. They
+work best when used as part of a thoughtful development process that includes
+planning, testing, and code review.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

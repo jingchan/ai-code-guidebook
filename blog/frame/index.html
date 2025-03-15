@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detailed granularity of steps in a frame update. - AI Code Guidebook</title>
+    <meta
+      name="description"
+      content=""
+    />
+    <link rel="stylesheet" href="https://jingchan.github.io/ai-code-guidebook/css/main.css" />
+    
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="https:&#x2F;&#x2F;jingchan.github.io&#x2F;ai-code-guidebook" class="site-title"
+          >AI Code Guidebook</a
+        >
+        <div class="nav-links">
+          <a href="https://jingchan.github.io/ai-code-guidebook/blog">Blog</a>
+          <a href="https://github.com/jinghcan/ai-code-guidebook">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Detailed granularity of steps in a frame update.</h1>
+      <div class="post-meta">
+        <div class="post-meta-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <time datetime="2025-03-12"
+            >March 12, 2025</time
+          >
+        </div>
+        
+          <div class="post-meta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+              ></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+
+            <div class="post-tags">
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/prompt/"
+                  class="post-tag"
+                  >#prompt</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/list/"
+                  class="post-tag"
+                  >#list</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/frame/"
+                  class="post-tag"
+                  >#frame</a
+                >
+              
+            </div>
+          </div>
+        
+      </div>
+    </header>
+
+    <div class="post-content"><h1 id="detailed-todo-for-a-frame-update">Detailed todo for a frame update.</h1>
+<p><strong>Frame Start &amp; Input:</strong></p>
+<ol>
+<li><strong>Frame Start Marker (CPU):</strong> Begin CPU-side frame timing.</li>
+<li><strong>GPU Frame Start Marker (If Applicable):</strong> Begin GPU-side frame timing.</li>
+<li><strong>Input Device Polling (Keyboard):</strong> Poll keyboard input.</li>
+<li><strong>Input Device Polling (Mouse):</strong> Poll mouse input.</li>
+<li><strong>Input Device Polling (Gamepad 1):</strong> Poll gamepad 1 input.</li>
+<li><strong>Input Device Polling (Gamepad N):</strong> Poll gamepad N input.</li>
+<li><strong>Input Device Filtering (Debouncing):</strong> Apply debouncing to input signals.</li>
+<li><strong>Input Device Filtering (Smoothing):</strong> Apply smoothing to analog input.</li>
+<li><strong>Input Buffering (Raw Keyboard):</strong> Store raw keyboard input.</li>
+<li><strong>Input Buffering (Raw Mouse):</strong> Store raw mouse input.</li>
+<li><strong>Input Buffering (Raw Gamepad):</strong> Store raw gamepad input.</li>
+<li><strong>Input Translation (Key Bindings):</strong> Translate raw keys to game actions.</li>
+<li><strong>Input Translation (Mouse Movement):</strong> Translate mouse movement to
+camera/player movement.</li>
+<li><strong>Input Translation (Gamepad Axis):</strong> Translate gamepad axis to
+movement/actions.</li>
+<li><strong>Input Queueing (Action Events):</strong> Queue game action events.</li>
+<li><strong>Input Queueing (Movement Vectors):</strong> Queue movement vectors.</li>
+<li><strong>Input Queueing (UI Actions):</strong> Queue UI interaction events.</li>
+<li><strong>Game State Pre-Update (Timers):</strong> Update game timers.</li>
+<li><strong>Game State Pre-Update (Variables):</strong> Update pre-frame game variables.</li>
+<li><strong>AI Decision Making (Context Gathering):</strong> Gather game state context for
+AI.</li>
+<li><strong>AI Decision Making (Behavior Tree Evaluation):</strong> Evaluate AI behavior
+trees.</li>
+<li><strong>AI Decision Making (Pathfinding):</strong> Perform pathfinding if necessary.</li>
+<li><strong>AI Decision Making (Action Selection):</strong> Select actions based on AI logic.</li>
+<li><strong>Animation State Update (Transition Logic):</strong> Evaluate animation transition
+logic.</li>
+<li><strong>Animation State Update (Parameter Updates):</strong> Update animation parameters.</li>
+<li><strong>Game Logic Update (General Scripts):</strong> Execute general game scripts.</li>
+<li><strong>Game Logic Update (Entity Scripts):</strong> Execute entity-specific scripts.</li>
+<li><strong>Game Logic Update (System Logic):</strong> Execute game system logic.</li>
+<li><strong>Event Queue Processing (Game Events):</strong> Process game events.</li>
+<li><strong>Event Queue Processing (UI Events):</strong> Process UI events.</li>
+<li><strong>Broadphase Collision Detection (Spatial Partition Query):</strong> Query spatial
+partitioning for potential collisions.</li>
+<li><strong>Broadphase Collision Detection (Bounding Box Checks):</strong> Perform initial
+bounding box collision checks.</li>
+<li><strong>Spatial Partitioning Update (Dynamic Objects):</strong> Update spatial
+partitioning for dynamic objects.</li>
+<li><strong>Potential Collision Pair Filtering (Distance Checks):</strong> Filter potential
+collision pairs based on distance.</li>
+<li><strong>Potential Collision Pair Filtering (Layer Masks):</strong> Filter potential
+collision pairs based on layer masks.</li>
+<li><strong>Narrowphase Collision Detection (Precise Shape Checks):</strong> Perform precise
+collision checks using shapes.</li>
+<li><strong>Narrowphase Collision Detection (Contact Point Generation):</strong> Generate
+contact points and normals.</li>
+<li><strong>Collision Response (Impulse Resolution):</strong> Apply impulse-based collision
+resolution.</li>
+<li><strong>Collision Response (Friction Application):</strong> Apply friction forces.</li>
+<li><strong>Physics Simulation (Force Accumulation):</strong> Accumulate forces on physics
+bodies.</li>
+<li><strong>Physics Simulation (Integration - Velocity):</strong> Integrate velocities using
+accumulated forces.</li>
+<li><strong>Physics Simulation (Integration - Position):</strong> Integrate positions using
+velocities.</li>
+<li><strong>Physics State Update (Velocity Clamping):</strong> Clamp velocities to limits.</li>
+<li><strong>Physics State Update (Angular Velocity):</strong> Update angular velocities.</li>
+<li><strong>Game State Update (Movement Application):</strong> Apply physics results to
+entity positions.</li>
+<li><strong>Game State Update (Rotation Application):</strong> Apply physics results to
+entity rotations.</li>
+<li><strong>Game State Update (Scale Application):</strong> Apply physics results to entity
+scales.</li>
+<li><strong>Animation Blending/Interpolation (Linear Interpolation):</strong> Perform linear
+interpolation between animation states.</li>
+<li><strong>Animation Blending/Interpolation (Spherical Linear Interpolation):</strong>
+Perform spherical linear interpolation for rotations.</li>
+<li><strong>Animation Application (Bone Transformations):</strong> Apply animation
+transformations to bone hierarchies.</li>
+</ol>
+<p><strong>Rendering Preparation &amp; Rendering:</strong></p>
+<ol start="51">
+<li><strong>Game State Post-Update (Post-Physics Logic):</strong> Execute post-physics game
+logic.</li>
+<li><strong>Visibility Culling (Camera Frustum Culling):</strong> Perform camera frustum
+culling.</li>
+<li><strong>Visibility Culling (Occlusion Culling Prepass):</strong> Perform occlusion
+culling prepass.</li>
+<li><strong>Visibility Culling (Occlusion Culling Query):</strong> Perform occlusion culling
+queries.</li>
+<li><strong>Level of Detail (LOD) Selection (Distance Calculation):</strong> Calculate object
+distances from the camera.</li>
+<li><strong>Level of Detail (LOD) Selection (LOD Threshold Checks):</strong> Check LOD
+thresholds and select appropriate LOD.</li>
+<li><strong>Material Parameter Update (Texture Updates):</strong> Update material textures.</li>
+<li><strong>Material Parameter Update (Color Updates):</strong> Update material colors.</li>
+<li><strong>Material Parameter Update (Shader Parameters):</strong> Update shader parameters.</li>
+<li><strong>Shadow Map Generation (Light Frustum Calculation):</strong> Calculate light
+frustums.</li>
+<li><strong>Shadow Map Generation (Render Shadow Maps):</strong> Render shadow maps.</li>
+<li><strong>Light Culling (Light Volume Checks):</strong> Check light volumes against object
+bounding volumes.</li>
+<li><strong>Light Culling (Light List Generation):</strong> Generate lists of lights
+affecting each object.</li>
+<li><strong>Render Queue Population (Opaque Objects):</strong> Populate render queues with
+opaque objects.</li>
+<li><strong>Render Queue Population (Transparent Objects):</strong> Populate render queues
+with transparent objects.</li>
+<li><strong>Render Queue Population (UI Elements):</strong> Populate render queues with UI
+elements.</li>
+<li><strong>Render Queue Sorting (Depth Sorting):</strong> Sort render queues by depth.</li>
+<li><strong>Render Queue Sorting (Material Sorting):</strong> Sort render queues by material.</li>
+<li><strong>Vertex Buffer Preparation (Vertex Data Assembly):</strong> Assemble vertex data.</li>
+<li><strong>Vertex Buffer Preparation (Attribute Interleaving):</strong> Interleave vertex
+attributes.</li>
+<li><strong>Index Buffer Preparation (Index Data Assembly):</strong> Assemble index data.</li>
+<li><strong>Uniform Buffer Update (Transform Matrices):</strong> Update uniform buffers with
+transformation matrices.</li>
+<li><strong>Uniform Buffer Update (Light Parameters):</strong> Update uniform buffers with
+light parameters.</li>
+<li><strong>Uniform Buffer Update (Material Parameters):</strong> Update uniform buffers with
+material parameters.</li>
+<li><strong>Texture Upload (Texture Data Transfer):</strong> Transfer texture data to the
+GPU.</li>
+<li><strong>Texture Upload (Texture Mipmap Generation):</strong> Generate texture mipmaps.</li>
+<li><strong>Render Pass Begin (Primary Render Pass):</strong> Begin the primary render pass.</li>
+<li><strong>Shadow Map Render Pass (Begin Shadow Render Pass):</strong> Begin the shadow map
+render pass.</li>
+<li><strong>Shadow Map Render Pass (Render Shadow Casters):</strong> Render shadow casters.</li>
+<li><strong>Shadow Map Render Pass (End Shadow Render Pass):</strong> End the shadow map
+render pass.</li>
+<li><strong>Geometry Rendering (Opaque Geometry Draw Calls):</strong> Issue draw calls for
+opaque geometry.</li>
+<li><strong>Geometry Rendering (Instanced Rendering):</strong> Perform instanced rendering if
+applicable.</li>
+<li><strong>Transparency Rendering (Transparent Geometry Draw Calls):</strong> Issue draw
+calls for transparent geometry.</li>
+<li><strong>Transparency Rendering (Blending Operations):</strong> Perform blending
+operations.</li>
+<li><strong>Post-Processing Effects (Color Grading):</strong> Apply color grading.</li>
+<li><strong>Post-Processing Effects (Bloom):</strong> Apply bloom effect.</li>
+<li><strong>Post-Processing Effects (Depth of Field):</strong> Apply depth of field effect.</li>
+<li><strong>UI Rendering (UI Draw Calls):</strong> Issue draw calls for UI elements.</li>
+<li><strong>Debug Rendering (Wireframe Rendering):</strong> Render wireframe outlines.</li>
+<li><strong>Debug Rendering (Collision Box Rendering):</strong> Render collision boxes.</li>
+<li><strong>Render Pass End (Primary Render Pass End):</strong> End the primary render pass.</li>
+<li><strong>Frame Buffer Swap (Present Frame):</strong> Swap the front and back buffers.</li>
+<li><strong>GPU Sync (Wait for GPU Completion):</strong> Wait for the GPU to finish
+rendering.</li>
+<li><strong>Audio System Update (Sound Playback):</strong> Update the audio system and play
+sounds.</li>
+<li><strong>Audio System Update (Sound Mixing):</strong> Mix audio sources.</li>
+<li><strong>Network System Update (Packet Sending):</strong> Send network packets.</li>
+<li><strong>Network System Update (Packet Receiving):</strong> Receive network packets.</li>
+<li><strong>Garbage Collection (Memory Deallocation):</strong> Deallocate unused memory.</li>
+<li><strong>Delta Time Calculation (Frame Time Measurement):</strong> Calculate the time
+elapsed since the last frame.</li>
+<li><strong>Frame End Marker (CPU End Marker):</strong> End the CPU-side frame timing.</li>
+</ol>
+</div>
+
+    <div class="post-navigation">
+      
+
+      
+    </div>
+  </article>
+</main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 AI Code Guidebook</p>
+      </div>
+    </footer>
+  </body>
+</html>

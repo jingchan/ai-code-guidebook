@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>AI Code Guidebook - components</title>
+    <subtitle>A comprehensive guide to AI-powered code development</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://jingchan.github.io/ai-code-guidebook/tags/components/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-03-12T00:00:00+00:00</updated>
+    <id>https://jingchan.github.io/ai-code-guidebook/tags/components/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Suggestions for Components and Systems.</title>
+        <published>2025-03-12T00:00:00+00:00</published>
+        <updated>2025-03-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook/blog/ecs/"/>
+        <id>https://jingchan.github.io/ai-code-guidebook/blog/ecs/</id>
+        
+        <content type="html" xml:base="https://jingchan.github.io/ai-code-guidebook/blog/ecs/">&lt;h1 id=&quot;ecs-suggestions&quot;&gt;ECS Suggestions&lt;&#x2F;h1&gt;
+&lt;h2 id=&quot;components&quot;&gt;Components&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-core-components&quot;&gt;&lt;strong&gt;1. Core Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;These are fundamental components that most entities will use.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Transform&lt;&#x2F;strong&gt;: Position, rotation, and scale in 3D space.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Velocity&lt;&#x2F;strong&gt;: Linear velocity for movement.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Acceleration&lt;&#x2F;strong&gt;: Rate of change of velocity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AngularVelocity&lt;&#x2F;strong&gt;: Rotational speed.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AngularAcceleration&lt;&#x2F;strong&gt;: Rate of change of angular velocity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Parent&lt;&#x2F;strong&gt;: Entity that this entity is a child of.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Children&lt;&#x2F;strong&gt;: List of child entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tag&lt;&#x2F;strong&gt;: A string or enum for categorizing entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Name&lt;&#x2F;strong&gt;: A human-readable identifier for the entity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Active&lt;&#x2F;strong&gt;: Whether the entity is active or inactive.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;2-rendering-components&quot;&gt;&lt;strong&gt;2. Rendering Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components related to visual representation.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;11&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Mesh&lt;&#x2F;strong&gt;: Reference to a 3D mesh.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Material&lt;&#x2F;strong&gt;: Reference to a material&#x2F;shader.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Texture&lt;&#x2F;strong&gt;: Reference to a texture.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Color&lt;&#x2F;strong&gt;: Base color for rendering.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;UVOffset&lt;&#x2F;strong&gt;: Texture coordinate offset.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Animation&lt;&#x2F;strong&gt;: Current animation state.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Sprite&lt;&#x2F;strong&gt;: 2D image for rendering.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Billboard&lt;&#x2F;strong&gt;: Always faces the camera.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Light&lt;&#x2F;strong&gt;: Light source properties (color, intensity, range).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ShadowCaster&lt;&#x2F;strong&gt;: Whether the entity casts shadows.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ShadowReceiver&lt;&#x2F;strong&gt;: Whether the entity receives shadows.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ParticleEmitter&lt;&#x2F;strong&gt;: Emits particles for effects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Decal&lt;&#x2F;strong&gt;: Projects a texture onto surfaces.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;LOD&lt;&#x2F;strong&gt;: Level of detail for rendering.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Transparency&lt;&#x2F;strong&gt;: Controls opacity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Reflection&lt;&#x2F;strong&gt;: Reflectivity properties.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Refraction&lt;&#x2F;strong&gt;: Refraction properties.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Glow&lt;&#x2F;strong&gt;: Emissive glow effect.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Outline&lt;&#x2F;strong&gt;: Outline rendering for selection or highlighting.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Camera&lt;&#x2F;strong&gt;: Defines a viewport and projection.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;3-physics-components&quot;&gt;&lt;strong&gt;3. Physics Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components for physics simulation.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;31&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Collider&lt;&#x2F;strong&gt;: Defines collision shape (e.g., box, sphere, capsule).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rigidbody&lt;&#x2F;strong&gt;: Physical properties (mass, drag, gravity).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Trigger&lt;&#x2F;strong&gt;: Detects overlaps without physical collision.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Force&lt;&#x2F;strong&gt;: Applied force for movement.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Torque&lt;&#x2F;strong&gt;: Applied rotational force.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Gravity&lt;&#x2F;strong&gt;: Custom gravity settings.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Friction&lt;&#x2F;strong&gt;: Surface friction.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Bounciness&lt;&#x2F;strong&gt;: How much the entity bounces on collisions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Kinematic&lt;&#x2F;strong&gt;: Whether the entity is controlled by scripts rather than
+physics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;RaycastHit&lt;&#x2F;strong&gt;: Stores results of a raycast.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Buoyancy&lt;&#x2F;strong&gt;: Simulates floating in fluids.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;WindAffected&lt;&#x2F;strong&gt;: Responds to wind forces.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;HingeJoint&lt;&#x2F;strong&gt;: Rotational constraint between entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SpringJoint&lt;&#x2F;strong&gt;: Elastic constraint between entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;FixedJoint&lt;&#x2F;strong&gt;: Rigidly connects two entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ragdoll&lt;&#x2F;strong&gt;: Simulates physics-based character animation.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;WaterSurface&lt;&#x2F;strong&gt;: Defines a water plane for physics interactions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cloth&lt;&#x2F;strong&gt;: Simulates cloth physics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Softbody&lt;&#x2F;strong&gt;: Simulates soft, deformable physics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ExplosionForce&lt;&#x2F;strong&gt;: Applies force in a radial pattern.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;4-animation-components&quot;&gt;&lt;strong&gt;4. Animation Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components for animating entities.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;51&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Animator&lt;&#x2F;strong&gt;: Controls animation states and transitions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;BlendShape&lt;&#x2F;strong&gt;: Morph target for facial expressions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Bone&lt;&#x2F;strong&gt;: Part of a skeleton for rigging.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;IKTarget&lt;&#x2F;strong&gt;: Target for inverse kinematics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AnimationClip&lt;&#x2F;strong&gt;: Reference to a specific animation.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AnimationSpeed&lt;&#x2F;strong&gt;: Playback speed of animations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AnimationEvent&lt;&#x2F;strong&gt;: Triggers events during animation playback.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;LipSync&lt;&#x2F;strong&gt;: Synchronizes mouth movements with audio.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;FacialExpression&lt;&#x2F;strong&gt;: Controls facial animations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Gesture&lt;&#x2F;strong&gt;: Hand or body gestures for characters.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;5-audio-components&quot;&gt;&lt;strong&gt;5. Audio Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components for sound and music.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;61&quot;&gt;
+&lt;li&gt;&lt;strong&gt;AudioSource&lt;&#x2F;strong&gt;: Plays sounds or music.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AudioListener&lt;&#x2F;strong&gt;: Represents the “ear” for 3D audio.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SoundEffect&lt;&#x2F;strong&gt;: Short audio clip for effects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;MusicTrack&lt;&#x2F;strong&gt;: Background music.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Volume&lt;&#x2F;strong&gt;: Controls audio volume.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Pitch&lt;&#x2F;strong&gt;: Controls audio pitch.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SpatialBlend&lt;&#x2F;strong&gt;: Balances 2D and 3D audio.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ReverbZone&lt;&#x2F;strong&gt;: Applies reverb effects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AudioClip&lt;&#x2F;strong&gt;: Reference to an audio file.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AudioLoop&lt;&#x2F;strong&gt;: Whether the audio loops.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;6-ai-and-behavior-components&quot;&gt;&lt;strong&gt;6. AI and Behavior Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components for AI and entity behavior.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;71&quot;&gt;
+&lt;li&gt;&lt;strong&gt;AIState&lt;&#x2F;strong&gt;: Current state of the AI (e.g., idle, chasing).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Pathfinding&lt;&#x2F;strong&gt;: Pathfinding data and goals.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Waypoint&lt;&#x2F;strong&gt;: A point in a path.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;BehaviorTree&lt;&#x2F;strong&gt;: Hierarchical AI decision-making.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Blackboard&lt;&#x2F;strong&gt;: Shared data for AI decisions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Target&lt;&#x2F;strong&gt;: Entity to target (e.g., for attacks or movement).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VisionCone&lt;&#x2F;strong&gt;: Defines what the entity can “see.”&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;HearingRange&lt;&#x2F;strong&gt;: Defines what the entity can “hear.”&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;PatrolRoute&lt;&#x2F;strong&gt;: Path for patrolling behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Flocking&lt;&#x2F;strong&gt;: Group movement behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Steering&lt;&#x2F;strong&gt;: Steering behaviors (e.g., seek, flee).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Aggression&lt;&#x2F;strong&gt;: How aggressive the entity is.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fear&lt;&#x2F;strong&gt;: How fearful the entity is.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Curiosity&lt;&#x2F;strong&gt;: How curious the entity is.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Memory&lt;&#x2F;strong&gt;: Stores information about the environment.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DecisionMaker&lt;&#x2F;strong&gt;: Makes decisions based on inputs.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;UtilityAI&lt;&#x2F;strong&gt;: Scores actions based on utility.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Goal&lt;&#x2F;strong&gt;: What the AI is trying to achieve.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Action&lt;&#x2F;strong&gt;: An action the AI can perform.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ReactionTime&lt;&#x2F;strong&gt;: How quickly the AI reacts.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;7-gameplay-components&quot;&gt;&lt;strong&gt;7. Gameplay Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components for gameplay mechanics.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;91&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Health&lt;&#x2F;strong&gt;: Current and maximum health.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Damage&lt;&#x2F;strong&gt;: Amount of damage the entity can deal.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Armor&lt;&#x2F;strong&gt;: Reduces incoming damage.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Experience&lt;&#x2F;strong&gt;: Tracks experience points.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Level&lt;&#x2F;strong&gt;: Current level of the entity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Inventory&lt;&#x2F;strong&gt;: Stores items.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Equipment&lt;&#x2F;strong&gt;: Items currently equipped.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Weapon&lt;&#x2F;strong&gt;: Defines weapon properties.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ammo&lt;&#x2F;strong&gt;: Tracks ammunition.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cooldown&lt;&#x2F;strong&gt;: Time before an action can be performed again.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Timer&lt;&#x2F;strong&gt;: Counts down time for events.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Score&lt;&#x2F;strong&gt;: Tracks points or score.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Objective&lt;&#x2F;strong&gt;: Defines a goal or objective.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Quest&lt;&#x2F;strong&gt;: Tracks quest progress.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Dialogue&lt;&#x2F;strong&gt;: Stores dialogue lines.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Interaction&lt;&#x2F;strong&gt;: Defines how the entity can be interacted with.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Pickup&lt;&#x2F;strong&gt;: Can be picked up by the player.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Door&lt;&#x2F;strong&gt;: Can be opened or closed.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Switch&lt;&#x2F;strong&gt;: Can be toggled on or off.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Key&lt;&#x2F;strong&gt;: Unlocks something (e.g., a door).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Lock&lt;&#x2F;strong&gt;: Requires a key to unlock.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Trap&lt;&#x2F;strong&gt;: Damages or hinders entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Checkpoint&lt;&#x2F;strong&gt;: Saves progress.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Respawn&lt;&#x2F;strong&gt;: Defines respawn behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Team&lt;&#x2F;strong&gt;: Which team the entity belongs to.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Faction&lt;&#x2F;strong&gt;: Relationship with other factions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Reputation&lt;&#x2F;strong&gt;: How others perceive the entity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Stealth&lt;&#x2F;strong&gt;: How stealthy the entity is.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Detection&lt;&#x2F;strong&gt;: How easily the entity is detected.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Reward&lt;&#x2F;strong&gt;: What the entity gives when defeated or interacted with.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;8-ui-components&quot;&gt;&lt;strong&gt;8. UI Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components for user interface elements.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;121&quot;&gt;
+&lt;li&gt;&lt;strong&gt;UIElement&lt;&#x2F;strong&gt;: Base component for UI elements.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Button&lt;&#x2F;strong&gt;: Clickable UI button.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Text&lt;&#x2F;strong&gt;: Displays text.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Image&lt;&#x2F;strong&gt;: Displays an image.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Slider&lt;&#x2F;strong&gt;: Adjustable slider.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ProgressBar&lt;&#x2F;strong&gt;: Shows progress.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Dropdown&lt;&#x2F;strong&gt;: Selectable dropdown menu.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;InputField&lt;&#x2F;strong&gt;: Text input field.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Tooltip&lt;&#x2F;strong&gt;: Displays additional information on hover.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;HUD&lt;&#x2F;strong&gt;: Heads-up display elements.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Menu&lt;&#x2F;strong&gt;: Collection of UI elements.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Cursor&lt;&#x2F;strong&gt;: Custom cursor behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Notification&lt;&#x2F;strong&gt;: Displays temporary messages.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;HealthBar&lt;&#x2F;strong&gt;: Displays health.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Minimap&lt;&#x2F;strong&gt;: Displays a small map.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Crosshair&lt;&#x2F;strong&gt;: Aiming reticle.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Scoreboard&lt;&#x2F;strong&gt;: Displays scores.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;TimerUI&lt;&#x2F;strong&gt;: Displays a countdown.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;InventoryUI&lt;&#x2F;strong&gt;: Displays inventory.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DialogueUI&lt;&#x2F;strong&gt;: Displays dialogue.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;9-networking-components&quot;&gt;&lt;strong&gt;9. Networking Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Components for multiplayer and networking.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;141&quot;&gt;
+&lt;li&gt;&lt;strong&gt;NetworkID&lt;&#x2F;strong&gt;: Unique identifier for networked entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Replication&lt;&#x2F;strong&gt;: Synchronizes data across the network.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Latency&lt;&#x2F;strong&gt;: Simulates network latency.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;PacketLoss&lt;&#x2F;strong&gt;: Simulates packet loss.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Authority&lt;&#x2F;strong&gt;: Which client or server has control.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Snapshot&lt;&#x2F;strong&gt;: Stores a snapshot of the entity’s state.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Prediction&lt;&#x2F;strong&gt;: Predicts entity movement.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Interpolation&lt;&#x2F;strong&gt;: Smooths entity movement.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;RPC&lt;&#x2F;strong&gt;: Remote procedure call for networked actions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Lobby&lt;&#x2F;strong&gt;: Manages multiplayer lobbies.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;10-miscellaneous-components&quot;&gt;&lt;strong&gt;10. Miscellaneous Components&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Creative and niche components.&lt;&#x2F;p&gt;
+&lt;ol start=&quot;151&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Weather&lt;&#x2F;strong&gt;: Controls weather effects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;TimeOfDay&lt;&#x2F;strong&gt;: Tracks the time of day.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Season&lt;&#x2F;strong&gt;: Tracks the current season.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DayNightCycle&lt;&#x2F;strong&gt;: Controls day&#x2F;night transitions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fog&lt;&#x2F;strong&gt;: Controls fog density and color.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Wind&lt;&#x2F;strong&gt;: Controls wind direction and strength.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Rain&lt;&#x2F;strong&gt;: Controls rain intensity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Snow&lt;&#x2F;strong&gt;: Controls snow intensity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fire&lt;&#x2F;strong&gt;: Simulates fire effects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Smoke&lt;&#x2F;strong&gt;: Simulates smoke effects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Explosion&lt;&#x2F;strong&gt;: Simulates explosions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Destructible&lt;&#x2F;strong&gt;: Can be destroyed.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Constructible&lt;&#x2F;strong&gt;: Can be built or assembled.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Harvestable&lt;&#x2F;strong&gt;: Can be harvested for resources.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Resource&lt;&#x2F;strong&gt;: Stores resources (e.g., wood, gold).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Crafting&lt;&#x2F;strong&gt;: Defines crafting recipes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Trade&lt;&#x2F;strong&gt;: Defines trade behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Economy&lt;&#x2F;strong&gt;: Tracks currency and prices.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Population&lt;&#x2F;strong&gt;: Tracks population size.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Happiness&lt;&#x2F;strong&gt;: Tracks happiness level.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hunger&lt;&#x2F;strong&gt;: Tracks hunger level.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Thirst&lt;&#x2F;strong&gt;: Tracks thirst level.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Fatigue&lt;&#x2F;strong&gt;: Tracks fatigue level.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Temperature&lt;&#x2F;strong&gt;: Tracks temperature.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Radiation&lt;&#x2F;strong&gt;: Tracks radiation level.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Poison&lt;&#x2F;strong&gt;: Tracks poison level.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Disease&lt;&#x2F;strong&gt;: Tracks disease state.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Mutation&lt;&#x2F;strong&gt;: Tracks mutations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Evolution&lt;&#x2F;strong&gt;: Tracks evolutionary progress.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Magic&lt;&#x2F;strong&gt;: Tracks magical energy.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Mana&lt;&#x2F;strong&gt;: Tracks mana for spells.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Spell&lt;&#x2F;strong&gt;: Defines a spell or ability.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Buff&lt;&#x2F;strong&gt;: Temporary positive effect.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Debuff&lt;&#x2F;strong&gt;: Temporary negative effect.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Aura&lt;&#x2F;strong&gt;: Area-of-effect buff or debuff.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Summon&lt;&#x2F;strong&gt;: Summons another entity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Teleport&lt;&#x2F;strong&gt;: Teleports the entity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Portal&lt;&#x2F;strong&gt;: Transports entities between locations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;TimeTravel&lt;&#x2F;strong&gt;: Simulates time travel.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GravityWell&lt;&#x2F;strong&gt;: Simulates a gravity well.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;BlackHole&lt;&#x2F;strong&gt;: Simulates a black hole.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Wormhole&lt;&#x2F;strong&gt;: Simulates a wormhole.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Hologram&lt;&#x2F;strong&gt;: Displays a holographic image.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Drone&lt;&#x2F;strong&gt;: Controls a drone entity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Robot&lt;&#x2F;strong&gt;: Controls a robot entity.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Alien&lt;&#x2F;strong&gt;: Defines alien behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Zombie&lt;&#x2F;strong&gt;: Defines zombie behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Vampire&lt;&#x2F;strong&gt;: Defines vampire behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Werewolf&lt;&#x2F;strong&gt;: Defines werewolf behavior.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Ghost&lt;&#x2F;strong&gt;: Defines ghost behavior.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;systems&quot;&gt;Systems&lt;&#x2F;h2&gt;
+&lt;p&gt;Here’s a list of &lt;strong&gt;200 systems&lt;&#x2F;strong&gt; for an ECS architecture, categorized by
+functionality and referencing the
+&lt;a rel=&quot;noopener nofollow&quot; target=&quot;_blank&quot; href=&quot;https:&#x2F;&#x2F;www.reddit.com&#x2F;r&#x2F;gamedev&#x2F;comments&#x2F;15n6gq6&#x2F;comment&#x2F;jvm7k7r&#x2F;?utm_source=share&amp;amp;utm_medium=web3x&amp;amp;utm_name=web3xcss&amp;amp;utm_term=1&amp;amp;utm_content=share_button&quot;&gt;components from the previous list&lt;&#x2F;a&gt;.
+Systems are designed to process components logically, ensuring efficiency and
+scalability while avoiding anti-patterns.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;1-core-systems&quot;&gt;&lt;strong&gt;1. Core Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Process foundational components like transforms, hierarchy, and basic state.&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;MovementSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Transform&lt;&#x2F;code&gt; using &lt;code&gt;Velocity&lt;&#x2F;code&gt; and &lt;code&gt;Acceleration&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;RotationSystem&lt;&#x2F;strong&gt;: Updates rotation using &lt;code&gt;AngularVelocity&lt;&#x2F;code&gt; and
+&lt;code&gt;AngularAcceleration&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ParentingSystem&lt;&#x2F;strong&gt;: Updates child entities based on &lt;code&gt;Parent&lt;&#x2F;code&gt; and &lt;code&gt;Children&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;TagSystem&lt;&#x2F;strong&gt;: Handles entity categorization via &lt;code&gt;Tag&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;NamingSystem&lt;&#x2F;strong&gt;: Manages entity &lt;code&gt;Name&lt;&#x2F;code&gt; for debugging&#x2F;UI.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ActivationSystem&lt;&#x2F;strong&gt;: Toggles entity visibility&#x2F;behavior via &lt;code&gt;Active&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;HierarchySystem&lt;&#x2F;strong&gt;: Maintains parent-child relationships.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;BoundsSystem&lt;&#x2F;strong&gt;: Calculates bounding volumes for &lt;code&gt;Transform&lt;&#x2F;code&gt; and &lt;code&gt;Collider&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;LifetimeSystem&lt;&#x2F;strong&gt;: Tracks entity lifespan (e.g., for temporary effects).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;SpawnSystem&lt;&#x2F;strong&gt;: Instantiates entities with predefined components.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;2-rendering-systems&quot;&gt;&lt;strong&gt;2. Rendering Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Handle rendering, lighting, particles, and visual effects. 11.
+&lt;strong&gt;RenderMeshSystem&lt;&#x2F;strong&gt;: Draws entities with &lt;code&gt;Mesh&lt;&#x2F;code&gt;, &lt;code&gt;Material&lt;&#x2F;code&gt;, and
+&lt;code&gt;Transform&lt;&#x2F;code&gt;. 12. &lt;strong&gt;SpriteRenderingSystem&lt;&#x2F;strong&gt;: Renders 2D &lt;code&gt;Sprite&lt;&#x2F;code&gt; entities. 13.
+&lt;strong&gt;LightingSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Light&lt;&#x2F;code&gt; sources and shadows. 14.
+&lt;strong&gt;ShadowCastingSystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;ShadowCaster&lt;&#x2F;code&gt; and &lt;code&gt;ShadowReceiver&lt;&#x2F;code&gt;. 15.
+&lt;strong&gt;ParticleUpdateSystem&lt;&#x2F;strong&gt;: Simulates &lt;code&gt;ParticleEmitter&lt;&#x2F;code&gt; effects. 16.
+&lt;strong&gt;DecalSystem&lt;&#x2F;strong&gt;: Projects &lt;code&gt;Decal&lt;&#x2F;code&gt; textures onto surfaces. 17.
+&lt;strong&gt;TransparencySystem&lt;&#x2F;strong&gt;: Blends &lt;code&gt;Transparency&lt;&#x2F;code&gt; for translucent objects. 18.
+&lt;strong&gt;OutlineSystem&lt;&#x2F;strong&gt;: Renders &lt;code&gt;Outline&lt;&#x2F;code&gt; effects for highlighted entities. 19.
+&lt;strong&gt;CameraSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Camera&lt;&#x2F;code&gt; view&#x2F;projection matrices. 20. &lt;strong&gt;LODSystem&lt;&#x2F;strong&gt;:
+Swaps &lt;code&gt;LOD&lt;&#x2F;code&gt; meshes based on distance. 21. &lt;strong&gt;ReflectionSystem&lt;&#x2F;strong&gt;: Renders
+&lt;code&gt;Reflection&lt;&#x2F;code&gt; probes. 22. &lt;strong&gt;RefractionSystem&lt;&#x2F;strong&gt;: Handles &lt;code&gt;Refraction&lt;&#x2F;code&gt; effects. 23.
+&lt;strong&gt;GlowSystem&lt;&#x2F;strong&gt;: Applies &lt;code&gt;Glow&lt;&#x2F;code&gt; emissive effects. 24. &lt;strong&gt;BillboardSystem&lt;&#x2F;strong&gt;:
+Orients &lt;code&gt;Billboard&lt;&#x2F;code&gt; entities toward the camera. 25. &lt;strong&gt;UISystem&lt;&#x2F;strong&gt;: Renders
+&lt;code&gt;UIElement&lt;&#x2F;code&gt;, &lt;code&gt;Button&lt;&#x2F;code&gt;, &lt;code&gt;Text&lt;&#x2F;code&gt;, etc. 26. &lt;strong&gt;HUDSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;HealthBar&lt;&#x2F;code&gt;,
+&lt;code&gt;Minimap&lt;&#x2F;code&gt;, and &lt;code&gt;Scoreboard&lt;&#x2F;code&gt;. 27. &lt;strong&gt;WeatherSystem&lt;&#x2F;strong&gt;: Renders &lt;code&gt;Rain&lt;&#x2F;code&gt;, &lt;code&gt;Snow&lt;&#x2F;code&gt;, and
+&lt;code&gt;Fog&lt;&#x2F;code&gt;. 28. &lt;strong&gt;PostProcessingSystem&lt;&#x2F;strong&gt;: Applies screen-space effects (e.g., blur,
+color grading). 29. &lt;strong&gt;SkyboxSystem&lt;&#x2F;strong&gt;: Renders the skybox or &lt;code&gt;DayNightCycle&lt;&#x2F;code&gt;. 30.
+&lt;strong&gt;VFXSystem&lt;&#x2F;strong&gt;: Manages visual effects like &lt;code&gt;Fire&lt;&#x2F;code&gt;, &lt;code&gt;Smoke&lt;&#x2F;code&gt;, and &lt;code&gt;Explosion&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;3-physics-systems&quot;&gt;&lt;strong&gt;3. Physics Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Simulate collisions, forces, and physical interactions. 31.
+&lt;strong&gt;PhysicsSimulationSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Rigidbody&lt;&#x2F;code&gt;, &lt;code&gt;Velocity&lt;&#x2F;code&gt;, and &lt;code&gt;Force&lt;&#x2F;code&gt;. 32.
+&lt;strong&gt;CollisionDetectionSystem&lt;&#x2F;strong&gt;: Checks &lt;code&gt;Collider&lt;&#x2F;code&gt; overlaps and &lt;code&gt;Trigger&lt;&#x2F;code&gt;
+events. 33. &lt;strong&gt;CollisionResponseSystem&lt;&#x2F;strong&gt;: Resolves collisions using &lt;code&gt;Bounciness&lt;&#x2F;code&gt;
+and &lt;code&gt;Friction&lt;&#x2F;code&gt;. 34. &lt;strong&gt;GravitySystem&lt;&#x2F;strong&gt;: Applies &lt;code&gt;Gravity&lt;&#x2F;code&gt; to entities. 35.
+&lt;strong&gt;BuoyancySystem&lt;&#x2F;strong&gt;: Simulates &lt;code&gt;Buoyancy&lt;&#x2F;code&gt; in fluids. 36. &lt;strong&gt;WindSystem&lt;&#x2F;strong&gt;: Applies
+&lt;code&gt;WindAffected&lt;&#x2F;code&gt; forces. 37. &lt;strong&gt;JointSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;HingeJoint&lt;&#x2F;code&gt;, &lt;code&gt;SpringJoint&lt;&#x2F;code&gt;,
+and &lt;code&gt;FixedJoint&lt;&#x2F;code&gt;. 38. &lt;strong&gt;RagdollSystem&lt;&#x2F;strong&gt;: Animates &lt;code&gt;Ragdoll&lt;&#x2F;code&gt; physics. 39.
+&lt;strong&gt;ClothSimulationSystem&lt;&#x2F;strong&gt;: Simulates &lt;code&gt;Cloth&lt;&#x2F;code&gt; physics. 40. &lt;strong&gt;SoftbodySystem&lt;&#x2F;strong&gt;:
+Deforms &lt;code&gt;Softbody&lt;&#x2F;code&gt; entities. 41. &lt;strong&gt;RaycastSystem&lt;&#x2F;strong&gt;: Performs raycasts and stores
+&lt;code&gt;RaycastHit&lt;&#x2F;code&gt;. 42. &lt;strong&gt;ExplosionSystem&lt;&#x2F;strong&gt;: Applies &lt;code&gt;ExplosionForce&lt;&#x2F;code&gt; to nearby
+entities. 43. &lt;strong&gt;WaterInteractionSystem&lt;&#x2F;strong&gt;: Handles &lt;code&gt;WaterSurface&lt;&#x2F;code&gt; physics. 44.
+&lt;strong&gt;KinematicSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Kinematic&lt;&#x2F;code&gt; entities (script-controlled
+movement). 45. &lt;strong&gt;CharacterControllerSystem&lt;&#x2F;strong&gt;: Manages player&#x2F;enemy movement with
+&lt;code&gt;Collider&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;4-animation-systems&quot;&gt;&lt;strong&gt;4. Animation Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Animate entities using skeletons, blend shapes, and procedural motion. 46.
+&lt;strong&gt;SkeletalAnimationSystem&lt;&#x2F;strong&gt;: Drives &lt;code&gt;Bone&lt;&#x2F;code&gt; hierarchies and &lt;code&gt;Animator&lt;&#x2F;code&gt;. 47.
+&lt;strong&gt;BlendShapeSystem&lt;&#x2F;strong&gt;: Interpolates &lt;code&gt;BlendShape&lt;&#x2F;code&gt; morph targets. 48. &lt;strong&gt;IKSystem&lt;&#x2F;strong&gt;:
+Solves &lt;code&gt;IKTarget&lt;&#x2F;code&gt; inverse kinematics. 49. &lt;strong&gt;LipSyncSystem&lt;&#x2F;strong&gt;: Syncs &lt;code&gt;LipSync&lt;&#x2F;code&gt;
+with &lt;code&gt;AudioSource&lt;&#x2F;code&gt;. 50. &lt;strong&gt;FacialAnimationSystem&lt;&#x2F;strong&gt;: Controls &lt;code&gt;FacialExpression&lt;&#x2F;code&gt;
+states. 51. &lt;strong&gt;GestureSystem&lt;&#x2F;strong&gt;: Triggers &lt;code&gt;Gesture&lt;&#x2F;code&gt; animations. 52.
+&lt;strong&gt;AnimationEventSystem&lt;&#x2F;strong&gt;: Fires events during &lt;code&gt;AnimationClip&lt;&#x2F;code&gt; playback. 53.
+&lt;strong&gt;AnimationBlendingSystem&lt;&#x2F;strong&gt;: Blends multiple &lt;code&gt;AnimationClip&lt;&#x2F;code&gt; states. 54.
+&lt;strong&gt;ProceduralAnimationSystem&lt;&#x2F;strong&gt;: Generates motion (e.g., &lt;code&gt;Flocking&lt;&#x2F;code&gt;). 55.
+&lt;strong&gt;AnimationSpeedSystem&lt;&#x2F;strong&gt;: Adjusts &lt;code&gt;AnimationSpeed&lt;&#x2F;code&gt; dynamically.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;5-audio-systems&quot;&gt;&lt;strong&gt;5. Audio Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Manage sound effects, music, and spatial audio. 56. &lt;strong&gt;AudioPlaybackSystem&lt;&#x2F;strong&gt;:
+Plays &lt;code&gt;SoundEffect&lt;&#x2F;code&gt; and &lt;code&gt;MusicTrack&lt;&#x2F;code&gt;. 57. &lt;strong&gt;SpatialAudioSystem&lt;&#x2F;strong&gt;: Updates 3D
+&lt;code&gt;AudioSource&lt;&#x2F;code&gt; and &lt;code&gt;AudioListener&lt;&#x2F;code&gt;. 58. &lt;strong&gt;VolumeControlSystem&lt;&#x2F;strong&gt;: Adjusts &lt;code&gt;Volume&lt;&#x2F;code&gt;
+and &lt;code&gt;Pitch&lt;&#x2F;code&gt;. 59. &lt;strong&gt;ReverbSystem&lt;&#x2F;strong&gt;: Applies &lt;code&gt;ReverbZone&lt;&#x2F;code&gt; effects. 60.
+&lt;strong&gt;AudioLoopSystem&lt;&#x2F;strong&gt;: Manages looping &lt;code&gt;AudioClip&lt;&#x2F;code&gt; instances. 61.
+&lt;strong&gt;DialogueSystem&lt;&#x2F;strong&gt;: Triggers &lt;code&gt;Dialogue&lt;&#x2F;code&gt; audio lines. 62.
+&lt;strong&gt;MusicTransitionSystem&lt;&#x2F;strong&gt;: Crossfades &lt;code&gt;MusicTrack&lt;&#x2F;code&gt; based on game state.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;6-ai-systems&quot;&gt;&lt;strong&gt;6. AI Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Drive NPC behavior, pathfinding, and decision-making. 63.
+&lt;strong&gt;AIStateMachineSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;AIState&lt;&#x2F;code&gt; transitions (e.g., idle →
+chase). 64. &lt;strong&gt;PathfindingSystem&lt;&#x2F;strong&gt;: Calculates paths using &lt;code&gt;Pathfinding&lt;&#x2F;code&gt; and
+&lt;code&gt;Waypoint&lt;&#x2F;code&gt;. 65. &lt;strong&gt;BehaviorTreeSystem&lt;&#x2F;strong&gt;: Executes &lt;code&gt;BehaviorTree&lt;&#x2F;code&gt; decision
+logic. 66. &lt;strong&gt;BlackboardSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Blackboard&lt;&#x2F;code&gt; data for AI. 67.
+&lt;strong&gt;TargetingSystem&lt;&#x2F;strong&gt;: Selects &lt;code&gt;Target&lt;&#x2F;code&gt; entities for AI. 68. &lt;strong&gt;VisionSystem&lt;&#x2F;strong&gt;:
+Checks &lt;code&gt;VisionCone&lt;&#x2F;code&gt; line-of-sight. 69. &lt;strong&gt;HearingSystem&lt;&#x2F;strong&gt;: Detects sounds in
+&lt;code&gt;HearingRange&lt;&#x2F;code&gt;. 70. &lt;strong&gt;PatrolSystem&lt;&#x2F;strong&gt;: Follows &lt;code&gt;PatrolRoute&lt;&#x2F;code&gt; waypoints. 71.
+&lt;strong&gt;FlockingSystem&lt;&#x2F;strong&gt;: Simulates &lt;code&gt;Flocking&lt;&#x2F;code&gt; group behavior. 72. &lt;strong&gt;SteeringSystem&lt;&#x2F;strong&gt;:
+Applies &lt;code&gt;Seek&lt;&#x2F;code&gt;, &lt;code&gt;Flee&lt;&#x2F;code&gt;, and &lt;code&gt;Wander&lt;&#x2F;code&gt; behaviors. 73. &lt;strong&gt;UtilityAISystem&lt;&#x2F;strong&gt;: Scores
+&lt;code&gt;Action&lt;&#x2F;code&gt; utility for &lt;code&gt;UtilityAI&lt;&#x2F;code&gt;. 74. &lt;strong&gt;MemorySystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Memory&lt;&#x2F;code&gt; based
+on observations. 75. &lt;strong&gt;ReactionSystem&lt;&#x2F;strong&gt;: Triggers actions based on
+&lt;code&gt;ReactionTime&lt;&#x2F;code&gt;.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;7-gameplay-systems&quot;&gt;&lt;strong&gt;7. Gameplay Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Handle health, combat, inventory, and quests. 76. &lt;strong&gt;HealthSystem&lt;&#x2F;strong&gt;: Updates
+&lt;code&gt;Health&lt;&#x2F;code&gt; and applies &lt;code&gt;Damage&lt;&#x2F;code&gt;. 77. &lt;strong&gt;CombatSystem&lt;&#x2F;strong&gt;: Resolves attacks using
+&lt;code&gt;Weapon&lt;&#x2F;code&gt; and &lt;code&gt;Armor&lt;&#x2F;code&gt;. 78. &lt;strong&gt;InventorySystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Inventory&lt;&#x2F;code&gt; and
+&lt;code&gt;Equipment&lt;&#x2F;code&gt;. 79. &lt;strong&gt;CooldownSystem&lt;&#x2F;strong&gt;: Tracks &lt;code&gt;Cooldown&lt;&#x2F;code&gt; timers for abilities. 80.
+&lt;strong&gt;ExperienceSystem&lt;&#x2F;strong&gt;: Awards &lt;code&gt;Experience&lt;&#x2F;code&gt; and updates &lt;code&gt;Level&lt;&#x2F;code&gt;. 81.
+&lt;strong&gt;QuestSystem&lt;&#x2F;strong&gt;: Tracks &lt;code&gt;Quest&lt;&#x2F;code&gt; objectives and rewards. 82.
+&lt;strong&gt;InteractionSystem&lt;&#x2F;strong&gt;: Handles &lt;code&gt;Interaction&lt;&#x2F;code&gt; prompts (e.g., “Press E to
+open”). 83. &lt;strong&gt;LockpickingSystem&lt;&#x2F;strong&gt;: Resolves &lt;code&gt;Lock&lt;&#x2F;code&gt; and &lt;code&gt;Key&lt;&#x2F;code&gt; mechanics. 84.
+&lt;strong&gt;TrapSystem&lt;&#x2F;strong&gt;: Triggers &lt;code&gt;Trap&lt;&#x2F;code&gt; effects on collision. 85. &lt;strong&gt;RespawnSystem&lt;&#x2F;strong&gt;:
+Handles &lt;code&gt;Respawn&lt;&#x2F;code&gt; logic for players&#x2F;enemies. 86. &lt;strong&gt;TeamSystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Team&lt;&#x2F;code&gt;
+and &lt;code&gt;Faction&lt;&#x2F;code&gt; relationships. 87. &lt;strong&gt;StealthSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Stealth&lt;&#x2F;code&gt; and
+&lt;code&gt;Detection&lt;&#x2F;code&gt; states. 88. &lt;strong&gt;EconomySystem&lt;&#x2F;strong&gt;: Trades &lt;code&gt;Resource&lt;&#x2F;code&gt; using &lt;code&gt;Economy&lt;&#x2F;code&gt;
+prices. 89. &lt;strong&gt;CraftingSystem&lt;&#x2F;strong&gt;: Combines &lt;code&gt;Resource&lt;&#x2F;code&gt; into items via
+&lt;code&gt;Crafting&lt;&#x2F;code&gt;. 90. &lt;strong&gt;HarvestSystem&lt;&#x2F;strong&gt;: Collects &lt;code&gt;Resource&lt;&#x2F;code&gt; from &lt;code&gt;Harvestable&lt;&#x2F;code&gt;
+entities.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;8-ui-systems&quot;&gt;&lt;strong&gt;8. UI Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Update and render user interface elements. 91. &lt;strong&gt;ButtonSystem&lt;&#x2F;strong&gt;: Handles
+&lt;code&gt;Button&lt;&#x2F;code&gt; clicks and hover states. 92. &lt;strong&gt;TextUpdateSystem&lt;&#x2F;strong&gt;: Updates dynamic
+&lt;code&gt;Text&lt;&#x2F;code&gt; (e.g., score, health). 93. &lt;strong&gt;SliderSystem&lt;&#x2F;strong&gt;: Adjusts &lt;code&gt;Slider&lt;&#x2F;code&gt; values
+(e.g., volume). 94. &lt;strong&gt;ProgressSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;ProgressBar&lt;&#x2F;code&gt; for
+quests&#x2F;loading. 95. &lt;strong&gt;TooltipSystem&lt;&#x2F;strong&gt;: Displays &lt;code&gt;Tooltip&lt;&#x2F;code&gt; on hover. 96.
+&lt;strong&gt;MenuSystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Menu&lt;&#x2F;code&gt; navigation and visibility. 97. &lt;strong&gt;CursorSystem&lt;&#x2F;strong&gt;:
+Updates &lt;code&gt;Cursor&lt;&#x2F;code&gt; appearance and behavior. 98. &lt;strong&gt;NotificationSystem&lt;&#x2F;strong&gt;:
+Shows&#x2F;hides &lt;code&gt;Notification&lt;&#x2F;code&gt; messages. 99. &lt;strong&gt;InventoryUISystem&lt;&#x2F;strong&gt;: Syncs
+&lt;code&gt;Inventory&lt;&#x2F;code&gt; with &lt;code&gt;InventoryUI&lt;&#x2F;code&gt;. 100. &lt;strong&gt;DialogueUISystem&lt;&#x2F;strong&gt;: Displays &lt;code&gt;Dialogue&lt;&#x2F;code&gt;
+choices and text.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;9-networking-systems&quot;&gt;&lt;strong&gt;9. Networking Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Synchronize data across clients and servers. 101. &lt;strong&gt;NetworkSyncSystem&lt;&#x2F;strong&gt;:
+Replicates &lt;code&gt;Transform&lt;&#x2F;code&gt; and &lt;code&gt;Velocity&lt;&#x2F;code&gt; via &lt;code&gt;NetworkID&lt;&#x2F;code&gt;. 102. &lt;strong&gt;SnapshotSystem&lt;&#x2F;strong&gt;:
+Interpolates &lt;code&gt;Snapshot&lt;&#x2F;code&gt; data for smooth movement. 103. &lt;strong&gt;PredictionSystem&lt;&#x2F;strong&gt;:
+Predicts entity states to reduce latency. 104. &lt;strong&gt;RPCHandlerSystem&lt;&#x2F;strong&gt;: Executes
+&lt;code&gt;RPC&lt;&#x2F;code&gt; calls (e.g., “Open Door”). 105. &lt;strong&gt;AuthoritySystem&lt;&#x2F;strong&gt;: Validates actions for
+entities with &lt;code&gt;Authority&lt;&#x2F;code&gt;. 106. &lt;strong&gt;LobbySystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Lobby&lt;&#x2F;code&gt; creation and
+player joins. 107. &lt;strong&gt;CheatDetectionSystem&lt;&#x2F;strong&gt;: Flags suspicious &lt;code&gt;Replication&lt;&#x2F;code&gt;
+data. 108. &lt;strong&gt;LagCompensationSystem&lt;&#x2F;strong&gt;: Rewinds time for hit detection. 109.
+&lt;strong&gt;PacketLossRecoverySystem&lt;&#x2F;strong&gt;: Resends critical data on &lt;code&gt;PacketLoss&lt;&#x2F;code&gt;. 110.
+&lt;strong&gt;VoiceChatSystem&lt;&#x2F;strong&gt;: Streams &lt;code&gt;AudioSource&lt;&#x2F;code&gt; data between players.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;10-creative-miscellaneous-systems&quot;&gt;&lt;strong&gt;10. Creative&#x2F;Miscellaneous Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;p&gt;Handle unique mechanics like weather, magic, and sci-fi elements. 111.
+&lt;strong&gt;WeatherSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Rain&lt;&#x2F;code&gt;, &lt;code&gt;Snow&lt;&#x2F;code&gt;, and &lt;code&gt;Wind&lt;&#x2F;code&gt;. 112. &lt;strong&gt;TimeSystem&lt;&#x2F;strong&gt;:
+Advances &lt;code&gt;TimeOfDay&lt;&#x2F;code&gt; and &lt;code&gt;Season&lt;&#x2F;code&gt;. 113. &lt;strong&gt;TemperatureSystem&lt;&#x2F;strong&gt;: Adjusts
+&lt;code&gt;Temperature&lt;&#x2F;code&gt; for survival games. 114. &lt;strong&gt;RadiationSystem&lt;&#x2F;strong&gt;: Applies &lt;code&gt;Radiation&lt;&#x2F;code&gt;
+damage over time. 115. &lt;strong&gt;MagicSystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Spell&lt;&#x2F;code&gt; casting and &lt;code&gt;Mana&lt;&#x2F;code&gt;
+costs. 116. &lt;strong&gt;BuffSystem&lt;&#x2F;strong&gt;: Applies &lt;code&gt;Buff&lt;&#x2F;code&gt; and &lt;code&gt;Debuff&lt;&#x2F;code&gt; effects. 117.
+&lt;strong&gt;AuraSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Aura&lt;&#x2F;code&gt; area effects. 118. &lt;strong&gt;SummonSystem&lt;&#x2F;strong&gt;: Spawns
+entities via &lt;code&gt;Summon&lt;&#x2F;code&gt;. 119. &lt;strong&gt;TeleportSystem&lt;&#x2F;strong&gt;: Moves entities using
+&lt;code&gt;Teleport&lt;&#x2F;code&gt;. 120. &lt;strong&gt;PortalSystem&lt;&#x2F;strong&gt;: Links &lt;code&gt;Portal&lt;&#x2F;code&gt; pairs for fast travel. 121.
+&lt;strong&gt;TimeTravelSystem&lt;&#x2F;strong&gt;: Reverts entity states for &lt;code&gt;TimeTravel&lt;&#x2F;code&gt;. 122.
+&lt;strong&gt;GravityWellSystem&lt;&#x2F;strong&gt;: Simulates &lt;code&gt;GravityWell&lt;&#x2F;code&gt; physics. 123.
+&lt;strong&gt;BlackHoleSystem&lt;&#x2F;strong&gt;: Pulls entities toward &lt;code&gt;BlackHole&lt;&#x2F;code&gt;. 124. &lt;strong&gt;HologramSystem&lt;&#x2F;strong&gt;:
+Renders &lt;code&gt;Hologram&lt;&#x2F;code&gt; projections. 125. &lt;strong&gt;DroneControlSystem&lt;&#x2F;strong&gt;: Pilots &lt;code&gt;Drone&lt;&#x2F;code&gt;
+entities. 126. &lt;strong&gt;AlienBehaviorSystem&lt;&#x2F;strong&gt;: Drives &lt;code&gt;Alien&lt;&#x2F;code&gt; AI logic. 127.
+&lt;strong&gt;ZombieInfectionSystem&lt;&#x2F;strong&gt;: Spreads &lt;code&gt;Disease&lt;&#x2F;code&gt; to entities. 128.
+&lt;strong&gt;VampireSystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Vampire&lt;&#x2F;code&gt; powers (e.g., feeding). 129.
+&lt;strong&gt;WerewolfTransformationSystem&lt;&#x2F;strong&gt;: Triggers &lt;code&gt;Werewolf&lt;&#x2F;code&gt; transformations. 130.
+&lt;strong&gt;GhostSystem&lt;&#x2F;strong&gt;: Enables &lt;code&gt;Ghost&lt;&#x2F;code&gt; phasing and invisibility.&lt;&#x2F;p&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;11-advanced-physics-systems&quot;&gt;&lt;strong&gt;11. Advanced Physics Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;131&quot;&gt;
+&lt;li&gt;&lt;strong&gt;FluidDynamicsSystem&lt;&#x2F;strong&gt;: Simulates fluid interactions with &lt;code&gt;Buoyancy&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;VehicleSystem&lt;&#x2F;strong&gt;: Manages car&#x2F;plane physics (steering, acceleration).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ProjectileSystem&lt;&#x2F;strong&gt;: Updates trajectory for &lt;code&gt;Weapon&lt;&#x2F;code&gt; projectiles.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DestructionSystem&lt;&#x2F;strong&gt;: Breaks &lt;code&gt;Destructible&lt;&#x2F;code&gt; entities into fragments.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ConstructionSystem&lt;&#x2F;strong&gt;: Assembles &lt;code&gt;Constructible&lt;&#x2F;code&gt; entities.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;12-environmental-systems&quot;&gt;&lt;strong&gt;12. Environmental Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;136&quot;&gt;
+&lt;li&gt;&lt;strong&gt;EcosystemSystem&lt;&#x2F;strong&gt;: Simulates &lt;code&gt;Population&lt;&#x2F;code&gt; and &lt;code&gt;Resource&lt;&#x2F;code&gt; cycles.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;FarmingSystem&lt;&#x2F;strong&gt;: Grows crops using &lt;code&gt;Harvestable&lt;&#x2F;code&gt; and &lt;code&gt;Season&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;PollutionSystem&lt;&#x2F;strong&gt;: Tracks environmental decay from &lt;code&gt;Industry&lt;&#x2F;code&gt; components.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DisasterSystem&lt;&#x2F;strong&gt;: Triggers earthquakes, floods, or &lt;code&gt;Explosion&lt;&#x2F;code&gt; events.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;13-character-systems&quot;&gt;&lt;strong&gt;13. Character Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;140&quot;&gt;
+&lt;li&gt;&lt;strong&gt;HungerSystem&lt;&#x2F;strong&gt;: Depletes &lt;code&gt;Hunger&lt;&#x2F;code&gt; over time.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ThirstSystem&lt;&#x2F;strong&gt;: Depletes &lt;code&gt;Thirst&lt;&#x2F;code&gt; and applies penalties.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;FatigueSystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Fatigue&lt;&#x2F;code&gt; for survival mechanics.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;MutationSystem&lt;&#x2F;strong&gt;: Triggers &lt;code&gt;Mutation&lt;&#x2F;code&gt; effects (e.g., wings, claws).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;EvolutionSystem&lt;&#x2F;strong&gt;: Unlocks traits via &lt;code&gt;Evolution&lt;&#x2F;code&gt; progress.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;14-economy-social-systems&quot;&gt;&lt;strong&gt;14. Economy &amp;amp; Social Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;145&quot;&gt;
+&lt;li&gt;&lt;strong&gt;TradeSystem&lt;&#x2F;strong&gt;: Facilitates &lt;code&gt;Trade&lt;&#x2F;code&gt; between entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;StockMarketSystem&lt;&#x2F;strong&gt;: Simulates &lt;code&gt;Economy&lt;&#x2F;code&gt; fluctuations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;HappinessSystem&lt;&#x2F;strong&gt;: Updates &lt;code&gt;Happiness&lt;&#x2F;code&gt; based on events.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ReputationSystem&lt;&#x2F;strong&gt;: Adjusts &lt;code&gt;Reputation&lt;&#x2F;code&gt; with factions.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;15-sci-fi-systems&quot;&gt;&lt;strong&gt;15. Sci-Fi Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;149&quot;&gt;
+&lt;li&gt;&lt;strong&gt;WormholeSystem&lt;&#x2F;strong&gt;: Stabilizes &lt;code&gt;Wormhole&lt;&#x2F;code&gt; connections.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;EnergyShieldSystem&lt;&#x2F;strong&gt;: Toggles shields using &lt;code&gt;Magic&lt;&#x2F;code&gt; or &lt;code&gt;Resource&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;LaserSystem&lt;&#x2F;strong&gt;: Fires and tracks &lt;code&gt;Weapon&lt;&#x2F;code&gt; lasers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;NanobotSystem&lt;&#x2F;strong&gt;: Repairs entities using &lt;code&gt;Nanobot&lt;&#x2F;code&gt; components.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;16-horror-systems&quot;&gt;&lt;strong&gt;16. Horror Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;153&quot;&gt;
+&lt;li&gt;&lt;strong&gt;SanitySystem&lt;&#x2F;strong&gt;: Drains sanity near &lt;code&gt;Ghost&lt;&#x2F;code&gt; entities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;JumpScareSystem&lt;&#x2F;strong&gt;: Triggers &lt;code&gt;SoundEffect&lt;&#x2F;code&gt; and &lt;code&gt;AnimationEvent&lt;&#x2F;code&gt; scares.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;MonsterSpawnSystem&lt;&#x2F;strong&gt;: Generates enemies based on &lt;code&gt;Fear&lt;&#x2F;code&gt; levels.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;17-rpg-systems&quot;&gt;&lt;strong&gt;17. RPG Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;156&quot;&gt;
+&lt;li&gt;&lt;strong&gt;TalentSystem&lt;&#x2F;strong&gt;: Unlocks abilities via &lt;code&gt;Experience&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;ClassSystem&lt;&#x2F;strong&gt;: Manages RPG classes (e.g., warrior, mage).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;LootSystem&lt;&#x2F;strong&gt;: Drops &lt;code&gt;Reward&lt;&#x2F;code&gt; items on entity death.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;DialogChoiceSystem&lt;&#x2F;strong&gt;: Updates story branches via &lt;code&gt;Dialogue&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;18-strategy-systems&quot;&gt;&lt;strong&gt;18. Strategy Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;160&quot;&gt;
+&lt;li&gt;&lt;strong&gt;ResourceManagementSystem&lt;&#x2F;strong&gt;: Allocates &lt;code&gt;Resource&lt;&#x2F;code&gt; for building&#x2F;units.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;UnitCommandSystem&lt;&#x2F;strong&gt;: Issues orders to RTS units.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;FormationSystem&lt;&#x2F;strong&gt;: Arranges entities into &lt;code&gt;Flocking&lt;&#x2F;code&gt; formations.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;19-simulation-systems&quot;&gt;&lt;strong&gt;19. Simulation Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;163&quot;&gt;
+&lt;li&gt;&lt;strong&gt;TrafficSystem&lt;&#x2F;strong&gt;: Simulates vehicle &lt;code&gt;Pathfinding&lt;&#x2F;code&gt; in cities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;CrowdSystem&lt;&#x2F;strong&gt;: Manages &lt;code&gt;Flocking&lt;&#x2F;code&gt; pedestrians.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;WildlifeSystem&lt;&#x2F;strong&gt;: Drives &lt;code&gt;Animal&lt;&#x2F;code&gt; AI and &lt;code&gt;BehaviorTree&lt;&#x2F;code&gt; logic.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;hr &#x2F;&gt;
+&lt;h3 id=&quot;20-experimental-systems&quot;&gt;&lt;strong&gt;20. Experimental Systems&lt;&#x2F;strong&gt;&lt;&#x2F;h3&gt;
+&lt;ol start=&quot;166&quot;&gt;
+&lt;li&gt;&lt;strong&gt;NeuralNetworkSystem&lt;&#x2F;strong&gt;: Trains AI using machine learning.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GeneticAlgorithmSystem&lt;&#x2F;strong&gt;: Evolves entity traits via &lt;code&gt;Mutation&lt;&#x2F;code&gt;.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;QuantumSystem&lt;&#x2F;strong&gt;: Simulates quantum states (e.g., superposition).&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;RealityShiftSystem&lt;&#x2F;strong&gt;: Alters physics rules temporarily.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>

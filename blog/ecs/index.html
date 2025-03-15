@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suggestions for Components and Systems. - AI Code Guidebook</title>
+    <meta
+      name="description"
+      content=""
+    />
+    <link rel="stylesheet" href="https://jingchan.github.io/ai-code-guidebook/css/main.css" />
+    
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="https:&#x2F;&#x2F;jingchan.github.io&#x2F;ai-code-guidebook" class="site-title"
+          >AI Code Guidebook</a
+        >
+        <div class="nav-links">
+          <a href="https://jingchan.github.io/ai-code-guidebook/blog">Blog</a>
+          <a href="https://github.com/jinghcan/ai-code-guidebook">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Suggestions for Components and Systems.</h1>
+      <div class="post-meta">
+        <div class="post-meta-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <time datetime="2025-03-12"
+            >March 12, 2025</time
+          >
+        </div>
+        
+          <div class="post-meta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+              ></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+
+            <div class="post-tags">
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/prompt/"
+                  class="post-tag"
+                  >#prompt</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/list/"
+                  class="post-tag"
+                  >#list</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/ecs/"
+                  class="post-tag"
+                  >#ecs</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/components/"
+                  class="post-tag"
+                  >#components</a
+                >
+              
+            </div>
+          </div>
+        
+      </div>
+    </header>
+
+    <div class="post-content"><h1 id="ecs-suggestions">ECS Suggestions</h1>
+<h2 id="components">Components</h2>
+<h3 id="1-core-components"><strong>1. Core Components</strong></h3>
+<p>These are fundamental components that most entities will use.</p>
+<ol>
+<li><strong>Transform</strong>: Position, rotation, and scale in 3D space.</li>
+<li><strong>Velocity</strong>: Linear velocity for movement.</li>
+<li><strong>Acceleration</strong>: Rate of change of velocity.</li>
+<li><strong>AngularVelocity</strong>: Rotational speed.</li>
+<li><strong>AngularAcceleration</strong>: Rate of change of angular velocity.</li>
+<li><strong>Parent</strong>: Entity that this entity is a child of.</li>
+<li><strong>Children</strong>: List of child entities.</li>
+<li><strong>Tag</strong>: A string or enum for categorizing entities.</li>
+<li><strong>Name</strong>: A human-readable identifier for the entity.</li>
+<li><strong>Active</strong>: Whether the entity is active or inactive.</li>
+</ol>
+<hr />
+<h3 id="2-rendering-components"><strong>2. Rendering Components</strong></h3>
+<p>Components related to visual representation.</p>
+<ol start="11">
+<li><strong>Mesh</strong>: Reference to a 3D mesh.</li>
+<li><strong>Material</strong>: Reference to a material/shader.</li>
+<li><strong>Texture</strong>: Reference to a texture.</li>
+<li><strong>Color</strong>: Base color for rendering.</li>
+<li><strong>UVOffset</strong>: Texture coordinate offset.</li>
+<li><strong>Animation</strong>: Current animation state.</li>
+<li><strong>Sprite</strong>: 2D image for rendering.</li>
+<li><strong>Billboard</strong>: Always faces the camera.</li>
+<li><strong>Light</strong>: Light source properties (color, intensity, range).</li>
+<li><strong>ShadowCaster</strong>: Whether the entity casts shadows.</li>
+<li><strong>ShadowReceiver</strong>: Whether the entity receives shadows.</li>
+<li><strong>ParticleEmitter</strong>: Emits particles for effects.</li>
+<li><strong>Decal</strong>: Projects a texture onto surfaces.</li>
+<li><strong>LOD</strong>: Level of detail for rendering.</li>
+<li><strong>Transparency</strong>: Controls opacity.</li>
+<li><strong>Reflection</strong>: Reflectivity properties.</li>
+<li><strong>Refraction</strong>: Refraction properties.</li>
+<li><strong>Glow</strong>: Emissive glow effect.</li>
+<li><strong>Outline</strong>: Outline rendering for selection or highlighting.</li>
+<li><strong>Camera</strong>: Defines a viewport and projection.</li>
+</ol>
+<hr />
+<h3 id="3-physics-components"><strong>3. Physics Components</strong></h3>
+<p>Components for physics simulation.</p>
+<ol start="31">
+<li><strong>Collider</strong>: Defines collision shape (e.g., box, sphere, capsule).</li>
+<li><strong>Rigidbody</strong>: Physical properties (mass, drag, gravity).</li>
+<li><strong>Trigger</strong>: Detects overlaps without physical collision.</li>
+<li><strong>Force</strong>: Applied force for movement.</li>
+<li><strong>Torque</strong>: Applied rotational force.</li>
+<li><strong>Gravity</strong>: Custom gravity settings.</li>
+<li><strong>Friction</strong>: Surface friction.</li>
+<li><strong>Bounciness</strong>: How much the entity bounces on collisions.</li>
+<li><strong>Kinematic</strong>: Whether the entity is controlled by scripts rather than
+physics.</li>
+<li><strong>RaycastHit</strong>: Stores results of a raycast.</li>
+<li><strong>Buoyancy</strong>: Simulates floating in fluids.</li>
+<li><strong>WindAffected</strong>: Responds to wind forces.</li>
+<li><strong>HingeJoint</strong>: Rotational constraint between entities.</li>
+<li><strong>SpringJoint</strong>: Elastic constraint between entities.</li>
+<li><strong>FixedJoint</strong>: Rigidly connects two entities.</li>
+<li><strong>Ragdoll</strong>: Simulates physics-based character animation.</li>
+<li><strong>WaterSurface</strong>: Defines a water plane for physics interactions.</li>
+<li><strong>Cloth</strong>: Simulates cloth physics.</li>
+<li><strong>Softbody</strong>: Simulates soft, deformable physics.</li>
+<li><strong>ExplosionForce</strong>: Applies force in a radial pattern.</li>
+</ol>
+<hr />
+<h3 id="4-animation-components"><strong>4. Animation Components</strong></h3>
+<p>Components for animating entities.</p>
+<ol start="51">
+<li><strong>Animator</strong>: Controls animation states and transitions.</li>
+<li><strong>BlendShape</strong>: Morph target for facial expressions.</li>
+<li><strong>Bone</strong>: Part of a skeleton for rigging.</li>
+<li><strong>IKTarget</strong>: Target for inverse kinematics.</li>
+<li><strong>AnimationClip</strong>: Reference to a specific animation.</li>
+<li><strong>AnimationSpeed</strong>: Playback speed of animations.</li>
+<li><strong>AnimationEvent</strong>: Triggers events during animation playback.</li>
+<li><strong>LipSync</strong>: Synchronizes mouth movements with audio.</li>
+<li><strong>FacialExpression</strong>: Controls facial animations.</li>
+<li><strong>Gesture</strong>: Hand or body gestures for characters.</li>
+</ol>
+<hr />
+<h3 id="5-audio-components"><strong>5. Audio Components</strong></h3>
+<p>Components for sound and music.</p>
+<ol start="61">
+<li><strong>AudioSource</strong>: Plays sounds or music.</li>
+<li><strong>AudioListener</strong>: Represents the “ear” for 3D audio.</li>
+<li><strong>SoundEffect</strong>: Short audio clip for effects.</li>
+<li><strong>MusicTrack</strong>: Background music.</li>
+<li><strong>Volume</strong>: Controls audio volume.</li>
+<li><strong>Pitch</strong>: Controls audio pitch.</li>
+<li><strong>SpatialBlend</strong>: Balances 2D and 3D audio.</li>
+<li><strong>ReverbZone</strong>: Applies reverb effects.</li>
+<li><strong>AudioClip</strong>: Reference to an audio file.</li>
+<li><strong>AudioLoop</strong>: Whether the audio loops.</li>
+</ol>
+<hr />
+<h3 id="6-ai-and-behavior-components"><strong>6. AI and Behavior Components</strong></h3>
+<p>Components for AI and entity behavior.</p>
+<ol start="71">
+<li><strong>AIState</strong>: Current state of the AI (e.g., idle, chasing).</li>
+<li><strong>Pathfinding</strong>: Pathfinding data and goals.</li>
+<li><strong>Waypoint</strong>: A point in a path.</li>
+<li><strong>BehaviorTree</strong>: Hierarchical AI decision-making.</li>
+<li><strong>Blackboard</strong>: Shared data for AI decisions.</li>
+<li><strong>Target</strong>: Entity to target (e.g., for attacks or movement).</li>
+<li><strong>VisionCone</strong>: Defines what the entity can “see.”</li>
+<li><strong>HearingRange</strong>: Defines what the entity can “hear.”</li>
+<li><strong>PatrolRoute</strong>: Path for patrolling behavior.</li>
+<li><strong>Flocking</strong>: Group movement behavior.</li>
+<li><strong>Steering</strong>: Steering behaviors (e.g., seek, flee).</li>
+<li><strong>Aggression</strong>: How aggressive the entity is.</li>
+<li><strong>Fear</strong>: How fearful the entity is.</li>
+<li><strong>Curiosity</strong>: How curious the entity is.</li>
+<li><strong>Memory</strong>: Stores information about the environment.</li>
+<li><strong>DecisionMaker</strong>: Makes decisions based on inputs.</li>
+<li><strong>UtilityAI</strong>: Scores actions based on utility.</li>
+<li><strong>Goal</strong>: What the AI is trying to achieve.</li>
+<li><strong>Action</strong>: An action the AI can perform.</li>
+<li><strong>ReactionTime</strong>: How quickly the AI reacts.</li>
+</ol>
+<hr />
+<h3 id="7-gameplay-components"><strong>7. Gameplay Components</strong></h3>
+<p>Components for gameplay mechanics.</p>
+<ol start="91">
+<li><strong>Health</strong>: Current and maximum health.</li>
+<li><strong>Damage</strong>: Amount of damage the entity can deal.</li>
+<li><strong>Armor</strong>: Reduces incoming damage.</li>
+<li><strong>Experience</strong>: Tracks experience points.</li>
+<li><strong>Level</strong>: Current level of the entity.</li>
+<li><strong>Inventory</strong>: Stores items.</li>
+<li><strong>Equipment</strong>: Items currently equipped.</li>
+<li><strong>Weapon</strong>: Defines weapon properties.</li>
+<li><strong>Ammo</strong>: Tracks ammunition.</li>
+<li><strong>Cooldown</strong>: Time before an action can be performed again.</li>
+<li><strong>Timer</strong>: Counts down time for events.</li>
+<li><strong>Score</strong>: Tracks points or score.</li>
+<li><strong>Objective</strong>: Defines a goal or objective.</li>
+<li><strong>Quest</strong>: Tracks quest progress.</li>
+<li><strong>Dialogue</strong>: Stores dialogue lines.</li>
+<li><strong>Interaction</strong>: Defines how the entity can be interacted with.</li>
+<li><strong>Pickup</strong>: Can be picked up by the player.</li>
+<li><strong>Door</strong>: Can be opened or closed.</li>
+<li><strong>Switch</strong>: Can be toggled on or off.</li>
+<li><strong>Key</strong>: Unlocks something (e.g., a door).</li>
+<li><strong>Lock</strong>: Requires a key to unlock.</li>
+<li><strong>Trap</strong>: Damages or hinders entities.</li>
+<li><strong>Checkpoint</strong>: Saves progress.</li>
+<li><strong>Respawn</strong>: Defines respawn behavior.</li>
+<li><strong>Team</strong>: Which team the entity belongs to.</li>
+<li><strong>Faction</strong>: Relationship with other factions.</li>
+<li><strong>Reputation</strong>: How others perceive the entity.</li>
+<li><strong>Stealth</strong>: How stealthy the entity is.</li>
+<li><strong>Detection</strong>: How easily the entity is detected.</li>
+<li><strong>Reward</strong>: What the entity gives when defeated or interacted with.</li>
+</ol>
+<hr />
+<h3 id="8-ui-components"><strong>8. UI Components</strong></h3>
+<p>Components for user interface elements.</p>
+<ol start="121">
+<li><strong>UIElement</strong>: Base component for UI elements.</li>
+<li><strong>Button</strong>: Clickable UI button.</li>
+<li><strong>Text</strong>: Displays text.</li>
+<li><strong>Image</strong>: Displays an image.</li>
+<li><strong>Slider</strong>: Adjustable slider.</li>
+<li><strong>ProgressBar</strong>: Shows progress.</li>
+<li><strong>Dropdown</strong>: Selectable dropdown menu.</li>
+<li><strong>InputField</strong>: Text input field.</li>
+<li><strong>Tooltip</strong>: Displays additional information on hover.</li>
+<li><strong>HUD</strong>: Heads-up display elements.</li>
+<li><strong>Menu</strong>: Collection of UI elements.</li>
+<li><strong>Cursor</strong>: Custom cursor behavior.</li>
+<li><strong>Notification</strong>: Displays temporary messages.</li>
+<li><strong>HealthBar</strong>: Displays health.</li>
+<li><strong>Minimap</strong>: Displays a small map.</li>
+<li><strong>Crosshair</strong>: Aiming reticle.</li>
+<li><strong>Scoreboard</strong>: Displays scores.</li>
+<li><strong>TimerUI</strong>: Displays a countdown.</li>
+<li><strong>InventoryUI</strong>: Displays inventory.</li>
+<li><strong>DialogueUI</strong>: Displays dialogue.</li>
+</ol>
+<hr />
+<h3 id="9-networking-components"><strong>9. Networking Components</strong></h3>
+<p>Components for multiplayer and networking.</p>
+<ol start="141">
+<li><strong>NetworkID</strong>: Unique identifier for networked entities.</li>
+<li><strong>Replication</strong>: Synchronizes data across the network.</li>
+<li><strong>Latency</strong>: Simulates network latency.</li>
+<li><strong>PacketLoss</strong>: Simulates packet loss.</li>
+<li><strong>Authority</strong>: Which client or server has control.</li>
+<li><strong>Snapshot</strong>: Stores a snapshot of the entity’s state.</li>
+<li><strong>Prediction</strong>: Predicts entity movement.</li>
+<li><strong>Interpolation</strong>: Smooths entity movement.</li>
+<li><strong>RPC</strong>: Remote procedure call for networked actions.</li>
+<li><strong>Lobby</strong>: Manages multiplayer lobbies.</li>
+</ol>
+<hr />
+<h3 id="10-miscellaneous-components"><strong>10. Miscellaneous Components</strong></h3>
+<p>Creative and niche components.</p>
+<ol start="151">
+<li><strong>Weather</strong>: Controls weather effects.</li>
+<li><strong>TimeOfDay</strong>: Tracks the time of day.</li>
+<li><strong>Season</strong>: Tracks the current season.</li>
+<li><strong>DayNightCycle</strong>: Controls day/night transitions.</li>
+<li><strong>Fog</strong>: Controls fog density and color.</li>
+<li><strong>Wind</strong>: Controls wind direction and strength.</li>
+<li><strong>Rain</strong>: Controls rain intensity.</li>
+<li><strong>Snow</strong>: Controls snow intensity.</li>
+<li><strong>Fire</strong>: Simulates fire effects.</li>
+<li><strong>Smoke</strong>: Simulates smoke effects.</li>
+<li><strong>Explosion</strong>: Simulates explosions.</li>
+<li><strong>Destructible</strong>: Can be destroyed.</li>
+<li><strong>Constructible</strong>: Can be built or assembled.</li>
+<li><strong>Harvestable</strong>: Can be harvested for resources.</li>
+<li><strong>Resource</strong>: Stores resources (e.g., wood, gold).</li>
+<li><strong>Crafting</strong>: Defines crafting recipes.</li>
+<li><strong>Trade</strong>: Defines trade behavior.</li>
+<li><strong>Economy</strong>: Tracks currency and prices.</li>
+<li><strong>Population</strong>: Tracks population size.</li>
+<li><strong>Happiness</strong>: Tracks happiness level.</li>
+<li><strong>Hunger</strong>: Tracks hunger level.</li>
+<li><strong>Thirst</strong>: Tracks thirst level.</li>
+<li><strong>Fatigue</strong>: Tracks fatigue level.</li>
+<li><strong>Temperature</strong>: Tracks temperature.</li>
+<li><strong>Radiation</strong>: Tracks radiation level.</li>
+<li><strong>Poison</strong>: Tracks poison level.</li>
+<li><strong>Disease</strong>: Tracks disease state.</li>
+<li><strong>Mutation</strong>: Tracks mutations.</li>
+<li><strong>Evolution</strong>: Tracks evolutionary progress.</li>
+<li><strong>Magic</strong>: Tracks magical energy.</li>
+<li><strong>Mana</strong>: Tracks mana for spells.</li>
+<li><strong>Spell</strong>: Defines a spell or ability.</li>
+<li><strong>Buff</strong>: Temporary positive effect.</li>
+<li><strong>Debuff</strong>: Temporary negative effect.</li>
+<li><strong>Aura</strong>: Area-of-effect buff or debuff.</li>
+<li><strong>Summon</strong>: Summons another entity.</li>
+<li><strong>Teleport</strong>: Teleports the entity.</li>
+<li><strong>Portal</strong>: Transports entities between locations.</li>
+<li><strong>TimeTravel</strong>: Simulates time travel.</li>
+<li><strong>GravityWell</strong>: Simulates a gravity well.</li>
+<li><strong>BlackHole</strong>: Simulates a black hole.</li>
+<li><strong>Wormhole</strong>: Simulates a wormhole.</li>
+<li><strong>Hologram</strong>: Displays a holographic image.</li>
+<li><strong>Drone</strong>: Controls a drone entity.</li>
+<li><strong>Robot</strong>: Controls a robot entity.</li>
+<li><strong>Alien</strong>: Defines alien behavior.</li>
+<li><strong>Zombie</strong>: Defines zombie behavior.</li>
+<li><strong>Vampire</strong>: Defines vampire behavior.</li>
+<li><strong>Werewolf</strong>: Defines werewolf behavior.</li>
+<li><strong>Ghost</strong>: Defines ghost behavior.</li>
+</ol>
+<h2 id="systems">Systems</h2>
+<p>Here’s a list of <strong>200 systems</strong> for an ECS architecture, categorized by
+functionality and referencing the
+<a rel="noopener nofollow" target="_blank" href="https://www.reddit.com/r/gamedev/comments/15n6gq6/comment/jvm7k7r/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button">components from the previous list</a>.
+Systems are designed to process components logically, ensuring efficiency and
+scalability while avoiding anti-patterns.</p>
+<hr />
+<h3 id="1-core-systems"><strong>1. Core Systems</strong></h3>
+<p>Process foundational components like transforms, hierarchy, and basic state.</p>
+<ol>
+<li><strong>MovementSystem</strong>: Updates <code>Transform</code> using <code>Velocity</code> and <code>Acceleration</code>.</li>
+<li><strong>RotationSystem</strong>: Updates rotation using <code>AngularVelocity</code> and
+<code>AngularAcceleration</code>.</li>
+<li><strong>ParentingSystem</strong>: Updates child entities based on <code>Parent</code> and <code>Children</code>.</li>
+<li><strong>TagSystem</strong>: Handles entity categorization via <code>Tag</code>.</li>
+<li><strong>NamingSystem</strong>: Manages entity <code>Name</code> for debugging/UI.</li>
+<li><strong>ActivationSystem</strong>: Toggles entity visibility/behavior via <code>Active</code>.</li>
+<li><strong>HierarchySystem</strong>: Maintains parent-child relationships.</li>
+<li><strong>BoundsSystem</strong>: Calculates bounding volumes for <code>Transform</code> and <code>Collider</code>.</li>
+<li><strong>LifetimeSystem</strong>: Tracks entity lifespan (e.g., for temporary effects).</li>
+<li><strong>SpawnSystem</strong>: Instantiates entities with predefined components.</li>
+</ol>
+<hr />
+<h3 id="2-rendering-systems"><strong>2. Rendering Systems</strong></h3>
+<p>Handle rendering, lighting, particles, and visual effects. 11.
+<strong>RenderMeshSystem</strong>: Draws entities with <code>Mesh</code>, <code>Material</code>, and
+<code>Transform</code>. 12. <strong>SpriteRenderingSystem</strong>: Renders 2D <code>Sprite</code> entities. 13.
+<strong>LightingSystem</strong>: Updates <code>Light</code> sources and shadows. 14.
+<strong>ShadowCastingSystem</strong>: Manages <code>ShadowCaster</code> and <code>ShadowReceiver</code>. 15.
+<strong>ParticleUpdateSystem</strong>: Simulates <code>ParticleEmitter</code> effects. 16.
+<strong>DecalSystem</strong>: Projects <code>Decal</code> textures onto surfaces. 17.
+<strong>TransparencySystem</strong>: Blends <code>Transparency</code> for translucent objects. 18.
+<strong>OutlineSystem</strong>: Renders <code>Outline</code> effects for highlighted entities. 19.
+<strong>CameraSystem</strong>: Updates <code>Camera</code> view/projection matrices. 20. <strong>LODSystem</strong>:
+Swaps <code>LOD</code> meshes based on distance. 21. <strong>ReflectionSystem</strong>: Renders
+<code>Reflection</code> probes. 22. <strong>RefractionSystem</strong>: Handles <code>Refraction</code> effects. 23.
+<strong>GlowSystem</strong>: Applies <code>Glow</code> emissive effects. 24. <strong>BillboardSystem</strong>:
+Orients <code>Billboard</code> entities toward the camera. 25. <strong>UISystem</strong>: Renders
+<code>UIElement</code>, <code>Button</code>, <code>Text</code>, etc. 26. <strong>HUDSystem</strong>: Updates <code>HealthBar</code>,
+<code>Minimap</code>, and <code>Scoreboard</code>. 27. <strong>WeatherSystem</strong>: Renders <code>Rain</code>, <code>Snow</code>, and
+<code>Fog</code>. 28. <strong>PostProcessingSystem</strong>: Applies screen-space effects (e.g., blur,
+color grading). 29. <strong>SkyboxSystem</strong>: Renders the skybox or <code>DayNightCycle</code>. 30.
+<strong>VFXSystem</strong>: Manages visual effects like <code>Fire</code>, <code>Smoke</code>, and <code>Explosion</code>.</p>
+<hr />
+<h3 id="3-physics-systems"><strong>3. Physics Systems</strong></h3>
+<p>Simulate collisions, forces, and physical interactions. 31.
+<strong>PhysicsSimulationSystem</strong>: Updates <code>Rigidbody</code>, <code>Velocity</code>, and <code>Force</code>. 32.
+<strong>CollisionDetectionSystem</strong>: Checks <code>Collider</code> overlaps and <code>Trigger</code>
+events. 33. <strong>CollisionResponseSystem</strong>: Resolves collisions using <code>Bounciness</code>
+and <code>Friction</code>. 34. <strong>GravitySystem</strong>: Applies <code>Gravity</code> to entities. 35.
+<strong>BuoyancySystem</strong>: Simulates <code>Buoyancy</code> in fluids. 36. <strong>WindSystem</strong>: Applies
+<code>WindAffected</code> forces. 37. <strong>JointSystem</strong>: Updates <code>HingeJoint</code>, <code>SpringJoint</code>,
+and <code>FixedJoint</code>. 38. <strong>RagdollSystem</strong>: Animates <code>Ragdoll</code> physics. 39.
+<strong>ClothSimulationSystem</strong>: Simulates <code>Cloth</code> physics. 40. <strong>SoftbodySystem</strong>:
+Deforms <code>Softbody</code> entities. 41. <strong>RaycastSystem</strong>: Performs raycasts and stores
+<code>RaycastHit</code>. 42. <strong>ExplosionSystem</strong>: Applies <code>ExplosionForce</code> to nearby
+entities. 43. <strong>WaterInteractionSystem</strong>: Handles <code>WaterSurface</code> physics. 44.
+<strong>KinematicSystem</strong>: Updates <code>Kinematic</code> entities (script-controlled
+movement). 45. <strong>CharacterControllerSystem</strong>: Manages player/enemy movement with
+<code>Collider</code>.</p>
+<hr />
+<h3 id="4-animation-systems"><strong>4. Animation Systems</strong></h3>
+<p>Animate entities using skeletons, blend shapes, and procedural motion. 46.
+<strong>SkeletalAnimationSystem</strong>: Drives <code>Bone</code> hierarchies and <code>Animator</code>. 47.
+<strong>BlendShapeSystem</strong>: Interpolates <code>BlendShape</code> morph targets. 48. <strong>IKSystem</strong>:
+Solves <code>IKTarget</code> inverse kinematics. 49. <strong>LipSyncSystem</strong>: Syncs <code>LipSync</code>
+with <code>AudioSource</code>. 50. <strong>FacialAnimationSystem</strong>: Controls <code>FacialExpression</code>
+states. 51. <strong>GestureSystem</strong>: Triggers <code>Gesture</code> animations. 52.
+<strong>AnimationEventSystem</strong>: Fires events during <code>AnimationClip</code> playback. 53.
+<strong>AnimationBlendingSystem</strong>: Blends multiple <code>AnimationClip</code> states. 54.
+<strong>ProceduralAnimationSystem</strong>: Generates motion (e.g., <code>Flocking</code>). 55.
+<strong>AnimationSpeedSystem</strong>: Adjusts <code>AnimationSpeed</code> dynamically.</p>
+<hr />
+<h3 id="5-audio-systems"><strong>5. Audio Systems</strong></h3>
+<p>Manage sound effects, music, and spatial audio. 56. <strong>AudioPlaybackSystem</strong>:
+Plays <code>SoundEffect</code> and <code>MusicTrack</code>. 57. <strong>SpatialAudioSystem</strong>: Updates 3D
+<code>AudioSource</code> and <code>AudioListener</code>. 58. <strong>VolumeControlSystem</strong>: Adjusts <code>Volume</code>
+and <code>Pitch</code>. 59. <strong>ReverbSystem</strong>: Applies <code>ReverbZone</code> effects. 60.
+<strong>AudioLoopSystem</strong>: Manages looping <code>AudioClip</code> instances. 61.
+<strong>DialogueSystem</strong>: Triggers <code>Dialogue</code> audio lines. 62.
+<strong>MusicTransitionSystem</strong>: Crossfades <code>MusicTrack</code> based on game state.</p>
+<hr />
+<h3 id="6-ai-systems"><strong>6. AI Systems</strong></h3>
+<p>Drive NPC behavior, pathfinding, and decision-making. 63.
+<strong>AIStateMachineSystem</strong>: Updates <code>AIState</code> transitions (e.g., idle →
+chase). 64. <strong>PathfindingSystem</strong>: Calculates paths using <code>Pathfinding</code> and
+<code>Waypoint</code>. 65. <strong>BehaviorTreeSystem</strong>: Executes <code>BehaviorTree</code> decision
+logic. 66. <strong>BlackboardSystem</strong>: Updates <code>Blackboard</code> data for AI. 67.
+<strong>TargetingSystem</strong>: Selects <code>Target</code> entities for AI. 68. <strong>VisionSystem</strong>:
+Checks <code>VisionCone</code> line-of-sight. 69. <strong>HearingSystem</strong>: Detects sounds in
+<code>HearingRange</code>. 70. <strong>PatrolSystem</strong>: Follows <code>PatrolRoute</code> waypoints. 71.
+<strong>FlockingSystem</strong>: Simulates <code>Flocking</code> group behavior. 72. <strong>SteeringSystem</strong>:
+Applies <code>Seek</code>, <code>Flee</code>, and <code>Wander</code> behaviors. 73. <strong>UtilityAISystem</strong>: Scores
+<code>Action</code> utility for <code>UtilityAI</code>. 74. <strong>MemorySystem</strong>: Updates <code>Memory</code> based
+on observations. 75. <strong>ReactionSystem</strong>: Triggers actions based on
+<code>ReactionTime</code>.</p>
+<hr />
+<h3 id="7-gameplay-systems"><strong>7. Gameplay Systems</strong></h3>
+<p>Handle health, combat, inventory, and quests. 76. <strong>HealthSystem</strong>: Updates
+<code>Health</code> and applies <code>Damage</code>. 77. <strong>CombatSystem</strong>: Resolves attacks using
+<code>Weapon</code> and <code>Armor</code>. 78. <strong>InventorySystem</strong>: Manages <code>Inventory</code> and
+<code>Equipment</code>. 79. <strong>CooldownSystem</strong>: Tracks <code>Cooldown</code> timers for abilities. 80.
+<strong>ExperienceSystem</strong>: Awards <code>Experience</code> and updates <code>Level</code>. 81.
+<strong>QuestSystem</strong>: Tracks <code>Quest</code> objectives and rewards. 82.
+<strong>InteractionSystem</strong>: Handles <code>Interaction</code> prompts (e.g., “Press E to
+open”). 83. <strong>LockpickingSystem</strong>: Resolves <code>Lock</code> and <code>Key</code> mechanics. 84.
+<strong>TrapSystem</strong>: Triggers <code>Trap</code> effects on collision. 85. <strong>RespawnSystem</strong>:
+Handles <code>Respawn</code> logic for players/enemies. 86. <strong>TeamSystem</strong>: Manages <code>Team</code>
+and <code>Faction</code> relationships. 87. <strong>StealthSystem</strong>: Updates <code>Stealth</code> and
+<code>Detection</code> states. 88. <strong>EconomySystem</strong>: Trades <code>Resource</code> using <code>Economy</code>
+prices. 89. <strong>CraftingSystem</strong>: Combines <code>Resource</code> into items via
+<code>Crafting</code>. 90. <strong>HarvestSystem</strong>: Collects <code>Resource</code> from <code>Harvestable</code>
+entities.</p>
+<hr />
+<h3 id="8-ui-systems"><strong>8. UI Systems</strong></h3>
+<p>Update and render user interface elements. 91. <strong>ButtonSystem</strong>: Handles
+<code>Button</code> clicks and hover states. 92. <strong>TextUpdateSystem</strong>: Updates dynamic
+<code>Text</code> (e.g., score, health). 93. <strong>SliderSystem</strong>: Adjusts <code>Slider</code> values
+(e.g., volume). 94. <strong>ProgressSystem</strong>: Updates <code>ProgressBar</code> for
+quests/loading. 95. <strong>TooltipSystem</strong>: Displays <code>Tooltip</code> on hover. 96.
+<strong>MenuSystem</strong>: Manages <code>Menu</code> navigation and visibility. 97. <strong>CursorSystem</strong>:
+Updates <code>Cursor</code> appearance and behavior. 98. <strong>NotificationSystem</strong>:
+Shows/hides <code>Notification</code> messages. 99. <strong>InventoryUISystem</strong>: Syncs
+<code>Inventory</code> with <code>InventoryUI</code>. 100. <strong>DialogueUISystem</strong>: Displays <code>Dialogue</code>
+choices and text.</p>
+<hr />
+<h3 id="9-networking-systems"><strong>9. Networking Systems</strong></h3>
+<p>Synchronize data across clients and servers. 101. <strong>NetworkSyncSystem</strong>:
+Replicates <code>Transform</code> and <code>Velocity</code> via <code>NetworkID</code>. 102. <strong>SnapshotSystem</strong>:
+Interpolates <code>Snapshot</code> data for smooth movement. 103. <strong>PredictionSystem</strong>:
+Predicts entity states to reduce latency. 104. <strong>RPCHandlerSystem</strong>: Executes
+<code>RPC</code> calls (e.g., “Open Door”). 105. <strong>AuthoritySystem</strong>: Validates actions for
+entities with <code>Authority</code>. 106. <strong>LobbySystem</strong>: Manages <code>Lobby</code> creation and
+player joins. 107. <strong>CheatDetectionSystem</strong>: Flags suspicious <code>Replication</code>
+data. 108. <strong>LagCompensationSystem</strong>: Rewinds time for hit detection. 109.
+<strong>PacketLossRecoverySystem</strong>: Resends critical data on <code>PacketLoss</code>. 110.
+<strong>VoiceChatSystem</strong>: Streams <code>AudioSource</code> data between players.</p>
+<hr />
+<h3 id="10-creative-miscellaneous-systems"><strong>10. Creative/Miscellaneous Systems</strong></h3>
+<p>Handle unique mechanics like weather, magic, and sci-fi elements. 111.
+<strong>WeatherSystem</strong>: Updates <code>Rain</code>, <code>Snow</code>, and <code>Wind</code>. 112. <strong>TimeSystem</strong>:
+Advances <code>TimeOfDay</code> and <code>Season</code>. 113. <strong>TemperatureSystem</strong>: Adjusts
+<code>Temperature</code> for survival games. 114. <strong>RadiationSystem</strong>: Applies <code>Radiation</code>
+damage over time. 115. <strong>MagicSystem</strong>: Manages <code>Spell</code> casting and <code>Mana</code>
+costs. 116. <strong>BuffSystem</strong>: Applies <code>Buff</code> and <code>Debuff</code> effects. 117.
+<strong>AuraSystem</strong>: Updates <code>Aura</code> area effects. 118. <strong>SummonSystem</strong>: Spawns
+entities via <code>Summon</code>. 119. <strong>TeleportSystem</strong>: Moves entities using
+<code>Teleport</code>. 120. <strong>PortalSystem</strong>: Links <code>Portal</code> pairs for fast travel. 121.
+<strong>TimeTravelSystem</strong>: Reverts entity states for <code>TimeTravel</code>. 122.
+<strong>GravityWellSystem</strong>: Simulates <code>GravityWell</code> physics. 123.
+<strong>BlackHoleSystem</strong>: Pulls entities toward <code>BlackHole</code>. 124. <strong>HologramSystem</strong>:
+Renders <code>Hologram</code> projections. 125. <strong>DroneControlSystem</strong>: Pilots <code>Drone</code>
+entities. 126. <strong>AlienBehaviorSystem</strong>: Drives <code>Alien</code> AI logic. 127.
+<strong>ZombieInfectionSystem</strong>: Spreads <code>Disease</code> to entities. 128.
+<strong>VampireSystem</strong>: Manages <code>Vampire</code> powers (e.g., feeding). 129.
+<strong>WerewolfTransformationSystem</strong>: Triggers <code>Werewolf</code> transformations. 130.
+<strong>GhostSystem</strong>: Enables <code>Ghost</code> phasing and invisibility.</p>
+<hr />
+<h3 id="11-advanced-physics-systems"><strong>11. Advanced Physics Systems</strong></h3>
+<ol start="131">
+<li><strong>FluidDynamicsSystem</strong>: Simulates fluid interactions with <code>Buoyancy</code>.</li>
+<li><strong>VehicleSystem</strong>: Manages car/plane physics (steering, acceleration).</li>
+<li><strong>ProjectileSystem</strong>: Updates trajectory for <code>Weapon</code> projectiles.</li>
+<li><strong>DestructionSystem</strong>: Breaks <code>Destructible</code> entities into fragments.</li>
+<li><strong>ConstructionSystem</strong>: Assembles <code>Constructible</code> entities.</li>
+</ol>
+<hr />
+<h3 id="12-environmental-systems"><strong>12. Environmental Systems</strong></h3>
+<ol start="136">
+<li><strong>EcosystemSystem</strong>: Simulates <code>Population</code> and <code>Resource</code> cycles.</li>
+<li><strong>FarmingSystem</strong>: Grows crops using <code>Harvestable</code> and <code>Season</code>.</li>
+<li><strong>PollutionSystem</strong>: Tracks environmental decay from <code>Industry</code> components.</li>
+<li><strong>DisasterSystem</strong>: Triggers earthquakes, floods, or <code>Explosion</code> events.</li>
+</ol>
+<hr />
+<h3 id="13-character-systems"><strong>13. Character Systems</strong></h3>
+<ol start="140">
+<li><strong>HungerSystem</strong>: Depletes <code>Hunger</code> over time.</li>
+<li><strong>ThirstSystem</strong>: Depletes <code>Thirst</code> and applies penalties.</li>
+<li><strong>FatigueSystem</strong>: Manages <code>Fatigue</code> for survival mechanics.</li>
+<li><strong>MutationSystem</strong>: Triggers <code>Mutation</code> effects (e.g., wings, claws).</li>
+<li><strong>EvolutionSystem</strong>: Unlocks traits via <code>Evolution</code> progress.</li>
+</ol>
+<hr />
+<h3 id="14-economy-social-systems"><strong>14. Economy &amp; Social Systems</strong></h3>
+<ol start="145">
+<li><strong>TradeSystem</strong>: Facilitates <code>Trade</code> between entities.</li>
+<li><strong>StockMarketSystem</strong>: Simulates <code>Economy</code> fluctuations.</li>
+<li><strong>HappinessSystem</strong>: Updates <code>Happiness</code> based on events.</li>
+<li><strong>ReputationSystem</strong>: Adjusts <code>Reputation</code> with factions.</li>
+</ol>
+<hr />
+<h3 id="15-sci-fi-systems"><strong>15. Sci-Fi Systems</strong></h3>
+<ol start="149">
+<li><strong>WormholeSystem</strong>: Stabilizes <code>Wormhole</code> connections.</li>
+<li><strong>EnergyShieldSystem</strong>: Toggles shields using <code>Magic</code> or <code>Resource</code>.</li>
+<li><strong>LaserSystem</strong>: Fires and tracks <code>Weapon</code> lasers.</li>
+<li><strong>NanobotSystem</strong>: Repairs entities using <code>Nanobot</code> components.</li>
+</ol>
+<hr />
+<h3 id="16-horror-systems"><strong>16. Horror Systems</strong></h3>
+<ol start="153">
+<li><strong>SanitySystem</strong>: Drains sanity near <code>Ghost</code> entities.</li>
+<li><strong>JumpScareSystem</strong>: Triggers <code>SoundEffect</code> and <code>AnimationEvent</code> scares.</li>
+<li><strong>MonsterSpawnSystem</strong>: Generates enemies based on <code>Fear</code> levels.</li>
+</ol>
+<hr />
+<h3 id="17-rpg-systems"><strong>17. RPG Systems</strong></h3>
+<ol start="156">
+<li><strong>TalentSystem</strong>: Unlocks abilities via <code>Experience</code>.</li>
+<li><strong>ClassSystem</strong>: Manages RPG classes (e.g., warrior, mage).</li>
+<li><strong>LootSystem</strong>: Drops <code>Reward</code> items on entity death.</li>
+<li><strong>DialogChoiceSystem</strong>: Updates story branches via <code>Dialogue</code>.</li>
+</ol>
+<hr />
+<h3 id="18-strategy-systems"><strong>18. Strategy Systems</strong></h3>
+<ol start="160">
+<li><strong>ResourceManagementSystem</strong>: Allocates <code>Resource</code> for building/units.</li>
+<li><strong>UnitCommandSystem</strong>: Issues orders to RTS units.</li>
+<li><strong>FormationSystem</strong>: Arranges entities into <code>Flocking</code> formations.</li>
+</ol>
+<hr />
+<h3 id="19-simulation-systems"><strong>19. Simulation Systems</strong></h3>
+<ol start="163">
+<li><strong>TrafficSystem</strong>: Simulates vehicle <code>Pathfinding</code> in cities.</li>
+<li><strong>CrowdSystem</strong>: Manages <code>Flocking</code> pedestrians.</li>
+<li><strong>WildlifeSystem</strong>: Drives <code>Animal</code> AI and <code>BehaviorTree</code> logic.</li>
+</ol>
+<hr />
+<h3 id="20-experimental-systems"><strong>20. Experimental Systems</strong></h3>
+<ol start="166">
+<li><strong>NeuralNetworkSystem</strong>: Trains AI using machine learning.</li>
+<li><strong>GeneticAlgorithmSystem</strong>: Evolves entity traits via <code>Mutation</code>.</li>
+<li><strong>QuantumSystem</strong>: Simulates quantum states (e.g., superposition).</li>
+<li><strong>RealityShiftSystem</strong>: Alters physics rules temporarily.</li>
+</ol>
+</div>
+
+    <div class="post-navigation">
+      
+
+      
+    </div>
+  </article>
+</main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 AI Code Guidebook</p>
+      </div>
+    </footer>
+  </body>
+</html>

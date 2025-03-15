@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suggestions for Components and Systems. - AI Code Guidebook</title>
+    <meta
+      name="description"
+      content=""
+    />
+    <link rel="stylesheet" href="https://jingchan.github.io/ai-code-guidebook/css/main.css" />
+    
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="https:&#x2F;&#x2F;jingchan.github.io&#x2F;ai-code-guidebook" class="site-title"
+          >AI Code Guidebook</a
+        >
+        <div class="nav-links">
+          <a href="https://jingchan.github.io/ai-code-guidebook/blog">Blog</a>
+          <a href="https://github.com/jinghcan/ai-code-guidebook">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">Suggestions for Components and Systems.</h1>
+      <div class="post-meta">
+        <div class="post-meta-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <time datetime="2025-03-12"
+            >March 12, 2025</time
+          >
+        </div>
+        
+          <div class="post-meta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+              ></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+
+            <div class="post-tags">
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/prompt/"
+                  class="post-tag"
+                  >#prompt</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/list/"
+                  class="post-tag"
+                  >#list</a
+                >
+              
+            </div>
+          </div>
+        
+      </div>
+    </header>
+
+    <div class="post-content"><p>Below is a compact, concise checklist for developing a basic first game level,
+broken into small, actionable 1-2 hour tasks. Use this as a TODO list—check off
+items as you complete them to track your progress!</p>
+<hr />
+<h2 id="game-level-development-checklist">Game Level Development Checklist</h2>
+<h3 id="currently-doing">Currently Doing</h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Place 3-5 static objects (rocks, trees)</li>
+<li><input disabled="" type="checkbox"/>
+Add basic water (flat plane with texture)</li>
+</ul>
+<h3 id="to-do-later">To Do Later</h3>
+<h5 id="game-world">Game World</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Create a flat terrain (plane/grid)</li>
+<li><input disabled="" type="checkbox"/>
+Add a simple skybox or gradient</li>
+<li><input disabled="" type="checkbox"/>
+Set up level boundaries (invisible walls)</li>
+</ul>
+<h5 id="player-character">Player Character</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Build a basic player shape (cube/capsule)</li>
+<li><input disabled="" type="checkbox"/>
+Implement jumping (spacebar)</li>
+<li><input disabled="" type="checkbox"/>
+Add a basic animation (e.g., walk cycle)</li>
+<li><input disabled="" type="checkbox"/>
+Set up player spawn point</li>
+</ul>
+<h5 id="controls">Controls</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Map movement keys (WASD)</li>
+<li><input disabled="" type="checkbox"/>
+Add mouse look (camera rotation)</li>
+<li><input disabled="" type="checkbox"/>
+Enable sprint (Shift key)</li>
+<li><input disabled="" type="checkbox"/>
+Bind an action key (e.g., E for interact)</li>
+<li><input disabled="" type="checkbox"/>
+Add crouch functionality (Ctrl key)</li>
+</ul>
+<h5 id="camera-system">Camera System</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Set up a third-person follow camera</li>
+<li><input disabled="" type="checkbox"/>
+Add basic camera collision</li>
+<li><input disabled="" type="checkbox"/>
+Enable zoom (mouse wheel)</li>
+<li><input disabled="" type="checkbox"/>
+Smooth camera movement</li>
+<li><input disabled="" type="checkbox"/>
+Add a first-person toggle option</li>
+</ul>
+<h5 id="physics">Physics</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Apply gravity to player</li>
+<li><input disabled="" type="checkbox"/>
+Add ground detection for jumping</li>
+<li><input disabled="" type="checkbox"/>
+Enable pushing small objects</li>
+<li><input disabled="" type="checkbox"/>
+Set up a slippery surface</li>
+<li><input disabled="" type="checkbox"/>
+Add a bouncy object</li>
+</ul>
+<h5 id="collision-detection">Collision Detection</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Create player collision box</li>
+<li><input disabled="" type="checkbox"/>
+Set terrain collision</li>
+<li><input disabled="" type="checkbox"/>
+Add collision to static objects</li>
+<li><input disabled="" type="checkbox"/>
+Implement wall collision</li>
+<li><input disabled="" type="checkbox"/>
+Test edge cases (corners, slopes)</li>
+</ul>
+<h5 id="ai-and-npcs">AI and NPCs</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Place a static NPC</li>
+<li><input disabled="" type="checkbox"/>
+Add NPC patrol (two points)</li>
+<li><input disabled="" type="checkbox"/>
+Enable basic interaction (e.g., “Hello!”)</li>
+<li><input disabled="" type="checkbox"/>
+Add a chase behavior</li>
+<li><input disabled="" type="checkbox"/>
+Create a simple NPC animation</li>
+</ul>
+<h5 id="user-interface-ui">User Interface (UI)</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Add a health bar</li>
+<li><input disabled="" type="checkbox"/>
+Display a score counter</li>
+<li><input disabled="" type="checkbox"/>
+Build a pause menu</li>
+<li><input disabled="" type="checkbox"/>
+Add a basic HUD (ammo/time)</li>
+<li><input disabled="" type="checkbox"/>
+Create a main menu screen</li>
+</ul>
+<h5 id="audio">Audio</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Implement background music loop</li>
+<li><input disabled="" type="checkbox"/>
+Add footstep sounds</li>
+<li><input disabled="" type="checkbox"/>
+Include jump sound effect</li>
+<li><input disabled="" type="checkbox"/>
+Add interaction sound (e.g., click)</li>
+<li><input disabled="" type="checkbox"/>
+Set up ambient noise (wind, birds)</li>
+</ul>
+<h5 id="lighting">Lighting</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Add a directional light (sun)</li>
+<li><input disabled="" type="checkbox"/>
+Set up ambient lighting</li>
+<li><input disabled="" type="checkbox"/>
+Place a point light (e.g., torch)</li>
+<li><input disabled="" type="checkbox"/>
+Add shadows to key objects</li>
+<li><input disabled="" type="checkbox"/>
+Test night mode lighting</li>
+</ul>
+<h5 id="level-design">Level Design</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Design a start-to-end path</li>
+<li><input disabled="" type="checkbox"/>
+Add 2-3 obstacles (walls, gaps)</li>
+<li><input disabled="" type="checkbox"/>
+Create a simple puzzle (e.g., lever)</li>
+<li><input disabled="" type="checkbox"/>
+Place a collectible item</li>
+<li><input disabled="" type="checkbox"/>
+Add a hidden area</li>
+</ul>
+<h5 id="story-and-objectives">Story and Objectives</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Define a level goal (e.g., reach exit)</li>
+<li><input disabled="" type="checkbox"/>
+Add a start screen with text</li>
+<li><input disabled="" type="checkbox"/>
+Set up a win condition</li>
+<li><input disabled="" type="checkbox"/>
+Include a failure state (e.g., death)</li>
+<li><input disabled="" type="checkbox"/>
+Add a short intro cutscene</li>
+</ul>
+<h5 id="performance-optimization">Performance Optimization</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Enable frustum culling</li>
+<li><input disabled="" type="checkbox"/>
+Batch static objects</li>
+<li><input disabled="" type="checkbox"/>
+Test frame rate</li>
+<li><input disabled="" type="checkbox"/>
+Reduce texture sizes</li>
+<li><input disabled="" type="checkbox"/>
+Profile CPU usage</li>
+</ul>
+<h5 id="testing-and-debugging">Testing and Debugging</h5>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Playtest level start to finish</li>
+<li><input disabled="" type="checkbox"/>
+Fix movement bugs</li>
+<li><input disabled="" type="checkbox"/>
+Resolve collision issues</li>
+<li><input disabled="" type="checkbox"/>
+Test with a friend</li>
+<li><input disabled="" type="checkbox"/>
+Polish one feature (e.g., jumping)</li>
+</ul>
+<h3 id="completed-tasks">Completed Tasks</h3>
+<ul>
+<li><input disabled="" type="checkbox"/>
+Add WASD movement</li>
+</ul>
+<hr />
+<h3 id="notes">Notes</h3>
+<ul>
+<li><strong>Keep it Simple</strong>: Start with placeholders (e.g., cubes) and refine later.</li>
+<li><strong>Stay on Track</strong>: Each task is 1-2 hours—split bigger ones if needed.</li>
+<li><strong>Next Steps</strong>: After finishing, add complexity (e.g., more NPCs, puzzles).</li>
+</ul>
+<p>Let me know if you need more tasks or tweaks!</p>
+</div>
+
+    <div class="post-navigation">
+      
+
+      
+    </div>
+  </article>
+</main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 AI Code Guidebook</p>
+      </div>
+    </footer>
+  </body>
+</html>

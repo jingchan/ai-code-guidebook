@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Coding Best Practices: A Comprehensive Guide - AI Code Guidebook</title>
+    <meta
+      name="description"
+      content="Learn essential best practices for working effectively with AI coding assistants while maintaining code quality and security"
+    />
+    <link rel="stylesheet" href="https://jingchan.github.io/ai-code-guidebook/css/main.css" />
+    
+  </head>
+
+  <body>
+    <header>
+      <nav class="container">
+        <a href="https:&#x2F;&#x2F;jingchan.github.io&#x2F;ai-code-guidebook" class="site-title"
+          >AI Code Guidebook</a
+        >
+        <div class="nav-links">
+          <a href="https://jingchan.github.io/ai-code-guidebook/blog">Blog</a>
+          <a href="https://github.com/jinghcan/ai-code-guidebook">GitHub</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+  <article class="post">
+    <header class="post-header">
+      <h1 class="post-title">AI Coding Best Practices: A Comprehensive Guide</h1>
+      <div class="post-meta">
+        <div class="post-meta-item">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <time datetime="2024-03-12"
+            >March 12, 2024</time
+          >
+        </div>
+        
+          <div class="post-meta-item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+              ></path>
+              <line x1="7" y1="7" x2="7.01" y2="7"></line>
+            </svg>
+
+            <div class="post-tags">
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/ai/"
+                  class="post-tag"
+                  >#ai</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/best-practices/"
+                  class="post-tag"
+                  >#best-practices</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/coding/"
+                  class="post-tag"
+                  >#coding</a
+                >
+              
+                <a
+                  href="https://jingchan.github.io/ai-code-guidebook/tags/security/"
+                  class="post-tag"
+                  >#security</a
+                >
+              
+            </div>
+          </div>
+        
+      </div>
+    </header>
+
+    <div class="post-content"><h1 id="ai-coding-best-practices-a-comprehensive-guide">AI Coding Best Practices: A Comprehensive Guide</h1>
+<p>As AI coding assistants become increasingly sophisticated, it’s crucial to develop good practices for working with them effectively. This guide covers essential best practices to help you maximize the benefits while avoiding common pitfalls.</p>
+<h2 id="core-principles">Core Principles</h2>
+<h3 id="1-verify-and-validate">1. Verify and Validate</h3>
+<p>Always review AI-generated code before implementing it:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#616e88;">// ❌ Don&#39;t blindly accept AI suggestions
+</span><span style="color:#81a1c1;">let</span><span> unsafe_code </span><span style="color:#81a1c1;">=</span><span> ai</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">generate_code</span><span>()</span><span style="color:#eceff4;">;
+</span><span style="color:#88c0d0;">use_in_production</span><span>(unsafe_code)</span><span style="color:#eceff4;">;  </span><span style="color:#616e88;">// Risky!
+</span><span>
+</span><span style="color:#616e88;">// ✅ Review and validate first
+</span><span style="color:#81a1c1;">let</span><span> generated_code </span><span style="color:#81a1c1;">=</span><span> ai</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">generate_code</span><span>()</span><span style="color:#eceff4;">;
+</span><span style="color:#81a1c1;">if </span><span style="color:#88c0d0;">validate_code</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>generated_code) {
+</span><span>    </span><span style="color:#88c0d0;">run_tests</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>generated_code)</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#88c0d0;">code_review</span><span>(</span><span style="color:#81a1c1;">&amp;</span><span>generated_code)</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#88c0d0;">use_in_production</span><span>(generated_code)</span><span style="color:#eceff4;">;
+</span><span>}
+</span></code></pre>
+<h3 id="2-maintain-context">2. Maintain Context</h3>
+<p>Provide clear context for better results:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#616e88;">// ❌ Poor context
+</span><span>ai</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">generate</span><span>(</span><span style="color:#a3be8c;">&quot;add authentication&quot;</span><span>)</span><span style="color:#eceff4;">;
+</span><span>
+</span><span style="color:#616e88;">// ✅ Clear context
+</span><span>ai</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">generate</span><span>(</span><span style="color:#a3be8c;">&quot;&quot;&quot;
+</span><span style="color:#a3be8c;">Add JWT authentication with the following requirements:
+</span><span style="color:#a3be8c;">- Use RS256 algorithm
+</span><span style="color:#a3be8c;">- 15-minute token expiration
+</span><span style="color:#a3be8c;">- Include user roles in claims
+</span><span style="color:#a3be8c;">- Implement refresh token mechanism
+</span><span style="color:#a3be8c;">&quot;&quot;&quot;</span><span>)</span><span style="color:#eceff4;">;
+</span></code></pre>
+<h2 id="security-considerations">Security Considerations</h2>
+<ol>
+<li>
+<p><strong>Never share sensitive data</strong></p>
+<ul>
+<li>API keys</li>
+<li>Passwords</li>
+<li>Personal information</li>
+<li>Internal business logic</li>
+</ul>
+</li>
+<li>
+<p><strong>Validate security-critical code</strong></p>
+<ul>
+<li>Authentication</li>
+<li>Authorization</li>
+<li>Data validation</li>
+<li>Cryptographic operations</li>
+</ul>
+</li>
+</ol>
+<h2 id="code-quality">Code Quality</h2>
+<p>Maintain high standards:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#616e88;">// ❌ Accepting unclear code
+</span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">process</span><span>(x</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">i32</span><span>) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#81a1c1;">i32 </span><span>{
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> a </span><span style="color:#81a1c1;">=</span><span> x </span><span style="color:#81a1c1;">* </span><span style="color:#b48ead;">2</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> b </span><span style="color:#81a1c1;">=</span><span> a </span><span style="color:#81a1c1;">+ </span><span style="color:#b48ead;">3</span><span style="color:#eceff4;">;
+</span><span>    b </span><span style="color:#81a1c1;">- </span><span style="color:#b48ead;">1
+</span><span>}
+</span><span>
+</span><span style="color:#616e88;">// ✅ Requesting clear, documented code
+</span><span style="color:#616e88;">/// Processes a number through a specific algorithm
+</span><span style="color:#616e88;">///
+</span><span style="color:#616e88;">/// # Arguments
+</span><span style="color:#616e88;">/// * `input` - The number to process
+</span><span style="color:#616e88;">///
+</span><span style="color:#616e88;">/// # Returns
+</span><span style="color:#616e88;">/// The processed result: (input * 2 + 3) - 1
+</span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">process_number</span><span>(input</span><span style="color:#eceff4;">: </span><span style="color:#81a1c1;">i32</span><span>) </span><span style="color:#eceff4;">-&gt; </span><span style="color:#81a1c1;">i32 </span><span>{
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> doubled </span><span style="color:#81a1c1;">=</span><span> input </span><span style="color:#81a1c1;">* </span><span style="color:#b48ead;">2</span><span style="color:#eceff4;">;
+</span><span>    </span><span style="color:#81a1c1;">let</span><span> added </span><span style="color:#81a1c1;">=</span><span> doubled </span><span style="color:#81a1c1;">+ </span><span style="color:#b48ead;">3</span><span style="color:#eceff4;">;
+</span><span>    added </span><span style="color:#81a1c1;">- </span><span style="color:#b48ead;">1
+</span><span>}
+</span></code></pre>
+<h2 id="workflow-integration">Workflow Integration</h2>
+<h3 id="version-control">Version Control</h3>
+<pre data-lang="bash" style="background-color:#2e3440;color:#d8dee9;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#616e88;"># Create feature branch for AI-assisted work
+</span><span style="color:#88c0d0;">git</span><span> checkout -b feature/ai-assisted-auth
+</span><span>
+</span><span style="color:#616e88;"># Commit with clear messages
+</span><span style="color:#88c0d0;">git</span><span> commit -m </span><span style="color:#a3be8c;">&quot;Add JWT authentication
+</span><span style="color:#a3be8c;">- Implemented using AI assistance
+</span><span style="color:#a3be8c;">- Manually reviewed and tested
+</span><span style="color:#a3be8c;">- Added unit tests&quot;
+</span></code></pre>
+<h3 id="documentation">Documentation</h3>
+<p>Always document AI usage:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span style="color:#616e88;">//! This module was developed with AI assistance
+</span><span style="color:#616e88;">//! AI was used for:
+</span><span style="color:#616e88;">//! - Initial code structure
+</span><span style="color:#616e88;">//! - Test case generation
+</span><span style="color:#616e88;">//! - Documentation templates
+</span><span style="color:#616e88;">//!
+</span><span style="color:#616e88;">//! All code has been reviewed and tested by human developers.
+</span></code></pre>
+<h2 id="testing-strategy">Testing Strategy</h2>
+<p>Implement comprehensive testing:</p>
+<pre data-lang="rust" style="background-color:#2e3440;color:#d8dee9;" class="language-rust "><code class="language-rust" data-lang="rust"><span>#[cfg(test)]
+</span><span style="color:#81a1c1;">mod </span><span>tests {
+</span><span>    </span><span style="color:#81a1c1;">use super::*</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>    #[test]
+</span><span>    </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">test_ai_generated_function</span><span>() {
+</span><span>        </span><span style="color:#616e88;">// Arrange
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> input </span><span style="color:#81a1c1;">= </span><span style="color:#b48ead;">42</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        </span><span style="color:#616e88;">// Act
+</span><span>        </span><span style="color:#81a1c1;">let</span><span> result </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">process_number</span><span>(input)</span><span style="color:#eceff4;">;
+</span><span>
+</span><span>        </span><span style="color:#616e88;">// Assert
+</span><span>        assert_eq!(result</span><span style="color:#eceff4;">, </span><span style="color:#b48ead;">86</span><span>)</span><span style="color:#eceff4;">; </span><span style="color:#616e88;">// (42 * 2 + 3) - 1
+</span><span>    }
+</span><span>
+</span><span>    </span><span style="color:#616e88;">// Add edge cases
+</span><span>    #[test]
+</span><span>    </span><span style="color:#81a1c1;">fn </span><span style="color:#88c0d0;">test_edge_cases</span><span>() {
+</span><span>        assert_eq!(</span><span style="color:#88c0d0;">process_number</span><span>(</span><span style="color:#b48ead;">0</span><span>)</span><span style="color:#eceff4;">, </span><span style="color:#b48ead;">2</span><span>)</span><span style="color:#eceff4;">;
+</span><span>        assert_eq!(</span><span style="color:#88c0d0;">process_number</span><span>(</span><span style="color:#81a1c1;">-</span><span style="color:#b48ead;">1</span><span>)</span><span style="color:#eceff4;">, </span><span style="color:#b48ead;">1</span><span>)</span><span style="color:#eceff4;">;
+</span><span>        assert_eq!(</span><span style="color:#88c0d0;">process_number</span><span>(</span><span style="color:#81a1c1;">i32::</span><span>MAX)</span><span style="color:#eceff4;">, </span><span style="color:#81a1c1;">i32::</span><span>MAX </span><span style="color:#81a1c1;">* </span><span style="color:#b48ead;">2 </span><span style="color:#81a1c1;">+ </span><span style="color:#b48ead;">2</span><span>)</span><span style="color:#eceff4;">;
+</span><span>    }
+</span><span>}
+</span></code></pre>
+<h2 id="continuous-learning">Continuous Learning</h2>
+<ol>
+<li>
+<p><strong>Keep track of successful patterns</strong></p>
+<ul>
+<li>Document what works well</li>
+<li>Share with team members</li>
+<li>Create reusable templates</li>
+</ul>
+</li>
+<li>
+<p><strong>Learn from mistakes</strong></p>
+<ul>
+<li>Record common issues</li>
+<li>Develop prevention strategies</li>
+<li>Update team guidelines</li>
+</ul>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Working effectively with AI coding assistants requires a balanced approach:</p>
+<ul>
+<li>Trust but verify</li>
+<li>Maintain high standards</li>
+<li>Focus on security</li>
+<li>Document extensively</li>
+<li>Test thoroughly</li>
+</ul>
+<p>Remember: AI is a powerful tool, but it’s your expertise that makes it truly effective.</p>
+</div>
+
+    <div class="post-navigation">
+      
+
+      
+    </div>
+  </article>
+</main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 AI Code Guidebook</p>
+      </div>
+    </footer>
+  </body>
+</html>

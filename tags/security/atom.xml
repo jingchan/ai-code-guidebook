@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>AI Code Guidebook - security</title>
+    <subtitle>A comprehensive guide to AI-powered code development</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://jingchan.github.io/ai-code-guidebook/tags/security/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-03-12T00:00:00+00:00</updated>
+    <id>https://jingchan.github.io/ai-code-guidebook/tags/security/atom.xml</id>
+    <entry xml:lang="en">
+        <title>AI Coding Best Practices: A Comprehensive Guide</title>
+        <published>2024-03-12T00:00:00+00:00</published>
+        <updated>2024-03-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook/blog/ai-coding-best-practices/"/>
+        <id>https://jingchan.github.io/ai-code-guidebook/blog/ai-coding-best-practices/</id>
+        
+        <content type="html" xml:base="https://jingchan.github.io/ai-code-guidebook/blog/ai-coding-best-practices/">&lt;h1 id=&quot;ai-coding-best-practices-a-comprehensive-guide&quot;&gt;AI Coding Best Practices: A Comprehensive Guide&lt;&#x2F;h1&gt;
+&lt;p&gt;As AI coding assistants become increasingly sophisticated, it’s crucial to develop good practices for working with them effectively. This guide covers essential best practices to help you maximize the benefits while avoiding common pitfalls.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;core-principles&quot;&gt;Core Principles&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;1-verify-and-validate&quot;&gt;1. Verify and Validate&lt;&#x2F;h3&gt;
+&lt;p&gt;Always review AI-generated code before implementing it:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; ❌ Don&amp;#39;t blindly accept AI suggestions
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; unsafe_code &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; ai&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;generate_code&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;use_in_production&lt;&#x2F;span&gt;&lt;span&gt;(unsafe_code)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;  &lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; Risky!
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; ✅ Review and validate first
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; generated_code &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; ai&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;generate_code&lt;&#x2F;span&gt;&lt;span&gt;()&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;if &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;validate_code&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;generated_code) {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;run_tests&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;generated_code)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;code_review&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;&amp;amp;&lt;&#x2F;span&gt;&lt;span&gt;generated_code)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;use_in_production&lt;&#x2F;span&gt;&lt;span&gt;(generated_code)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;2-maintain-context&quot;&gt;2. Maintain Context&lt;&#x2F;h3&gt;
+&lt;p&gt;Provide clear context for better results:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; ❌ Poor context
+&lt;&#x2F;span&gt;&lt;span&gt;ai&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;generate&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;add authentication&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; ✅ Clear context
+&lt;&#x2F;span&gt;&lt;span&gt;ai&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;.&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;generate&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;Add JWT authentication with the following requirements:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;- Use RS256 algorithm
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;- 15-minute token expiration
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;- Include user roles in claims
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;- Implement refresh token mechanism
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;&amp;quot;&amp;quot;&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;security-considerations&quot;&gt;Security Considerations&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Never share sensitive data&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;API keys&lt;&#x2F;li&gt;
+&lt;li&gt;Passwords&lt;&#x2F;li&gt;
+&lt;li&gt;Personal information&lt;&#x2F;li&gt;
+&lt;li&gt;Internal business logic&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Validate security-critical code&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Authentication&lt;&#x2F;li&gt;
+&lt;li&gt;Authorization&lt;&#x2F;li&gt;
+&lt;li&gt;Data validation&lt;&#x2F;li&gt;
+&lt;li&gt;Cryptographic operations&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;code-quality&quot;&gt;Code Quality&lt;&#x2F;h2&gt;
+&lt;p&gt;Maintain high standards:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; ❌ Accepting unclear code
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;process&lt;&#x2F;span&gt;&lt;span&gt;(x&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;-&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; x &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; a &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    b &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; ✅ Requesting clear, documented code
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;&#x2F; Processes a number through a specific algorithm
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;&#x2F; # Arguments
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;&#x2F; * `input` - The number to process
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;&#x2F;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;&#x2F; # Returns
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;&#x2F; The processed result: (input * 2 + 3) - 1
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;process_number&lt;&#x2F;span&gt;&lt;span&gt;(input&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;: &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;i32&lt;&#x2F;span&gt;&lt;span&gt;) &lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;-&amp;gt; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;i32 &lt;&#x2F;span&gt;&lt;span&gt;{
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; doubled &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; input &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; added &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;=&lt;&#x2F;span&gt;&lt;span&gt; doubled &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;3&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    added &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;- &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;workflow-integration&quot;&gt;Workflow Integration&lt;&#x2F;h2&gt;
+&lt;h3 id=&quot;version-control&quot;&gt;Version Control&lt;&#x2F;h3&gt;
+&lt;pre data-lang=&quot;bash&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-bash &quot;&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;# Create feature branch for AI-assisted work
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; checkout -b feature&#x2F;ai-assisted-auth
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;# Commit with clear messages
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;git&lt;&#x2F;span&gt;&lt;span&gt; commit -m &lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;&amp;quot;Add JWT authentication
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;- Implemented using AI assistance
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;- Manually reviewed and tested
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#a3be8c;&quot;&gt;- Added unit tests&amp;quot;
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h3 id=&quot;documentation&quot;&gt;Documentation&lt;&#x2F;h3&gt;
+&lt;p&gt;Always document AI usage:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;! This module was developed with AI assistance
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;! AI was used for:
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;! - Initial code structure
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;! - Test case generation
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;! - Documentation templates
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;!
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F;! All code has been reviewed and tested by human developers.
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;testing-strategy&quot;&gt;Testing Strategy&lt;&#x2F;h2&gt;
+&lt;p&gt;Implement comprehensive testing:&lt;&#x2F;p&gt;
+&lt;pre data-lang=&quot;rust&quot; style=&quot;background-color:#2e3440;color:#d8dee9;&quot; class=&quot;language-rust &quot;&gt;&lt;code class=&quot;language-rust&quot; data-lang=&quot;rust&quot;&gt;&lt;span&gt;#[cfg(test)]
+&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;mod &lt;&#x2F;span&gt;&lt;span&gt;tests {
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;use super::*&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    #[test]
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;test_ai_generated_function&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; Arrange
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; input &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;42&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; Act
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;let&lt;&#x2F;span&gt;&lt;span&gt; result &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;= &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;process_number&lt;&#x2F;span&gt;&lt;span&gt;(input)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;        &lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; Assert
+&lt;&#x2F;span&gt;&lt;span&gt;        assert_eq!(result&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;86&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;; &lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; (42 * 2 + 3) - 1
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#616e88;&quot;&gt;&#x2F;&#x2F; Add edge cases
+&lt;&#x2F;span&gt;&lt;span&gt;    #[test]
+&lt;&#x2F;span&gt;&lt;span&gt;    &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;fn &lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;test_edge_cases&lt;&#x2F;span&gt;&lt;span&gt;() {
+&lt;&#x2F;span&gt;&lt;span&gt;        assert_eq!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;process_number&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;0&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        assert_eq!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;process_number&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;-&lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;1&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;        assert_eq!(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#88c0d0;&quot;&gt;process_number&lt;&#x2F;span&gt;&lt;span&gt;(&lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;i32::&lt;&#x2F;span&gt;&lt;span&gt;MAX)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;, &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;i32::&lt;&#x2F;span&gt;&lt;span&gt;MAX &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;* &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2 &lt;&#x2F;span&gt;&lt;span style=&quot;color:#81a1c1;&quot;&gt;+ &lt;&#x2F;span&gt;&lt;span style=&quot;color:#b48ead;&quot;&gt;2&lt;&#x2F;span&gt;&lt;span&gt;)&lt;&#x2F;span&gt;&lt;span style=&quot;color:#eceff4;&quot;&gt;;
+&lt;&#x2F;span&gt;&lt;span&gt;    }
+&lt;&#x2F;span&gt;&lt;span&gt;}
+&lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
+&lt;h2 id=&quot;continuous-learning&quot;&gt;Continuous Learning&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Keep track of successful patterns&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Document what works well&lt;&#x2F;li&gt;
+&lt;li&gt;Share with team members&lt;&#x2F;li&gt;
+&lt;li&gt;Create reusable templates&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Learn from mistakes&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Record common issues&lt;&#x2F;li&gt;
+&lt;li&gt;Develop prevention strategies&lt;&#x2F;li&gt;
+&lt;li&gt;Update team guidelines&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;Working effectively with AI coding assistants requires a balanced approach:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;Trust but verify&lt;&#x2F;li&gt;
+&lt;li&gt;Maintain high standards&lt;&#x2F;li&gt;
+&lt;li&gt;Focus on security&lt;&#x2F;li&gt;
+&lt;li&gt;Document extensively&lt;&#x2F;li&gt;
+&lt;li&gt;Test thoroughly&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;Remember: AI is a powerful tool, but it’s your expertise that makes it truly effective.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

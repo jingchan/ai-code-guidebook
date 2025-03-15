@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>AI Code Guidebook - frame</title>
+    <subtitle>A comprehensive guide to AI-powered code development</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://jingchan.github.io/ai-code-guidebook/tags/frame/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2025-03-12T00:00:00+00:00</updated>
+    <id>https://jingchan.github.io/ai-code-guidebook/tags/frame/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Detailed granularity of steps in a frame update.</title>
+        <published>2025-03-12T00:00:00+00:00</published>
+        <updated>2025-03-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://jingchan.github.io/ai-code-guidebook/blog/frame/"/>
+        <id>https://jingchan.github.io/ai-code-guidebook/blog/frame/</id>
+        
+        <content type="html" xml:base="https://jingchan.github.io/ai-code-guidebook/blog/frame/">&lt;h1 id=&quot;detailed-todo-for-a-frame-update&quot;&gt;Detailed todo for a frame update.&lt;&#x2F;h1&gt;
+&lt;p&gt;&lt;strong&gt;Frame Start &amp;amp; Input:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Frame Start Marker (CPU):&lt;&#x2F;strong&gt; Begin CPU-side frame timing.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GPU Frame Start Marker (If Applicable):&lt;&#x2F;strong&gt; Begin GPU-side frame timing.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Device Polling (Keyboard):&lt;&#x2F;strong&gt; Poll keyboard input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Device Polling (Mouse):&lt;&#x2F;strong&gt; Poll mouse input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Device Polling (Gamepad 1):&lt;&#x2F;strong&gt; Poll gamepad 1 input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Device Polling (Gamepad N):&lt;&#x2F;strong&gt; Poll gamepad N input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Device Filtering (Debouncing):&lt;&#x2F;strong&gt; Apply debouncing to input signals.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Device Filtering (Smoothing):&lt;&#x2F;strong&gt; Apply smoothing to analog input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Buffering (Raw Keyboard):&lt;&#x2F;strong&gt; Store raw keyboard input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Buffering (Raw Mouse):&lt;&#x2F;strong&gt; Store raw mouse input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Buffering (Raw Gamepad):&lt;&#x2F;strong&gt; Store raw gamepad input.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Translation (Key Bindings):&lt;&#x2F;strong&gt; Translate raw keys to game actions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Translation (Mouse Movement):&lt;&#x2F;strong&gt; Translate mouse movement to
+camera&#x2F;player movement.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Translation (Gamepad Axis):&lt;&#x2F;strong&gt; Translate gamepad axis to
+movement&#x2F;actions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Queueing (Action Events):&lt;&#x2F;strong&gt; Queue game action events.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Queueing (Movement Vectors):&lt;&#x2F;strong&gt; Queue movement vectors.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Input Queueing (UI Actions):&lt;&#x2F;strong&gt; Queue UI interaction events.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game State Pre-Update (Timers):&lt;&#x2F;strong&gt; Update game timers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game State Pre-Update (Variables):&lt;&#x2F;strong&gt; Update pre-frame game variables.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AI Decision Making (Context Gathering):&lt;&#x2F;strong&gt; Gather game state context for
+AI.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AI Decision Making (Behavior Tree Evaluation):&lt;&#x2F;strong&gt; Evaluate AI behavior
+trees.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AI Decision Making (Pathfinding):&lt;&#x2F;strong&gt; Perform pathfinding if necessary.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;AI Decision Making (Action Selection):&lt;&#x2F;strong&gt; Select actions based on AI logic.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Animation State Update (Transition Logic):&lt;&#x2F;strong&gt; Evaluate animation transition
+logic.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Animation State Update (Parameter Updates):&lt;&#x2F;strong&gt; Update animation parameters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game Logic Update (General Scripts):&lt;&#x2F;strong&gt; Execute general game scripts.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game Logic Update (Entity Scripts):&lt;&#x2F;strong&gt; Execute entity-specific scripts.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game Logic Update (System Logic):&lt;&#x2F;strong&gt; Execute game system logic.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Event Queue Processing (Game Events):&lt;&#x2F;strong&gt; Process game events.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Event Queue Processing (UI Events):&lt;&#x2F;strong&gt; Process UI events.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Broadphase Collision Detection (Spatial Partition Query):&lt;&#x2F;strong&gt; Query spatial
+partitioning for potential collisions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Broadphase Collision Detection (Bounding Box Checks):&lt;&#x2F;strong&gt; Perform initial
+bounding box collision checks.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Spatial Partitioning Update (Dynamic Objects):&lt;&#x2F;strong&gt; Update spatial
+partitioning for dynamic objects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Potential Collision Pair Filtering (Distance Checks):&lt;&#x2F;strong&gt; Filter potential
+collision pairs based on distance.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Potential Collision Pair Filtering (Layer Masks):&lt;&#x2F;strong&gt; Filter potential
+collision pairs based on layer masks.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Narrowphase Collision Detection (Precise Shape Checks):&lt;&#x2F;strong&gt; Perform precise
+collision checks using shapes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Narrowphase Collision Detection (Contact Point Generation):&lt;&#x2F;strong&gt; Generate
+contact points and normals.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Collision Response (Impulse Resolution):&lt;&#x2F;strong&gt; Apply impulse-based collision
+resolution.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Collision Response (Friction Application):&lt;&#x2F;strong&gt; Apply friction forces.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Physics Simulation (Force Accumulation):&lt;&#x2F;strong&gt; Accumulate forces on physics
+bodies.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Physics Simulation (Integration - Velocity):&lt;&#x2F;strong&gt; Integrate velocities using
+accumulated forces.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Physics Simulation (Integration - Position):&lt;&#x2F;strong&gt; Integrate positions using
+velocities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Physics State Update (Velocity Clamping):&lt;&#x2F;strong&gt; Clamp velocities to limits.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Physics State Update (Angular Velocity):&lt;&#x2F;strong&gt; Update angular velocities.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game State Update (Movement Application):&lt;&#x2F;strong&gt; Apply physics results to
+entity positions.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game State Update (Rotation Application):&lt;&#x2F;strong&gt; Apply physics results to
+entity rotations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Game State Update (Scale Application):&lt;&#x2F;strong&gt; Apply physics results to entity
+scales.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Animation Blending&#x2F;Interpolation (Linear Interpolation):&lt;&#x2F;strong&gt; Perform linear
+interpolation between animation states.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Animation Blending&#x2F;Interpolation (Spherical Linear Interpolation):&lt;&#x2F;strong&gt;
+Perform spherical linear interpolation for rotations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Animation Application (Bone Transformations):&lt;&#x2F;strong&gt; Apply animation
+transformations to bone hierarchies.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+&lt;p&gt;&lt;strong&gt;Rendering Preparation &amp;amp; Rendering:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+&lt;ol start=&quot;51&quot;&gt;
+&lt;li&gt;&lt;strong&gt;Game State Post-Update (Post-Physics Logic):&lt;&#x2F;strong&gt; Execute post-physics game
+logic.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Visibility Culling (Camera Frustum Culling):&lt;&#x2F;strong&gt; Perform camera frustum
+culling.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Visibility Culling (Occlusion Culling Prepass):&lt;&#x2F;strong&gt; Perform occlusion
+culling prepass.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Visibility Culling (Occlusion Culling Query):&lt;&#x2F;strong&gt; Perform occlusion culling
+queries.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Level of Detail (LOD) Selection (Distance Calculation):&lt;&#x2F;strong&gt; Calculate object
+distances from the camera.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Level of Detail (LOD) Selection (LOD Threshold Checks):&lt;&#x2F;strong&gt; Check LOD
+thresholds and select appropriate LOD.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Material Parameter Update (Texture Updates):&lt;&#x2F;strong&gt; Update material textures.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Material Parameter Update (Color Updates):&lt;&#x2F;strong&gt; Update material colors.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Material Parameter Update (Shader Parameters):&lt;&#x2F;strong&gt; Update shader parameters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Shadow Map Generation (Light Frustum Calculation):&lt;&#x2F;strong&gt; Calculate light
+frustums.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Shadow Map Generation (Render Shadow Maps):&lt;&#x2F;strong&gt; Render shadow maps.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Light Culling (Light Volume Checks):&lt;&#x2F;strong&gt; Check light volumes against object
+bounding volumes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Light Culling (Light List Generation):&lt;&#x2F;strong&gt; Generate lists of lights
+affecting each object.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Render Queue Population (Opaque Objects):&lt;&#x2F;strong&gt; Populate render queues with
+opaque objects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Render Queue Population (Transparent Objects):&lt;&#x2F;strong&gt; Populate render queues
+with transparent objects.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Render Queue Population (UI Elements):&lt;&#x2F;strong&gt; Populate render queues with UI
+elements.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Render Queue Sorting (Depth Sorting):&lt;&#x2F;strong&gt; Sort render queues by depth.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Render Queue Sorting (Material Sorting):&lt;&#x2F;strong&gt; Sort render queues by material.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Vertex Buffer Preparation (Vertex Data Assembly):&lt;&#x2F;strong&gt; Assemble vertex data.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Vertex Buffer Preparation (Attribute Interleaving):&lt;&#x2F;strong&gt; Interleave vertex
+attributes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Index Buffer Preparation (Index Data Assembly):&lt;&#x2F;strong&gt; Assemble index data.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Uniform Buffer Update (Transform Matrices):&lt;&#x2F;strong&gt; Update uniform buffers with
+transformation matrices.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Uniform Buffer Update (Light Parameters):&lt;&#x2F;strong&gt; Update uniform buffers with
+light parameters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Uniform Buffer Update (Material Parameters):&lt;&#x2F;strong&gt; Update uniform buffers with
+material parameters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Texture Upload (Texture Data Transfer):&lt;&#x2F;strong&gt; Transfer texture data to the
+GPU.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Texture Upload (Texture Mipmap Generation):&lt;&#x2F;strong&gt; Generate texture mipmaps.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Render Pass Begin (Primary Render Pass):&lt;&#x2F;strong&gt; Begin the primary render pass.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Shadow Map Render Pass (Begin Shadow Render Pass):&lt;&#x2F;strong&gt; Begin the shadow map
+render pass.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Shadow Map Render Pass (Render Shadow Casters):&lt;&#x2F;strong&gt; Render shadow casters.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Shadow Map Render Pass (End Shadow Render Pass):&lt;&#x2F;strong&gt; End the shadow map
+render pass.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Geometry Rendering (Opaque Geometry Draw Calls):&lt;&#x2F;strong&gt; Issue draw calls for
+opaque geometry.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Geometry Rendering (Instanced Rendering):&lt;&#x2F;strong&gt; Perform instanced rendering if
+applicable.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Transparency Rendering (Transparent Geometry Draw Calls):&lt;&#x2F;strong&gt; Issue draw
+calls for transparent geometry.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Transparency Rendering (Blending Operations):&lt;&#x2F;strong&gt; Perform blending
+operations.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Post-Processing Effects (Color Grading):&lt;&#x2F;strong&gt; Apply color grading.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Post-Processing Effects (Bloom):&lt;&#x2F;strong&gt; Apply bloom effect.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Post-Processing Effects (Depth of Field):&lt;&#x2F;strong&gt; Apply depth of field effect.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;UI Rendering (UI Draw Calls):&lt;&#x2F;strong&gt; Issue draw calls for UI elements.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Debug Rendering (Wireframe Rendering):&lt;&#x2F;strong&gt; Render wireframe outlines.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Debug Rendering (Collision Box Rendering):&lt;&#x2F;strong&gt; Render collision boxes.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Render Pass End (Primary Render Pass End):&lt;&#x2F;strong&gt; End the primary render pass.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Frame Buffer Swap (Present Frame):&lt;&#x2F;strong&gt; Swap the front and back buffers.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;GPU Sync (Wait for GPU Completion):&lt;&#x2F;strong&gt; Wait for the GPU to finish
+rendering.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Audio System Update (Sound Playback):&lt;&#x2F;strong&gt; Update the audio system and play
+sounds.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Audio System Update (Sound Mixing):&lt;&#x2F;strong&gt; Mix audio sources.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Network System Update (Packet Sending):&lt;&#x2F;strong&gt; Send network packets.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Network System Update (Packet Receiving):&lt;&#x2F;strong&gt; Receive network packets.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Garbage Collection (Memory Deallocation):&lt;&#x2F;strong&gt; Deallocate unused memory.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Delta Time Calculation (Frame Time Measurement):&lt;&#x2F;strong&gt; Calculate the time
+elapsed since the last frame.&lt;&#x2F;li&gt;
+&lt;li&gt;&lt;strong&gt;Frame End Marker (CPU End Marker):&lt;&#x2F;strong&gt; End the CPU-side frame timing.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+</feed>
